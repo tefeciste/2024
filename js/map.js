@@ -6,8 +6,10 @@
 	var dmoins;
 
 	var isDisplayed = true;
-	var isDisplayedNew = true;
-	var isDisplayedOld = true;
+	var isFinished = true;
+	var isProgram = true;
+	var isRaid = true;
+
 
 	//	LatLng to center the map	
 	var saintCouat = [42.996200, 2.107704];
@@ -294,11 +296,11 @@
         cheminNav.addTo(map);
 
 		//  06 Danemark
-/*		var dkRoller = L.geoJson(danemark, {
+		var dkRoller = L.geoJson(danemark, {
 			onEachFeature: onEachFeature,
 			style: style
 		});
-        dkRoller.addTo(map);*/
+        dkRoller.addTo(map);
 
 		// 07 gtmc
 		var gtMassifC = L.geoJson(gtmc, {
@@ -319,7 +321,7 @@
 			onEachFeature: onEachFeature,
 			style: style
         });
-hendonosti.addTo(map);
+        hendonosti.addTo(map);
 		
 		// 10 Lyon - Aix
 		var lyonAixPce = L.geoJson(lyonAix, {
@@ -357,11 +359,11 @@ hendonosti.addTo(map);
         soustons.addTo(map);
 
 		// 15 Strasbourg - Saint-Petersbourg
-/*		var strasbSankt = L.geoJson(strasStPet, {
+		var strasbSankt = L.geoJson(strasStPet, {
 			onEachFeature: onEachFeature,
 			style: style
 		});
-        strasbSankt.addTo(map);*/
+        strasbSankt.addTo(map);
 		
 		// 16 Toulouse - Miranda de Ebro
 		var toulMir = L.geoJson(tlseMirEbro, {
@@ -370,6 +372,12 @@ hendonosti.addTo(map);
 		});
         toulMir.addTo(map);
 
+        // 17 Lisbonne - Santiago
+        var lisSantiago = L.geoJson(lisSant, {
+            onEachFeature: onEachFeature,
+            style: style
+        });
+        lisSantiago.addTo(map);
 
 /*
         COUCHES GEOJSON
@@ -418,45 +426,126 @@ hendonosti.addTo(map);
 		});
         tlseBez.addTo(map);
 
-	// LAYER GROUPS
-	// Overlays are checkboxes
-	// var overlayMaps = new L.layerGroup();
-	// overlayMaps = {
+/*
+		COUCHES GEOJSON
+		Projets
+*/
+		// 01 Nantes - Hambourg
+		var nantHamb = L.geoJson(nanthambourg, {
+			onEachFeature: onEachFeature,
+			style: style
+		});
+        nantHamb.addTo(map);
+
+		// 02 Mulhouse - Istanbul
+		var mulhouse = new L.geoJson(mulhIstanbul, {
+			onEachFeature: onEachFeature,
+			style: style
+		});
+        mulhouse.addTo(map);
+
+		// 03  Cap Nord
+		var capeNord = L.geoJson(capNord, {
+			onEachFeature: onEachFeature,
+			style: style
+		});
+		capeNord.addTo(map);
+
+/*
+    LAYER GROUPS
+*/
+
 	var overLayers = [
 		{
-			group: "Fait",
+			group: "G1",
 			collapsed: true,
-			layers: [	
-				{
-					active: true,
-					name:"Aix-Cannes",
-					layer: aixCannes
+			layers: [
+                {
+                    active: true,
+					name:"Paris - revel",
+					layer: parisRev
 				},
 				{
 					active: true,
-					name:"Bordeaux - Moissac",
-					layer: bdxMoissac
+					name:"Luxembourg - Lyon",
+					layer: luxembourg
 				},
 				{
 					active: true,
-					name:"Revel - Sarlat",
-					layer: revelSarlat
+					name:"Nantes - Strasbourg",
+					layer: nantesStras
+				},
+				{
+                    active: true,
+                    name:"Girona - Ayamonte",
+                    layer: geroAya
+                },
+				{
+					active: true,
+					name:"Madrid - Lisbonne",
+					layer: madLis
 				},
 				{
 					active: true,
-					name:"Briancon - Aix",
-					layer: brianconAix
-				},
-				{
-					active: true,
-					name:"Chemin Navarrais",
-					layer: cheminNav
-				},
-/*				{
-					active: true,
-					name:"Danemark en roller",
-					layer: dkRoller
-				},*/
+					name:"Toulouse - Béziers",
+					layer: tlseBez
+				}
+			]
+		},{
+            group: "G2",
+            collapsed: true,
+            layers: [
+                {
+                    active: true,
+                    name:"Nantes - Hambourg",
+                    layer: nantHamb
+                },
+                {
+                    active: true,
+                    name:"Bale - Istanbul",
+                    layer: mulhouse
+                },
+                {
+                    active: true,
+                    name:"Cap Nord",
+                    layer: capeNord
+                }
+            ]
+        },
+        {
+            group: "G3",
+            collapsed: true,
+            layers: [
+                {
+                    active: true,
+                    name:"Aix-Cannes",
+                    layer: aixCannes
+                },
+                {
+                    active: true,
+                    name:"Bordeaux - Moissac",
+                    layer: bdxMoissac
+                },
+                {
+                    active: true,
+                    name:"Revel - Sarlat",
+                    layer: revelSarlat
+                },
+                {
+                    active: true,
+                    name:"Briancon - Aix",
+                    layer: brianconAix
+                },
+                {
+                    active: true,
+                    name:"Chemin Navarrais",
+                    layer: cheminNav
+                },
+                {
+                    active: true,
+                    name:"Danemark en roller",
+                    layer: dkRoller
+                },
                 {
                     active: true,
                     name:"GTMC",
@@ -497,58 +586,25 @@ hendonosti.addTo(map);
                     name:"Soustons - St Jean",
                     layer: soustons
                 },
-/*                {
+                {
                     active: true,
                     name:"Strasbourg - St Pétersbourg",
                     layer: strasbSankt
-                },*/
+                },
                 {
                     active: true,
                     name:"Toulouse - Miranda de Ebro",
                     layer: toulMir
-                }
-			]
-		},
-		{
-			group: "2020",
-			collapsed: true,
-			layers: [
+                },
                 {
                     active: true,
-					name:"Paris - revel",
-					layer: parisRev
-				},
-				{
-					active: true,
-					name:"Luxembourg - Lyon",
-					layer: luxembourg
-				},
-				{
-					active: true,
-					name:"Nantes - Strasbourg",
-					layer: nantesStras
-				},
-				{
-                    active: true,
-                    name:"Girona - Ayamonte",
-                    layer: geroAya
-                },
-				{
-					active: true,
-					name:"Madrid - Lisbonne",
-					layer: madLis
-				},
-				{
-					active: true,
-					name:"Toulouse - Béziers",
-					layer: tlseBez
-				}
-			]
-		}
+                    name:"Lisbonne - Santiago",
+                    layer: lisSantiago
+                }
+            ]
+        }
 	];
-		// Basemaps are radios			
-		//var baseMaps = new L.layerGroup();
-		//baseMaps = {
+		// Basemaps are radios
 	var baseLayers = [
 		{
 			group: "Cartes",
@@ -637,27 +693,17 @@ hendonosti.addTo(map);
 		collapsibleGroups: true
 	});
 	map.addControl(panelLayers);
-	
-	//L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 	//	Add Scale control to map			
 	L.control.scale({imperial: false}).addTo(map);
 
-	
 	//	MAP EVENTS
-
 	//  On load	
 	map.doubleClickZoom.disable();
-		
-	//	On click	
-	map.on('click', function(e) {
-			$('.leaflet-control.elevation').fadeOut('fast');
-	});
-	
-	bounds_group.addLayer(fStrasLyon);
-	bounds_group.addLayer(fSanLis);
+
+	bounds_group.addLayer(lisSantiago);
+	bounds_group.addLayer(capeNord);
 	setBounds();
-	
 
 	
 //		Adjust map to fit layer clicked		
@@ -683,6 +729,8 @@ hendonosti.addTo(map);
 		
 	}
 
+
+
 $( document ).ready(function() {
 
     $('.leaflet-control.elevation').hide();
@@ -699,57 +747,53 @@ $( document ).ready(function() {
     $('.leaflet-panel-layers-base').click(function(){
 		toggleBm();
 	});
-    var faitGroupLabel = $('.leaflet-panel-layers-grouplabel:contains("Fait")');
-    $(faitGroupLabel).append('<span id="g1" class="laySelect"><i class="fas fa-times"></i> / <i class="far fa-check-square"></i></i></span>');
-    var faitGroupCbList = $('.leaflet-panel-layers-group:contains("Fait")').find('input[type=checkbox]');
-    var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro];
-    //var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
 
-    var nvGroupLabel = $('.leaflet-panel-layers-grouplabel:contains("2020")');
-    $(nvGroupLabel).append('<span id="g2" class="laySelect"><i class="fas fa-times"></i> / <i class="far fa-check-square"></i></i></span>');
-    var nvGroupCbList = $('.leaflet-panel-layers-group:contains("2020")').find('input[type=checkbox]');
-    var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
-
-
-	$("#g1").click(function(){  //"select all" change
-		if (isDisplayedOld ===true){
-            for (var i = 0, leng = faitGroupCbList.length; i < leng; i++) {
-                $(this).prop('checked', false);
-            }
-            for (var j = 0, siz = faitGroupList.length; j < siz; j++) {
-                map.removeLayer(faitGroupList[j]);
-            }
-			isDisplayedOld = false;
-		}else{
-            for (var k = 0, len = faitGroupCbList.length; k < len; k++) {
-                $(this).prop('checked', true);
-            }
-            for (var l = 0, size = faitGroupList.length; l < size; l++) {
-                faitGroupList[l].addTo(map);
-            }
-			isDisplayedOld = true;
-		}
-	});
-
-    $("#g2").click(function(){  //"select all" change
-        if (isDisplayedNew ===true){
-            for (var i = 0, leng = nvGroupCbList.length; i < leng; i++) {
-                $(this).prop('checked', false);
-            }
-            for (var j = 0, siz = nvGroupList.length; j < siz; j++) {
-                map.removeLayer(nvGroupList[j]);
-            }
-            isDisplayedNew = false;
-        }else{
-            for (var k = 0, len = nvGroupCbList.length; k < len; k++) {
-                $(this).prop('checked', true);
-            }
-            for (var l = 0, size = nvGroupList.length; l < size; l++) {
-                nvGroupList[l].addTo(map);
-            }
-            isDisplayedNew = true;
-        }
+    //	On click
+    map.on('click', function(e) {
+        $('.leaflet-control.elevation').fadeOut('fast');
     });
+
+    var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
+    var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
+    var raidGroupList = [mulhouse, nantHamb/*, capeNord*/];
+    var isCheckedList = [true, true, true];
+
+    var groupLabelArray = ["2020","Raids","Faits"];
+    var groupListArray = [nvGroupList, raidGroupList, faitGroupList];
+
+    for (var i = 0, len = groupLabelArray.length; i<len; i++){
+        var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
+        // modification du titre du groupe
+        var titlespan = $('.leaflet-panel-layers-title').first();
+        $(titlespan).html(groupLabelArray[i]);
+        // ajout de la fonction select all
+        var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
+        $(titleDiv).append('<span id="g"'+i+' class="laySelect"><i class="fas fa-times"></i> / <i class="far fa-check-square"></i></i></span>');
+    }
+
+    for (var n = 0, length = groupListArray.length; n<length; n++){
+        $('#g'+n).click(function(){  //"select all" change
+            if (isCheckedList[n] ===true){
+                var checkboxList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[n].find('input[type=checkbox]');
+                for (var i = 0, leng = checkboxList.length; i < leng; i++) {
+                    $(this).prop('checked', false);
+                }
+                for (var j = 0, siz = groupListArray[n].length; j < siz; j++) {
+                    map.removeLayer(groupListArray[n][j]);
+                }
+                isCheckedList[n]= false;
+            }else{
+                for (var k = 0, len = checkboxList.length; k < len; k++) {
+                    $(this).prop('checked', true);
+                }
+                for (var l = 0, size = groupListArray[l].length; l < size; l++) {
+                    groupListArray[n][l].addTo(map);
+                }
+                isCheckedList[n] = true;
+            }
+        });
+    }
+
 });
 			
 		

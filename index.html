@@ -11,7 +11,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
         <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
-		<title>LCL Epreuves 2020</title>
+		<title>Epreuves 2024</title>
         <link rel="shortcut icon" href="images/ico/favicon.ico">
 		<style>
 			html, body, #map {
@@ -28,7 +28,7 @@
 		<!-- Load FontAWESOME Vector Icons CSS Library -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 		<!-- Load Leaflet 0.7.2 CSS Library -->
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css" />
 		<link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-panel-layers/src/leaflet-panel-layers.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
 		<!-- Load Leaflet elevation CSS Library -->
@@ -36,9 +36,9 @@
 		<link rel="stylesheet" href="css/style.css" />
 		
 		<!-- Load D3 Library -->
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" integrity="sha256-dsOXGNHAo/syFnazt+KTBsCQeRmlcW1XKL0bCK4Baec=" crossorigin="anonymous"></script>
 		<!-- Load Leaflet Library -->
-		<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>		
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet-src.js"></script>
 		<!-- <script type="text/javascript" src="https://unpkg.com/leaflet@1.4.0/dist/leaflet-src.js" crossorigin=""></script> -->
 		<!-- Load Leaflet-ajax Library -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha256-rVeyUZMfAHhQJ7hvWaHrKknTDdqGcn1gxBBJA++E4z8=" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@
 		<script src="js/data/fait/blanSarlat.js"></script>
 		<script src="js/data/fait/briAix.js"></script>
 		<script src="js/data/fait/chemNav.js"></script>
-		<!--<script src="js/data/fait/danemark.js"></script>-->
+		<script src="js/data/fait/danemark.js"></script>
 		<script src="js/data/fait/gtmc.js"></script>
 		<script src="js/data/fait/gtmn.js"></script>
 		<script src="js/data/fait/hendSanSeb.js"></script>
@@ -66,8 +66,9 @@
 		<script src="js/data/fait/nantHend.js"></script>
 		<script src="js/data/fait/revelAix.js"></script>
 		<script src="js/data/fait/sousPiePor.js"></script>
-		<!--<script src="js/data/fait/strasStPet.js"></script>-->
+		<script src="js/data/fait/strasStPet.js"></script>
 		<script src="js/data/fait/tlseMirEbro.js"></script>
+		<script src="js/data/fait/lisSant.js"></script>
 
 		<!-- A Faire -->
 		<script src="js/data/girAya.js"></script>
@@ -76,6 +77,11 @@
 		<script src="js/data/nanStras.js"></script>
 		<script src="js/data/parisRevel.js"></script>
 		<script src="js/data/tlseBeziers.js"></script>
+
+		<!-- Projets -->
+        <script src="js/data/raid/mulhIstanbul.js"></script>
+        <script src="js/data/raid/nanthambourg.js"></script>
+        <script src="js/data/raid/capNord.js"></script>
 
 		<!-- Load Map Configuration -->
 		<script src="https://labs.easyblog.it/maps/leaflet-panel-layers/src/leaflet-panel-layers.js"></script>
