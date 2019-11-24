@@ -790,7 +790,7 @@ $( document ).ready(function() {
     for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         var title = $(groups[i]).find('.leaflet-panel-layers-title').first();
-        $(title).html('<div><div>'+groupLabelArray[i] + '</div><div><input type="checkbox" id='+idValue+' class="selButton" checked></div></div>');
+        $(title).html('<input type="checkbox" id='+idValue+' class="selButton" checked> '+groupLabelArray[i] + ' ');
     }
 
     $('.selButton').click(function () {
@@ -800,10 +800,7 @@ $( document ).ready(function() {
             console.log(id);
             console.log(index);
             toggleAllLayersGroup(index);
-
-            //$('input[type=checkbox]').attr('checked', true);
         }
-
     });
 
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
