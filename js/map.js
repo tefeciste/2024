@@ -739,18 +739,19 @@ var groupLabelArray = ["2020","Raids","Faits"];
 
 
 var isGroupShow = [true, true, true];
-//$(checkboxList[i]).prop('checked', false);
 
 function removeAllLayersGroup(index){
     //nvLayerGroup.clearLayers();
         for (var i=0; i<layerDisplayArray[index].length; i++) {
             map.removeLayer(layerDisplayArray[index][i]);
         }
+    $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index].find('input[type=checkbox]').prop('checked', false);
 }
 function addAllLayersGroup(index){
     for (var i=0; i<layerDisplayArray[index].length; i++){
         layerDisplayArray[index][i].addTo(map);
     }
+    $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index].find('input[type=checkbox]').prop('checked', true);
 }
 function toggleAllLayersGroup(index){
     if (isGroupShow[index]===true){
@@ -798,7 +799,10 @@ $( document ).ready(function() {
             console.log(id);
             console.log(index);
             toggleAllLayersGroup(index);
+
+            //$('input[type=checkbox]').attr('checked', true);
         }
+
     });
 
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
