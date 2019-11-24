@@ -729,6 +729,12 @@ var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtM
 var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
+var faitLayerGroup = new L.layerGroup(faitGroupArray);
+var nvLayerGroup = new L.layerGroup(nvGroupArray);
+var raidLayerGroup = new L.layerGroup(raidGroupArray);
+
+var leafletGroupArray = [nvLayerGroup,raidLayerGroup,faitLayerGroup];
+
 var groupLabelArray = ["2020","Raids","Faits"];
 var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 
@@ -781,10 +787,10 @@ $( document ).ready(function() {
 
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     var i;
-    for (i = 0; i<groups.length; i++){
+    for (i = 0; i<groups.length-1; i++){
         var j;
-        for (j=0; j< layerDisplayArray[i].length-1; j++){
-            layerDisplayArray[i][j].addTo(map);
+        for (j=0; j< leafletGroupArray[i].length-1; j++){
+            leafletGroupArray[i][j].addTo(map);
         }
         var idValue = "toggleGroup-"+i;
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
