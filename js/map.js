@@ -793,11 +793,13 @@ $( document ).ready(function() {
 
     $('.selButton').click(function () {
         var id = this.id;
-        var index = id.slice(-1);
-        console.log(id);
-        console.log(index);
-        toggleAllLayersGroup(index);
-    })
+        if (id!==null && id.length>0){
+            var index = id.slice(-1);
+            console.log(id);
+            console.log(index);
+            toggleAllLayersGroup(index);
+        }
+    });
 
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
