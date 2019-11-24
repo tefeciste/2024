@@ -729,14 +729,9 @@ var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtM
 var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
-var faitLayerGroup = L.layerGroup(faitGroupArray);
-var nvLayerGroup = L.layerGroup(nvGroupArray);
-var raidLayerGroup = L.layerGroup(raidGroupArray);
-
-
 var groupLabelArray = ["2020","Raids","Faits"];
 var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
-var layerGroupArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
+
 var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
