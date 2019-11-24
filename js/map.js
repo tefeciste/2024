@@ -736,7 +736,7 @@ var faitLayerGroup = L.layerGroup(faitGroupList);
 var nvLayerGroup = L.layerGroup(nvGroupList);
 var raidLayerGroup = L.layerGroup(raidGroupList);
 
-var isGroupShow = false;
+
 var groupLabelArray = ["2020","Raids","Faits"];
 var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
 //$(checkboxList[i]).prop('checked', false);
@@ -762,7 +762,8 @@ function toggleAllLayersGroup(index){
 }
 
 $( document ).ready(function() {
-
+    var isGroupShow;
+    isGroupShow = false;
     $('.leaflet-control.elevation').hide();
 
     //	Load Close Button Elevation Profile
