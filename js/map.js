@@ -780,9 +780,9 @@ $( document ).ready(function() {
     });
 
     var i;
-    for (i = 0; i<layerDisplayArray.length; i++){
+    for (i = 0; i<layerDisplayArray.length-1; i++){
         var j;
-        for (j=0; j< layerDisplayArray[i].length; j++){
+        for (j=0; j< layerDisplayArray[i].length-1; j++){
             layerDisplayArray[i][j].addTo(map);
         }
         var idValue = "toggleGroup-"+i;
