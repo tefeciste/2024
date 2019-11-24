@@ -728,15 +728,15 @@
 var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
 var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
+var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 
 var faitLayerGroup = L.layerGroup(faitGroupArray);
 var nvLayerGroup = L.layerGroup(nvGroupArray);
 var raidLayerGroup = L.layerGroup(raidGroupArray);
-
 var leafletGroupArray = [nvLayerGroup,raidLayerGroup,faitLayerGroup];
 
 var groupLabelArray = ["2020","Raids","Faits"];
-var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
+
 
 var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
@@ -790,7 +790,7 @@ $( document ).ready(function() {
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
         $('#'+idValue).click(function () {
-            toggleAllLayersGroup();
+            toggleAllLayersGroup(i);
         });
     }
 
