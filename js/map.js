@@ -755,7 +755,7 @@ $( document ).ready(function() {
 
     var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
     var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
-    var raidGroupList = [mulhouse, nantHamb/*, capeNord*/];
+    var raidGroupList = [mulhouse, nantHamb, capeNord];
     var isCheckedList = [true, true, true];
 
     var groupLabelArray = ["2020","Raids","Faits"];
