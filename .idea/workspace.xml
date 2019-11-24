@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="" />
+    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1826">
-              <caret line="803" column="9" lean-forward="true" selection-start-line="803" selection-start-column="9" selection-end-line="803" selection-end-column="9" />
+            <state relative-caret-position="355">
+              <caret line="754" column="28" lean-forward="true" selection-start-line="754" selection-start-column="28" selection-end-line="754" selection-end-column="28" />
               <folding>
                 <element signature="e#268#305#0" />
                 <element signature="e#359#405#0" />
@@ -150,17 +152,6 @@
                 <element signature="e#17860#17884#0" />
                 <element signature="e#17888#17950#0" />
                 <element signature="e#17914#17946#0" />
-                <element signature="e#18744#18904#0" />
-                <element signature="e#18842#18902#0" />
-                <element signature="e#18947#19044#0" />
-                <element signature="e#18861#18877#0" />
-                <element signature="e#19087#19281#0" />
-                <element signature="e#19123#19201#0" />
-                <element signature="e#19205#19279#0" />
-                <element signature="e#19625#19719#0" />
-                <element signature="e#19775#19793#0" />
-                <element signature="e#19845#19909#0" />
-                <element signature="e#20457#20481#0" />
               </folding>
             </state>
           </provider>
@@ -195,7 +186,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="63" />
     <option name="y" value="48" />
     <option name="width" value="974" />
@@ -207,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -229,14 +221,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Logiciels/android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574627828917" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574628313352" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -284,12 +275,13 @@
       <workItem from="1574545332569" duration="6684000" />
       <workItem from="1574594054459" duration="4158000" />
       <workItem from="1574600335795" duration="14149000" />
-      <workItem from="1574620404717" duration="7369000" />
+      <workItem from="1574620404717" duration="8439000" />
+      <workItem from="1574632307944" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40117000" />
+    <option name="totallyTimeSpent" value="41200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,10 +293,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20255864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -433,8 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1826">
-          <caret line="803" column="9" lean-forward="true" selection-start-line="803" selection-start-column="9" selection-end-line="803" selection-end-column="9" />
+        <state relative-caret-position="355">
+          <caret line="754" column="28" lean-forward="true" selection-start-line="754" selection-start-column="28" selection-end-line="754" selection-end-column="28" />
           <folding>
             <element signature="e#268#305#0" />
             <element signature="e#359#405#0" />
@@ -570,17 +562,6 @@
             <element signature="e#17860#17884#0" />
             <element signature="e#17888#17950#0" />
             <element signature="e#17914#17946#0" />
-            <element signature="e#18744#18904#0" />
-            <element signature="e#18842#18902#0" />
-            <element signature="e#18947#19044#0" />
-            <element signature="e#18861#18877#0" />
-            <element signature="e#19087#19281#0" />
-            <element signature="e#19123#19201#0" />
-            <element signature="e#19205#19279#0" />
-            <element signature="e#19625#19719#0" />
-            <element signature="e#19775#19793#0" />
-            <element signature="e#19845#19909#0" />
-            <element signature="e#20457#20481#0" />
           </folding>
         </state>
       </provider>
