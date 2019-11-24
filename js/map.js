@@ -774,7 +774,7 @@ $( document ).ready(function() {
 
     var index = 0;
 
-    for (var n = 0, length = groupListArray.length; n<length; n++){
+    for (var n = 0, length = groupListArray.length; n<length-1; n++){
     	var id = "#g"+n;
         $(id).click(function(){  //"select all" change
             var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
