@@ -790,7 +790,7 @@ $( document ).ready(function() {
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
     }
-    for (var n = 0; n<layerDisplayArray.length-1; n++){
+    for (var n = 0; n<layerDisplayArray.length; n++){
         $('#toggleGroup-'+n).click(function () {
             toggleAllLayersGroup(n);
         });
