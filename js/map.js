@@ -776,7 +776,7 @@ $( document ).ready(function() {
     	var id = "#g"+n;
         $(id).click(function(){  //"select all" change
             if (isCheckedList[n] ===true){
-                var checkboxList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[n].find('input[type=checkbox]');
+                var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
                 for (var i = 0, leng = checkboxList.length; i < leng; i++) {
                     $(this).prop('checked', false);
                 }
