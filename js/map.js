@@ -741,13 +741,15 @@ var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
 function removeAllLayersGroup(index){
-    for (var j=0, length = layerGroupArray[j].length; j< length-1; j++) {
-        map.removeLayer(layerGroupArray[index][j]);
+    var j;
+    for (j=0; j< layerDisplayArray[index].length; j++) {
+        map.removeLayer(layerDisplayArray[index][j]);
     }
 }
 function addAllLayersGroup(index){
-    for (var j=0, length = layerGroupArray[j].length; j< length-1; j++){
-        layerGroupArray[index][j].addTo(map);
+    var j;
+    for (j=0; j< layerDisplayArray[index].length; j++) {
+        layerDisplayArray[index][j].addTo(map);
     }
 }
 function toggleAllLayersGroup(index){
@@ -782,9 +784,10 @@ $( document ).ready(function() {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
 
-
-    for (var i = 0, len = layerGroupArray.length; i<len; i++){
-        for (var j=0, length = layerGroupArray[i].length; j< length-1; j++){
+    var i;
+    for (i = 0; i<layerGroupArray.length; i++){
+        var j;
+        for (j=0; j< layerGroupArray[i].length; j++){
             layerGroupArray[i][j].addTo(map);
         }
         var idValue = "g"+i;
@@ -794,30 +797,15 @@ $( document ).ready(function() {
         $(titlespan).html(groupLabelArray[i]);
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
+
+        $(idValue).click(function () {
+            toggleAllLayersGroup(i);
+        });
+
     }
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
-    $('#g0').click(function () {
-        if (isGroupShow[0]===true){
-            var j;
-            for (j=0; j< layerDisplayArray[0].length-1; j++) {
-                map.removeLayer(layerDisplayArray[0][j]);
-            }
-            isGroupShow[0]=false;
-        }else{
-            for (j=0; j< layerDisplayArray[0].length-1; j++) {
-                layerDisplayArray[0][j].addTo(map);
-            }
-            isGroupShow[0]=true;
-        }
-    });
-    $('#g1').click(function () {
-        toggleAllLayersGroup(1);
-    });
-    $('#g2').click(function () {
-        toggleAllLayersGroup(2);
-    });
 });
 			
 		
