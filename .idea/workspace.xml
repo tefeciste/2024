@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="792" column="36" lean-forward="true" selection-start-line="792" selection-start-column="36" selection-end-line="792" selection-end-column="36" />
+            <state relative-caret-position="1201">
+              <caret line="790" column="43" lean-forward="true" selection-start-line="790" selection-start-column="43" selection-end-line="790" selection-end-column="43" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
@@ -69,7 +68,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
@@ -153,12 +152,12 @@
       <workItem from="1574545332569" duration="6684000" />
       <workItem from="1574594054459" duration="4158000" />
       <workItem from="1574600335795" duration="14149000" />
-      <workItem from="1574620404717" duration="629000" />
+      <workItem from="1574620404717" duration="2073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33377000" />
+    <option name="totallyTimeSpent" value="34821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -171,6 +170,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.20042644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -301,8 +301,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="792" column="36" lean-forward="true" selection-start-line="792" selection-start-column="36" selection-end-line="792" selection-end-column="36" />
+        <state relative-caret-position="1201">
+          <caret line="790" column="43" lean-forward="true" selection-start-line="790" selection-start-column="43" selection-end-line="790" selection-end-column="43" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />

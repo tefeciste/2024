@@ -743,6 +743,9 @@ var isGroupShow = [true, true, true];
 
 function removeAllLayersGroup(){
     nvLayerGroup.clearLayers();
+    for (var i=0; i<nvGroupArray.length; i++){
+        map.removeLayer(nvGroupArray[i]);
+    }
 }
 function addAllLayersGroup(){
     for (var i=0; i<nvGroupArray.length; i++){
@@ -783,7 +786,7 @@ $( document ).ready(function() {
 
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     var i;
-    for (i = 0; i<groups.length-1; i++){
+    for (i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
