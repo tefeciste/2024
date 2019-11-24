@@ -784,7 +784,7 @@ $( document ).ready(function() {
         }
     }
 
-    for (var i = 0, len = groupListArray.length; i<len-1; i++){
+    for (var i = 0, len = groupListArray.length; i<len; i++){
         for (var j=0, length = groupListArray[i].length; j< length-1; j++){
             groupListArray[i][j].addTo(map);
         }
