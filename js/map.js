@@ -762,14 +762,14 @@ $( document ).ready(function() {
     var groupListArray = [nvGroupList, raidGroupList, faitGroupList];
 
     for (var i = 0, len = groupLabelArray.length; i<len; i++){
-        var id = "#g"+i;
+        var idValue = "g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
         // modification du titre du groupe
         var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
         $(titlespan).html(groupLabelArray[i]);
         // ajout de la fonction select all
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
-        $(titleDiv).append('<span id='+id+' class="laySelect"><i class="far fa-check-square"></i></span>');
+        $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
     }
 
     for (var n = 0, length = groupListArray.length; n<length; n++){
