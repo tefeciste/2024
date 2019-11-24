@@ -794,7 +794,7 @@ $( document ).ready(function() {
     $('.selButton').click(function () {
         var id = this.id;
         if (id!==null && id.length>0){
-            var index = id.slice(-1);
+            var index = parseInt(id.slice(-1));
             console.log(id);
             console.log(index);
             toggleAllLayersGroup(index);
