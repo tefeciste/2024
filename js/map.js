@@ -789,8 +789,9 @@ $( document ).ready(function() {
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
-        $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
-        $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<input type="checkbox" id='+idValue+' class="selButton" checked>');
+        var title = $(groups[i]).find('.leaflet-panel-layers-title').first();
+        $(title).html(groupLabelArray[i]);
+        $(title).append('<input type="checkbox" id='+idValue+' class="selButton" checked>');
     }
 
     $('.selButton').click(function () {
