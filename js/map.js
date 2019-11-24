@@ -772,9 +772,10 @@ $( document ).ready(function() {
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
     }
 
+    var index = 0;
+
     for (var n = 0, length = groupListArray.length; n<length; n++){
     	var id = "#g"+n;
-    	var index = 0;
         $(id).click(function(){  //"select all" change
             var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
             if (isCheckedList[index] ===true){
