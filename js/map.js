@@ -742,7 +742,7 @@ var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
 function removeAllLayersGroup(){
-    nvLayerGroup.clearLayers();
+    //nvLayerGroup.clearLayers();
     for (var i=0; i<nvGroupArray.length; i++){
         map.removeLayer(nvGroupArray[i]);
     }
