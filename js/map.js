@@ -790,7 +790,7 @@ $( document ).ready(function() {
     for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         var title = $(groups[i]).find('.leaflet-panel-layers-title').first();
-        $(title).html('<input type="checkbox" id='+idValue+' class="selButton" checked> '+groupLabelArray[i] + ' ');
+        $(title).html('<input type="checkbox" id='+idValue+' class="selButton" checked><span class="titleText">'+groupLabelArray[i] + '</span>');
     }
 
     $('.selButton').click(function () {
