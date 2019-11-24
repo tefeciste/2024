@@ -725,28 +725,29 @@
 		}
 
 	}
-var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
-var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
-var raidGroupList = [mulhouse, nantHamb, capeNord];
+var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
+var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
+var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
-var faitLayerGroup = L.layerGroup(faitGroupList);
-var nvLayerGroup = L.layerGroup(nvGroupList);
-var raidLayerGroup = L.layerGroup(raidGroupList);
+var faitLayerGroup = L.layerGroup(faitGroupArray);
+var nvLayerGroup = L.layerGroup(nvGroupArray);
+var raidLayerGroup = L.layerGroup(raidGroupArray);
 
 
 var groupLabelArray = ["2020","Raids","Faits"];
-var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
+var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
+var layerGroupArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
 var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
 function removeAllLayersGroup(index){
-    for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
-        map.removeLayer(groupListArray[index][j]);
+    for (var j=0, length = layerGroupArray[j].length; j< length-1; j++) {
+        map.removeLayer(layerGroupArray[index][j]);
     }
 }
 function addAllLayersGroup(index){
-    for (var j=0, length = groupListArray[j].length; j< length-1; j++){
-        groupListArray[index][j].addTo(map);
+    for (var j=0, length = layerGroupArray[j].length; j< length-1; j++){
+        layerGroupArray[index][j].addTo(map);
     }
 }
 function toggleAllLayersGroup(index){
@@ -782,9 +783,9 @@ $( document ).ready(function() {
     });
 
 
-    for (var i = 0, len = groupListArray.length; i<len; i++){
-        for (var j=0, length = groupListArray[i].length; j< length-1; j++){
-            groupListArray[i][j].addTo(map);
+    for (var i = 0, len = layerGroupArray.length; i<len; i++){
+        for (var j=0, length = layerGroupArray[i].length; j< length-1; j++){
+            layerGroupArray[i][j].addTo(map);
         }
         var idValue = "g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
@@ -800,13 +801,13 @@ $( document ).ready(function() {
     $('#g0').click(function () {
         if (isGroupShow[0]===true){
             var j;
-            for (j=0; j< groupListArray[0].length-1; j++) {
-                map.removeLayer(groupListArray[0][j]);
+            for (j=0; j< layerDisplayArray[0].length-1; j++) {
+                map.removeLayer(layerDisplayArray[0][j]);
             }
             isGroupShow[0]=false;
         }else{
-            for (j=0; j< groupListArray[0].length-1; j++) {
-                groupListArray[0][j].addTo(map);
+            for (j=0; j< layerDisplayArray[0].length-1; j++) {
+                layerDisplayArray[0][j].addTo(map);
             }
             isGroupShow[0]=true;
         }
