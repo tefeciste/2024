@@ -800,12 +800,12 @@ $( document ).ready(function() {
     $('#g0').click(function () {
         if (isGroupShow[0]===true){
             for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
-                map.removeLayer(groupListArray[index][j]);
+                map.removeLayer(groupListArray[0][j]);
             }
             isGroupShow[0]=false;
         }else{
             for (var j=0, length = groupListArray[j].length; j< length-1; j++){
-                groupListArray[index][j].addTo(map);
+                groupListArray[0][j].addTo(map);
             }
             isGroupShow[0]=true;
         }
