@@ -809,6 +809,7 @@ $( document ).ready(function() {
         }
     });
     $('.selButton').last().addClass('base-cb');
+    $('.selButton').last().off();
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
