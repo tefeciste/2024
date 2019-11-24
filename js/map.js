@@ -804,9 +804,7 @@ $( document ).ready(function() {
         }
     }
 
-
-
-});b
+});
 			
 		
 		
