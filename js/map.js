@@ -741,17 +741,18 @@ var groupLabelArray = ["2020","Raids","Faits"];
 var isGroupShow = [true, true, true];
 
 function removeAllLayersGroup(index){
-    //nvLayerGroup.clearLayers();
         for (var i=0; i<layerDisplayArray[index].length; i++) {
             map.removeLayer(layerDisplayArray[index][i]);
         }
-    $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index].find('input[type=checkbox]').prop('checked', false);
+    var group = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index];
+    $(group).find('input[type=checkbox]').prop('checked', false);
 }
 function addAllLayersGroup(index){
     for (var i=0; i<layerDisplayArray[index].length; i++){
         layerDisplayArray[index][i].addTo(map);
     }
-    $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index].find('input[type=checkbox]').prop('checked', true);
+    var group = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index];
+    $(group).find('input[type=checkbox]').prop('checked', true);
 }
 function toggleAllLayersGroup(index){
     if (isGroupShow[index]===true){
