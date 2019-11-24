@@ -797,7 +797,6 @@ $( document ).ready(function() {
     for (var j = 0; j<baseGroups.length; j++){
         var title = $(baseGroups[j]).find('.leaflet-panel-layers-title').first();
         $(title).append('<input type="checkbox" class="base-cb leaflet-panel-layers-checkbox">');
-        $('.baseCb').style.visibility = "hidden";
     }
 
     $('.selButton').click(function () {
@@ -809,7 +808,7 @@ $( document ).ready(function() {
             toggleAllLayersGroup(index);
         }
     });
-    $('.selButton').last().hide();
+    $('.selButton').last().addClass('base-cb');
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
