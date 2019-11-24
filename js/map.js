@@ -796,9 +796,12 @@ $( document ).ready(function() {
         $(titlespan).html(groupLabelArray[i]);
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
-        document.getElementById(idValue).addEventListener("click", function () {
+/*        document.getElementById(idValue).addEventListener("click", function () {
             toggleAllLayersGroup(i);
-        });
+        });*/
+        $(idValue).click(function () {
+            toggleAllLayersGroup(i);
+        })
     }
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
