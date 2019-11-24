@@ -21,7 +21,9 @@
     background: none;
     box-shadow: none;
 }
-
+.base-cb{
+    visibility: hidden;
+}
 .flex-div{
     display: flex;
 }

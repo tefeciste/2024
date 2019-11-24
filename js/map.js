@@ -785,13 +785,19 @@ $( document ).ready(function() {
     map.on('click', function(e) {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
-
+    var baseGroups = $('.leaflet-panel-layers-base > .leaflet-panel-layers-group');
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         var title = $(groups[i]).find('.leaflet-panel-layers-title').first();
         title.addClass('flex-div');
-        $(title).html('<input type="checkbox" id='+idValue+' class="selButton" checked><span class="titleText">'+groupLabelArray[i] + '</span>');
+        $(title).html('<input type="checkbox" id='+idValue+' class="selButton leaflet-panel-layers-checkbox" checked><span class="titleText">'+groupLabelArray[i] + '</span>');
+    }
+
+    for (var j = 0; j<baseGroups.length; j++){
+        var title = $(baseGroups[j]).find('.leaflet-panel-layers-title').first();
+        $(title).append('<input type="checkbox" class="base-cb leaflet-panel-layers-checkbox">');
+        $('.baseCb').style.visibility = "hidden";
     }
 
     $('.selButton').click(function () {
