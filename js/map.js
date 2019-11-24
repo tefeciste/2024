@@ -790,9 +790,9 @@ $( document ).ready(function() {
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
     }
-    for (var i = 0; i<layerDisplayArray.length; i++){
-        $('#toggleGroup-'+i).click(function () {
-            toggleAllLayersGroup(i);
+    for (var n = 0; n<layerDisplayArray.length-1; n++){
+        $('#toggleGroup-'+n).click(function () {
+            toggleAllLayersGroup(n);
         });
     }
 
