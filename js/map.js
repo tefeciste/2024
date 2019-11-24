@@ -780,10 +780,10 @@ $( document ).ready(function() {
     });
 
     var i;
-    for (i = 0; i<layerGroupArray.length; i++){
+    for (i = 0; i<layerDisplayArray.length; i++){
         var j;
-        for (j=0; j< layerGroupArray[i].length; j++){
-            layerGroupArray[i][j].addTo(map);
+        for (j=0; j< layerDisplayArray[i].length; j++){
+            layerDisplayArray[i][j].addTo(map);
         }
         var idValue = "toggleGroup-"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
@@ -791,7 +791,7 @@ $( document ).ready(function() {
         var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
         $(titlespan).html(groupLabelArray[i]);
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
-        $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
+        $(titleDiv).append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
 
         $('#'+idValue).click(function () {
             toggleAllLayersGroup(i);
