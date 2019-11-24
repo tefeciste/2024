@@ -801,13 +801,6 @@ $( document ).ready(function() {
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
-    if (controlExpansedArray.length>0){
-        $(controlExpansedArray).find('.leaflet-panel-layers-icon').html(">");
-        if (groupExpansedArray.length>0){
-            $(groupExpansedArray).find('.leaflet-panel-layers-icon').first().html("V");
-        }
-    }
-
 });
 			
 		
