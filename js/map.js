@@ -803,13 +803,13 @@ $( document ).ready(function() {
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
-    $('g1').click(function () {
+    $('#g1').click(function () {
         toggleAllLayersGroup(0);
     });
-    $('g2').click(function () {
+    $('#g2').click(function () {
         toggleAllLayersGroup(1);
     });
-    $('g3').click(function () {
+    $('#g3').click(function () {
         toggleAllLayersGroup(2);
     });
 });
