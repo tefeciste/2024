@@ -737,13 +737,13 @@ var isGroupShow = [true, true, true];
 
 function removeAllLayersGroup(index){
     var j;
-    for (j=0; j< layerDisplayArray[index].length; j++) {
+    for (j=0; j< layerDisplayArray[index].length-1; j++) {
         map.removeLayer(layerDisplayArray[index][j]);
     }
 }
 function addAllLayersGroup(index){
     var j;
-    for (j=0; j< layerDisplayArray[index].length; j++) {
+    for (j=0; j< layerDisplayArray[index].length-1; j++) {
         layerDisplayArray[index][j].addTo(map);
     }
 }
