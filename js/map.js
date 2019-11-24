@@ -730,6 +730,7 @@ var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
 var faitLayerGroup = new L.layerGroup(faitGroupArray);
+    faitLayerGroup.addTo(map);
 var nvLayerGroup = new L.layerGroup(nvGroupArray);
 var raidLayerGroup = new L.layerGroup(raidGroupArray);
 
@@ -741,25 +742,19 @@ var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
-function removeAllLayersGroup(index){
-    var j;
-    for (j=0; j< layerDisplayArray[index].length-1; j++) {
-        map.removeLayer(layerDisplayArray[index][j]);
-    }
+function removeAllLayersGroup(){
+    nvLayerGroup.clearLayers();
 }
-function addAllLayersGroup(index){
-    var j;
-    for (j=0; j< layerDisplayArray[index].length-1; j++) {
-        layerDisplayArray[index][j].addTo(map);
-    }
+function addAllLayersGroup(){
+    nvLayerGroup.addTo(map);
 }
-function toggleAllLayersGroup(index){
-    if (isGroupShow[index]===true){
-        removeAllLayersGroup(index);
-        isGroupShow[index]=false;
+function toggleAllLayersGroup(){
+    if (isGroupShow[0]===true){
+        removeAllLayersGroup();
+        isGroupShow[0]=false;
     }else{
-        addAllLayersGroup(index);
-        isGroupShow[index]=true;
+        addAllLayersGroup();
+        isGroupShow[0]=true;
     }
 }
 
@@ -788,22 +783,13 @@ $( document ).ready(function() {
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     var i;
     for (i = 0; i<groups.length-1; i++){
-        var j;
-        for (j=0; j< leafletGroupArray[i].length-1; j++){
-            leafletGroupArray[i][j].addTo(map);
-        }
         var idValue = "toggleGroup-"+i;
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
     }
-    var k;
-    for (k = 0; k<layerDisplayArray.length-1; k++){
-        var idValue = "toggleGroup-"+k;
-        $('#'+idValue).click(function () {
-            toggleAllLayersGroup(k);
-        });
-    }
-
+    $('#toggleGroup-0').click(function () {
+        toggleAllLayersGroup();
+    });
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
