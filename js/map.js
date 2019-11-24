@@ -781,7 +781,7 @@ $( document ).ready(function() {
                 for (var i = 0, leng = checkboxList.length; i < leng; i++) {
                     $(checkboxList[i]).prop('checked', false);
                 }
-                for (var j = 0, siz = groupListArray[n].length; j < siz; j++) {
+                for (var j = 0, siz = groupListArray[index].length; j < siz; j++) {
                     map.removeLayer(groupListArray[index][j]);
                 }
                 isCheckedList[index]= false;
@@ -789,7 +789,7 @@ $( document ).ready(function() {
                 for (var k = 0, len = checkboxList.length; k < len; k++) {
                     $(checkboxList[k]).prop('checked', true);
                 }
-                for (var l = 0, size = groupListArray[l].length; l < size; l++) {
+                for (var l = 0, size = groupListArray[index].length; l < size; l++) {
                     groupListArray[index][l].addTo(map);
                 }
                 isCheckedList[index] = true;
