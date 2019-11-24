@@ -762,17 +762,19 @@ $( document ).ready(function() {
     var groupListArray = [nvGroupList, raidGroupList, faitGroupList];
 
     for (var i = 0, len = groupLabelArray.length; i<len; i++){
+        var id = "#g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
         // modification du titre du groupe
-        var titlespan = $('.leaflet-panel-layers-title').first();
+        var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
         $(titlespan).html(groupLabelArray[i]);
         // ajout de la fonction select all
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
-        $(titleDiv).append('<span id="g"'+i+' class="laySelect"><i class="fas fa-times"></i> / <i class="far fa-check-square"></i></i></span>');
+        $(titleDiv).append('<span id='+id+' class="laySelect"><i class="far fa-check-square"></i></span>');
     }
 
     for (var n = 0, length = groupListArray.length; n<length; n++){
-        $('#g'+n).click(function(){  //"select all" change
+    	var id = "#g"+n;
+        $(id).click(function(){  //"select all" change
             if (isCheckedList[n] ===true){
                 var checkboxList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[n].find('input[type=checkbox]');
                 for (var i = 0, leng = checkboxList.length; i < leng; i++) {
