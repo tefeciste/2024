@@ -768,7 +768,9 @@ $( document ).ready(function() {
         groupListArray[index].clearLayers();
     };
     function addAllLayersGroup(index){
-        groupListArray[index].addTo(map);
+        for (var j=0, length = groupListArray[i].length; j< length; j++){
+            groupListArray[index][j].addTo(map);
+        }
     };
     function toggleAllLayersGroup(index){
         if (isGroupShow){
@@ -781,7 +783,9 @@ $( document ).ready(function() {
     }
 
     for (var i = 0, len = groupListArray.length; i<len; i++){
-        groupListArray[i].addTo(map);
+        for (var j=0, length = groupListArray[i].length; j< length; j++){
+            groupListArray[i][j].addTo(map);
+        }
         isGroupShow = true;
         var idValue = "g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
