@@ -798,7 +798,17 @@ $( document ).ready(function() {
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
     $('#g0').click(function () {
-        toggleAllLayersGroup(0);
+        if (isGroupShow[index]===true){
+            for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
+                map.removeLayer(groupListArray[index][j]);
+            }
+            isGroupShow[index]=false;
+        }else{
+            for (var j=0, length = groupListArray[j].length; j< length-1; j++){
+                groupListArray[index][j].addTo(map);
+            }
+            isGroupShow[index]=true;
+        }
     });
     $('#g1').click(function () {
         toggleAllLayersGroup(1);
