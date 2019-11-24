@@ -775,7 +775,7 @@ $( document ).ready(function() {
         }
     };
     function toggleAllLayersGroup(index){
-        if (isGroupShow){
+        if (isGroupShow===true){
             removeAllLayersGroup(index);
             isGroupShow=false;
         }else{

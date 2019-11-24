@@ -290,14 +290,14 @@ L.Control.PanelLayers = L.Control.Layers.extend({
 
 			groupexp = L.DomUtil.create('i', this.className + '-icon', groupdiv);
 			if (isCollapsed === true)
-				groupexp.innerHTML = ' + ';
+				groupexp.innerHTML = ' > ';
 			else
-				groupexp.innerHTML = ' V ';
+				groupexp.innerHTML = ' + ';
 
 			L.DomEvent.on(groupexp, 'click', function () {
 				if (L.DomUtil.hasClass(groupdiv, 'expanded')) {
 					L.DomUtil.removeClass(groupdiv, 'expanded');
-					groupexp.innerHTML = ' > ';
+					groupexp.innerHTML = ' + ';
 				} else {
 					L.DomUtil.addClass(groupdiv, 'expanded');
 					groupexp.innerHTML = ' V ';
