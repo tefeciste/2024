@@ -741,24 +741,24 @@ var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
-function removeAllLayersGroup(){
+function removeAllLayersGroup(index){
     //nvLayerGroup.clearLayers();
-    for (var i=0; i<nvGroupArray.length; i++){
-        map.removeLayer(nvGroupArray[i]);
+        for (var i=0; i<layerDisplayArray[index].length; i++) {
+            map.removeLayer(layerDisplayArray[index][i]);
+        }
+}
+function addAllLayersGroup(index){
+    for (var i=0; i<layerDisplayArray[index].length; i++){
+        layerDisplayArray[index][i].addTo(map);
     }
 }
-function addAllLayersGroup(){
-    for (var i=0; i<nvGroupArray.length; i++){
-       nvGroupArray[i].addTo(map);
-    }
-}
-function toggleAllLayersGroup(){
-    if (isGroupShow[0]===true){
-        removeAllLayersGroup();
-        isGroupShow[0]=false;
+function toggleAllLayersGroup(index){
+    if (isGroupShow[index]===true){
+        removeAllLayersGroup(index);
+        isGroupShow[index]=false;
     }else{
-        addAllLayersGroup();
-        isGroupShow[0]=true;
+        addAllLayersGroup(index);
+        isGroupShow[index]=true;
     }
 }
 
@@ -785,15 +785,15 @@ $( document ).ready(function() {
     });
 
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
-    var i;
-    for (i = 0; i<groups.length; i++){
+    for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
+        $('#'+idValue).click(function () {
+            toggleAllLayersGroup();
+        });
     }
-    $('#toggleGroup-0').click(function () {
-        toggleAllLayersGroup();
-    });
+
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
