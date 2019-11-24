@@ -799,13 +799,19 @@ $( document ).ready(function() {
 /*        document.getElementById(idValue).addEventListener("click", function () {
             toggleAllLayersGroup(i);
         });*/
-        $(idValue).click(function () {
-            toggleAllLayersGroup(i);
-        })
     }
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
+    $('g1').click(function () {
+        toggleAllLayersGroup(0);
+    });
+    $('g2').click(function () {
+        toggleAllLayersGroup(1);
+    });
+    $('g3').click(function () {
+        toggleAllLayersGroup(2);
+    });
 });
 			
 		
