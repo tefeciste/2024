@@ -703,7 +703,7 @@
 	setBounds();
 
 
-//		Adjust map to fit layer clicked		
+    //	Adjust map to fit layer clicked
 	function onselect(feature, layer){
 		layer.on('overlayadd', onOverlayAdd);
 
@@ -790,7 +790,7 @@ $( document ).ready(function() {
         for (j=0; j< layerGroupArray[i].length; j++){
             layerGroupArray[i][j].addTo(map);
         }
-        var idValue = "g"+i;
+        var idValue = "toggleGroup-"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
         // modification du titre du groupe
         var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
@@ -798,11 +798,12 @@ $( document ).ready(function() {
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
 
-        $(idValue).click(function () {
+        $('#'+idValue).click(function () {
             toggleAllLayersGroup(i);
         });
 
     }
+
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
