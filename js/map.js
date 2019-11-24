@@ -778,18 +778,18 @@ $( document ).ready(function() {
         $(id).click(function(){  //"select all" change
             var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
             if (isCheckedList[index] ===true){
-                for (var i = 0, leng = checkboxList.length; i < leng-1; i++) {
+                for (var i = 0, leng = checkboxList.length; i < leng; i++) {
                     $(checkboxList[i]).prop('checked', false);
                 }
-                for (var j = 0, siz = groupListArray[index].length; j < siz-1; j++) {
+                for (var j = 0, siz = groupListArray[index].length; j < siz; j++) {
                     map.removeLayer(groupListArray[index][j]);
                 }
                 isCheckedList[index]= false;
             }else{
-                for (var k = 0, len = checkboxList.length; k < len-1; k++) {
+                for (var k = 0, len = checkboxList.length; k < len; k++) {
                     $(checkboxList[k]).prop('checked', true);
                 }
-                for (var l = 0, size = groupListArray[index].length; l < size-1; l++) {
+                for (var l = 0, size = groupListArray[index].length; l < size; l++) {
                     groupListArray[index][l].addTo(map);
                 }
                 isCheckedList[index] = true;
