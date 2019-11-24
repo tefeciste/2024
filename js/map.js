@@ -791,7 +791,7 @@ $( document ).ready(function() {
         $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+' class="selButton"><i class="far fa-check-square"></i></span>');
     }
 
-    $('.selbutton').click(function () {
+    $('.selButton').click(function () {
         var id = this.id;
         var index = id.slice(-1);
         console.log(id);
