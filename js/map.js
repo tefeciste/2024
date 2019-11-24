@@ -775,10 +775,10 @@ $( document ).ready(function() {
     for (var n = 0, length = groupListArray.length; n<length; n++){
     	var id = "#g"+n;
         $(id).click(function(){  //"select all" change
+            var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
             if (isCheckedList[n] ===true){
-                var checkboxList = $(this).closest('.leaflet-panel-layers-group').find('input[type=checkbox]');
                 for (var i = 0, leng = checkboxList.length; i < leng; i++) {
-                    $(this).prop('checked', false);
+                    $(checkboxList[i]).prop('checked', false);
                 }
                 for (var j = 0, siz = groupListArray[n].length; j < siz; j++) {
                     map.removeLayer(groupListArray[n][j]);
@@ -786,7 +786,7 @@ $( document ).ready(function() {
                 isCheckedList[n]= false;
             }else{
                 for (var k = 0, len = checkboxList.length; k < len; k++) {
-                    $(this).prop('checked', true);
+                    $(checkboxList[k]).prop('checked', true);
                 }
                 for (var l = 0, size = groupListArray[l].length; l < size; l++) {
                     groupListArray[n][l].addTo(map);
