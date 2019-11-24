@@ -781,23 +781,21 @@ $( document ).ready(function() {
 
     var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     var i;
-    for (i = 0; i<groups.length-1; i++){
+    for (i = 0; i<groups.length; i++){
         var j;
         for (j=0; j< layerDisplayArray[i].length-1; j++){
             layerDisplayArray[i][j].addTo(map);
         }
         var idValue = "toggleGroup-"+i;
-        var layerList = groups[i];
-        // modification du titre du groupe
-        var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
-        $(titlespan).html(groupLabelArray[i]);
-        var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
-        $(titleDiv).append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
-
+        $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
+        $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
+    }
+    var k;
+    for (k = 0; k<layerDisplayArray.length-1; k++){
+        var idValue = "toggleGroup-"+k;
         $('#'+idValue).click(function () {
-            toggleAllLayersGroup(i);
+            toggleAllLayersGroup(k);
         });
-
     }
 
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
