@@ -729,7 +729,7 @@ var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtM
 var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
-var faitLayerGroup = L.layerGroup(faitGroupArray).addTo(map);
+var faitLayerGroup = L.layerGroup(faitGroupArray);
 var nvLayerGroup = L.layerGroup(nvGroupArray);
 var raidLayerGroup = L.layerGroup(raidGroupArray);
 
@@ -745,7 +745,9 @@ function removeAllLayersGroup(){
     nvLayerGroup.clearLayers();
 }
 function addAllLayersGroup(){
-    nvLayerGroup.addTo(map);
+    for (var i=0; i<nvGroupArray.length; i++){
+       nvGroupArray[i].addTo(map);
+    }
 }
 function toggleAllLayersGroup(){
     if (isGroupShow[0]===true){
