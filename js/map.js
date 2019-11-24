@@ -798,16 +798,16 @@ $( document ).ready(function() {
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
     $('#g0').click(function () {
-        if (isGroupShow[index]===true){
+        if (isGroupShow[0]===true){
             for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
                 map.removeLayer(groupListArray[index][j]);
             }
-            isGroupShow[index]=false;
+            isGroupShow[0]=false;
         }else{
             for (var j=0, length = groupListArray[j].length; j< length-1; j++){
                 groupListArray[index][j].addTo(map);
             }
-            isGroupShow[index]=true;
+            isGroupShow[0]=true;
         }
     });
     $('#g1').click(function () {
