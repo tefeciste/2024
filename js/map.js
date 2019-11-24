@@ -6,9 +6,6 @@
 	var dmoins;
 
 	var isDisplayed = true;
-	var isFinished = true;
-	var isProgram = true;
-	var isRaid = true;
 
 
 	//	LatLng to center the map
@@ -739,6 +736,7 @@ var raidLayerGroup = L.layerGroup(raidGroupList);
 
 var groupLabelArray = ["2020","Raids","Faits"];
 var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
+var isGroupShow = [true, true, true];
 //$(checkboxList[i]).prop('checked', false);
 
 function removeAllLayersGroup(index){
@@ -752,18 +750,17 @@ function addAllLayersGroup(index){
     }
 }
 function toggleAllLayersGroup(index){
-    if (isGroupShow===true){
+    if (isGroupShow[index]===true){
         removeAllLayersGroup(index);
-        isGroupShow=false;
+        isGroupShow[index]=false;
     }else{
         addAllLayersGroup(index);
-        isGroupShow=true;
+        isGroupShow[index]=true;
     }
 }
 
 $( document ).ready(function() {
-    var isGroupShow;
-    isGroupShow = false;
+
     $('.leaflet-control.elevation').hide();
 
     //	Load Close Button Elevation Profile
@@ -785,12 +782,10 @@ $( document ).ready(function() {
     });
 
 
-
     for (var i = 0, len = groupListArray.length; i<len; i++){
         for (var j=0, length = groupListArray[i].length; j< length-1; j++){
             groupListArray[i][j].addTo(map);
         }
-        isGroupShow = true;
         var idValue = "g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
         // modification du titre du groupe
@@ -798,7 +793,6 @@ $( document ).ready(function() {
         $(titlespan).html(groupLabelArray[i]);
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
-
     }
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
