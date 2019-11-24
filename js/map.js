@@ -755,11 +755,11 @@ $( document ).ready(function() {
     var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
     var raidGroupList = [mulhouse, nantHamb, capeNord];
 
-    var faitLayerGroup = L.layerGroup(faitGroupList).addTo(map);
-    var nvLayerGroup = L.layerGroup(nvGroupList).addTo(map);
-    var raidLayerGroup = L.layerGroup(raidGroupList).addTo(map);
+    var faitLayerGroup = L.layerGroup(faitGroupList);
+    var nvLayerGroup = L.layerGroup(nvGroupList);
+    var raidLayerGroup = L.layerGroup(raidGroupList);
 
-    var isGroupShow = true;
+    var isGroupShow = false;
     var groupLabelArray = ["2020","Raids","Faits"];
     var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
     //$(checkboxList[i]).prop('checked', false);
@@ -781,15 +781,15 @@ $( document ).ready(function() {
     }
 
     for (var i = 0, len = groupListArray.length; i<len; i++){
+        groupListArray[i].addTo(map);
+        isGroupShow = true;
         var idValue = "g"+i;
         var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
         // modification du titre du groupe
         var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
         $(titlespan).html(groupLabelArray[i]);
-        // ajout de la fonction select all
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
-
         document.getElementById(idValue).addEventListener("click", function () {
             toggleAllLayersGroup(i);
         });
@@ -806,7 +806,7 @@ $( document ).ready(function() {
 
 
 
-});
+});b
 			
 		
 		
