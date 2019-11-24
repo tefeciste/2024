@@ -765,10 +765,12 @@ $( document ).ready(function() {
     //$(checkboxList[i]).prop('checked', false);
 
     function removeAllLayersGroup(index){
-        groupListArray[index].clearLayers();
+        for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
+            map.removeLayer(groupListArray[index][j]);
+        }
     };
     function addAllLayersGroup(index){
-        for (var j=0, length = groupListArray[i].length; j< length; j++){
+        for (var j=0, length = groupListArray[j].length; j< length-1; j++){
             groupListArray[index][j].addTo(map);
         }
     };
@@ -782,8 +784,8 @@ $( document ).ready(function() {
         }
     }
 
-    for (var i = 0, len = groupListArray.length; i<len; i++){
-        for (var j=0, length = groupListArray[i].length; j< length; j++){
+    for (var i = 0, len = groupListArray.length; i<len-1; i++){
+        for (var j=0, length = groupListArray[i].length; j< length-1; j++){
             groupListArray[i][j].addTo(map);
         }
         isGroupShow = true;
