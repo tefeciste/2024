@@ -729,10 +729,9 @@ var faitGroupArray = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtM
 var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 
-var faitLayerGroup = new L.layerGroup(faitGroupArray);
-    faitLayerGroup.addTo(map);
-var nvLayerGroup = new L.layerGroup(nvGroupArray);
-var raidLayerGroup = new L.layerGroup(raidGroupArray);
+var faitLayerGroup = L.layerGroup(faitGroupArray).addTo(map);
+var nvLayerGroup = L.layerGroup(nvGroupArray);
+var raidLayerGroup = L.layerGroup(raidGroupArray);
 
 var leafletGroupArray = [nvLayerGroup,raidLayerGroup,faitLayerGroup];
 

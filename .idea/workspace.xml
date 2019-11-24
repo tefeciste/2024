@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="" />
+    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
+            <state relative-caret-position="400">
               <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
             </state>
           </provider>
@@ -27,42 +30,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="788" column="10" lean-forward="true" selection-start-line="788" selection-start-column="10" selection-end-line="788" selection-end-column="10" />
+            <state relative-caret-position="546">
+              <caret line="792" column="36" lean-forward="true" selection-start-line="792" selection-start-column="36" selection-end-line="792" selection-end-column="36" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
-                <element signature="e#8222#8276#0" />
-                <element signature="e#8377#8431#0" />
-                <element signature="e#8530#8584#0" />
-                <element signature="e#8683#8737#0" />
-                <element signature="e#8835#8889#0" />
-                <element signature="e#8978#9032#0" />
-                <element signature="e#9112#9166#0" />
-                <element signature="e#9249#9303#0" />
-                <element signature="e#9410#9470#0" />
-                <element signature="e#9564#9618#0" />
-                <element signature="e#9717#9771#0" />
-                <element signature="e#9874#9928#0" />
-                <element signature="e#10018#10072#0" />
-                <element signature="e#10183#10237#0" />
-                <element signature="e#10351#10405#0" />
-                <element signature="e#10517#10571#0" />
-                <element signature="e#10682#10760#0" />
-                <element signature="e#10911#10965#0" />
-                <element signature="e#11061#11115#0" />
-                <element signature="e#11215#11269#0" />
-                <element signature="e#11368#11422#0" />
-                <element signature="e#11523#11577#0" />
-                <element signature="e#11676#11730#0" />
-                <element signature="e#11863#11917#0" />
-                <element signature="e#12023#12077#0" />
-                <element signature="e#12164#12218#0" />
-                <element signature="e#12340#12933#0" />
-                <element signature="e#13014#13476#0" />
-                <element signature="e#13572#16180#0" />
-                <element signature="e#16295#16722#0" />
-                <element signature="e#16781#17272#0" />
               </folding>
             </state>
           </provider>
@@ -181,11 +153,12 @@
       <workItem from="1574545332569" duration="6684000" />
       <workItem from="1574594054459" duration="4158000" />
       <workItem from="1574600335795" duration="14149000" />
+      <workItem from="1574620404717" duration="629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32748000" />
+    <option name="totallyTimeSpent" value="33377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,7 +171,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.20042644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -317,54 +289,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/leaflet-src.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
+        <state relative-caret-position="400">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/leaflet-src.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="788" column="10" lean-forward="true" selection-start-line="788" selection-start-column="10" selection-end-line="788" selection-end-column="10" />
+        <state relative-caret-position="546">
+          <caret line="792" column="36" lean-forward="true" selection-start-line="792" selection-start-column="36" selection-end-line="792" selection-end-column="36" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#8222#8276#0" />
-            <element signature="e#8377#8431#0" />
-            <element signature="e#8530#8584#0" />
-            <element signature="e#8683#8737#0" />
-            <element signature="e#8835#8889#0" />
-            <element signature="e#8978#9032#0" />
-            <element signature="e#9112#9166#0" />
-            <element signature="e#9249#9303#0" />
-            <element signature="e#9410#9470#0" />
-            <element signature="e#9564#9618#0" />
-            <element signature="e#9717#9771#0" />
-            <element signature="e#9874#9928#0" />
-            <element signature="e#10018#10072#0" />
-            <element signature="e#10183#10237#0" />
-            <element signature="e#10351#10405#0" />
-            <element signature="e#10517#10571#0" />
-            <element signature="e#10682#10760#0" />
-            <element signature="e#10911#10965#0" />
-            <element signature="e#11061#11115#0" />
-            <element signature="e#11215#11269#0" />
-            <element signature="e#11368#11422#0" />
-            <element signature="e#11523#11577#0" />
-            <element signature="e#11676#11730#0" />
-            <element signature="e#11863#11917#0" />
-            <element signature="e#12023#12077#0" />
-            <element signature="e#12164#12218#0" />
-            <element signature="e#12340#12933#0" />
-            <element signature="e#13014#13476#0" />
-            <element signature="e#13572#16180#0" />
-            <element signature="e#16295#16722#0" />
-            <element signature="e#16781#17272#0" />
           </folding>
         </state>
       </provider>
