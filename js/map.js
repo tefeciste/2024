@@ -788,13 +788,16 @@ $( document ).ready(function() {
     for (var i = 0; i<groups.length; i++){
         var idValue = "toggleGroup-"+i;
         $(groups[i]).find('.leaflet-panel-layers-title').first().html(groupLabelArray[i]);
-        $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+'><i class="far fa-check-square"></i></span>');
+        $(groups[i]).find('.leaflet-panel-layers-grouplabel').first().append('<span id='+idValue+' class="selButton"><i class="far fa-check-square"></i></span>');
     }
-    for (var n = 0; n<layerDisplayArray.length; n++){
-        $('#toggleGroup-'+n).click(function () {
-            toggleAllLayersGroup(n);
-        });
-    }
+
+    $('.selbutton').click(function () {
+        var id = this.id;
+        var index = id.slice(-1);
+        console.log(id);
+        console.log(index);
+        toggleAllLayersGroup(index);
+    })
 
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
