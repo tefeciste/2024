@@ -779,14 +779,15 @@ $( document ).ready(function() {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
 
+    var groups = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group');
     var i;
-    for (i = 0; i<layerDisplayArray.length-1; i++){
+    for (i = 0; i<groups.length-1; i++){
         var j;
         for (j=0; j< layerDisplayArray[i].length-1; j++){
             layerDisplayArray[i][j].addTo(map);
         }
         var idValue = "toggleGroup-"+i;
-        var layerList = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[i];
+        var layerList = groups[i];
         // modification du titre du groupe
         var titlespan = $(layerList).find('.leaflet-panel-layers-title').first();
         $(titlespan).html(groupLabelArray[i]);
