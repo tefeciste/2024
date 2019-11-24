@@ -728,6 +728,38 @@
 		}
 
 	}
+var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
+var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
+var raidGroupList = [mulhouse, nantHamb, capeNord];
+
+var faitLayerGroup = L.layerGroup(faitGroupList);
+var nvLayerGroup = L.layerGroup(nvGroupList);
+var raidLayerGroup = L.layerGroup(raidGroupList);
+
+var isGroupShow = false;
+var groupLabelArray = ["2020","Raids","Faits"];
+var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
+//$(checkboxList[i]).prop('checked', false);
+
+function removeAllLayersGroup(index){
+    for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
+        map.removeLayer(groupListArray[index][j]);
+    }
+}
+function addAllLayersGroup(index){
+    for (var j=0, length = groupListArray[j].length; j< length-1; j++){
+        groupListArray[index][j].addTo(map);
+    }
+}
+function toggleAllLayersGroup(index){
+    if (isGroupShow===true){
+        removeAllLayersGroup(index);
+        isGroupShow=false;
+    }else{
+        addAllLayersGroup(index);
+        isGroupShow=true;
+    }
+}
 
 $( document ).ready(function() {
 
@@ -751,38 +783,7 @@ $( document ).ready(function() {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
 
-    var faitGroupList = [aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendSanSeb,lyonAixPce,lyonBordeaux,nantesHend,revAix,sousPiePor,tlseMirEbro,strasbSankt,dkRoller];
-    var nvGroupList = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
-    var raidGroupList = [mulhouse, nantHamb, capeNord];
 
-    var faitLayerGroup = L.layerGroup(faitGroupList);
-    var nvLayerGroup = L.layerGroup(nvGroupList);
-    var raidLayerGroup = L.layerGroup(raidGroupList);
-
-    var isGroupShow = false;
-    var groupLabelArray = ["2020","Raids","Faits"];
-    var groupListArray = [nvLayerGroup, raidLayerGroup, faitLayerGroup];
-    //$(checkboxList[i]).prop('checked', false);
-
-    function removeAllLayersGroup(index){
-        for (var j=0, length = groupListArray[j].length; j< length-1; j++) {
-            map.removeLayer(groupListArray[index][j]);
-        }
-    };
-    function addAllLayersGroup(index){
-        for (var j=0, length = groupListArray[j].length; j< length-1; j++){
-            groupListArray[index][j].addTo(map);
-        }
-    };
-    function toggleAllLayersGroup(index){
-        if (isGroupShow===true){
-            removeAllLayersGroup(index);
-            isGroupShow=false;
-        }else{
-            addAllLayersGroup(index);
-            isGroupShow=true;
-        }
-    }
 
     for (var i = 0, len = groupListArray.length; i<len; i++){
         for (var j=0, length = groupListArray[i].length; j< length-1; j++){
@@ -796,20 +797,18 @@ $( document ).ready(function() {
         $(titlespan).html(groupLabelArray[i]);
         var titleDiv = $(layerList).find('.leaflet-panel-layers-grouplabel').first();
         $(titleDiv).append('<span id='+idValue+' class="laySelect"><i class="far fa-check-square"></i></span>');
-/*        document.getElementById(idValue).addEventListener("click", function () {
-            toggleAllLayersGroup(i);
-        });*/
+
     }
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
-    $('#g1').click(function () {
+    $('#g0').click(function () {
         toggleAllLayersGroup(0);
     });
-    $('#g2').click(function () {
+    $('#g1').click(function () {
         toggleAllLayersGroup(1);
     });
-    $('#g3').click(function () {
+    $('#g2').click(function () {
         toggleAllLayersGroup(2);
     });
 });
