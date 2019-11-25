@@ -817,7 +817,7 @@ $( document ).ready(function() {
     $('.selButton').last().attr('id','last-group');
     $('#last-group').click(function () {
         if (isGroupShow[2]===true){
-            removeAllLayersGroup(2);
+            nvLayerGroup.clearLayers(2);
             isGroupShow[2]=false;
         }else{
             addAllLayersGroup(2);
