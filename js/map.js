@@ -746,6 +746,7 @@ function removeAllLayersGroup(index){
         }
     var group = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index];
     $(group).find('input[type=checkbox]').prop('checked', false);
+    isGroupShow[index]=false;
 }
 function addAllLayersGroup(index){
     for (var i=0; i<layerDisplayArray[index].length; i++){
@@ -753,14 +754,14 @@ function addAllLayersGroup(index){
     }
     var group = $('.leaflet-panel-layers-overlays > .leaflet-panel-layers-group')[index];
     $(group).find('input[type=checkbox]').prop('checked', true);
+    isGroupShow[index]=true;
 }
 function toggleAllLayersGroup(index){
     if (isGroupShow[index]===true){
         removeAllLayersGroup(index);
-        isGroupShow[index]=false;
+
     }else{
         addAllLayersGroup(index);
-        isGroupShow[index]=true;
     }
 }
 
@@ -808,8 +809,18 @@ $( document ).ready(function() {
             toggleAllLayersGroup(index);
         }
     });
-    $('.selButton').last().addClass('base-cb');
-    $('.selButton').last().off();
+    //$('.selButton').last().addClass('base-cb');
+    var dernier = $('.selButton').last();
+    $(dernier).off();
+    $(dernier).click(function () {
+        if (isGroupShow[2]===true){
+            faitLayerGroup.clearLayers();
+            isGroupShow[2]=false;
+        }else{
+            addAllLayersGroup(2);
+            isGroupShow[2]=true;
+        }
+    })
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
