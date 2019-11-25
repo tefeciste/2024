@@ -730,7 +730,7 @@ var nvGroupArray = [geroAya,luxembourg,madLis,nantesStras,parisRev,tlseBez];
 var raidGroupArray = [mulhouse, nantHamb, capeNord];
 var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 
-var faitLayerGroup = L.layerGroup(faitGroupArray);
+var faitLayerGroup = L.layerGroup([aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,toulMir,strasbSankt,dkRoller,lisSantiago]);
 var nvLayerGroup = L.layerGroup(nvGroupArray);
 var raidLayerGroup = L.layerGroup(raidGroupArray);
 var leafletGroupArray = [nvLayerGroup,raidLayerGroup,faitLayerGroup];
@@ -817,15 +817,13 @@ $( document ).ready(function() {
     $('.selButton').last().attr('id','last-group');
     $('#last-group').click(function () {
         if (isGroupShow[2]===true){
-            nvLayerGroup.clearLayers();
+            faitLayerGroup.clearLayers();
             isGroupShow[2]=false;
         }else{
             addAllLayersGroup(2);
             isGroupShow[2]=true;
         }
     });
-    var controlExpansedArray = $('.leaflet-panel-layers .expanded');
-    var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
 });
 			
