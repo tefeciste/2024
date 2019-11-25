@@ -811,7 +811,7 @@ $( document ).ready(function() {
     });
     //$('.selButton').last().addClass('base-cb');
     $('.selButton').last().off();
-    $('.selButton').last().attr('id','last-group'),
+    $('.selButton').last().attr('id','last-group');
     $('#last-group').click(function () {
         if (isGroupShow[2]===true){
             faitLayerGroup.clearLayers();
