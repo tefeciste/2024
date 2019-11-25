@@ -731,6 +731,7 @@ var raidGroupArray = [mulhouse, nantHamb, capeNord];
 var layerDisplayArray = [nvGroupArray, raidGroupArray, faitGroupArray];
 
 var faitLayerGroup = L.layerGroup([aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,toulMir,strasbSankt,dkRoller,lisSantiago]);
+    faitLayerGroup.addTo(map);
 var nvLayerGroup = L.layerGroup(nvGroupArray);
 var raidLayerGroup = L.layerGroup(raidGroupArray);
 var leafletGroupArray = [nvLayerGroup,raidLayerGroup,faitLayerGroup];
@@ -820,7 +821,8 @@ $( document ).ready(function() {
             faitLayerGroup.clearLayers();
             isGroupShow[2]=false;
         }else{
-            addAllLayersGroup(2);
+            faitLayerGroup.addTo(map);
+            //addAllLayersGroup(2);
             isGroupShow[2]=true;
         }
     });
