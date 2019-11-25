@@ -810,9 +810,9 @@ $( document ).ready(function() {
         }
     });
     //$('.selButton').last().addClass('base-cb');
-    var dernier = $('.selButton').last();
-    $(dernier).off();
-    $(dernier).click(function () {
+    $('.selButton').last().off();
+    $('.selButton').last().attr('id','last-group'),
+    $('#last-group').click(function () {
         if (isGroupShow[2]===true){
             faitLayerGroup.clearLayers();
             isGroupShow[2]=false;
@@ -820,7 +820,7 @@ $( document ).ready(function() {
             addAllLayersGroup(2);
             isGroupShow[2]=true;
         }
-    })
+    });
     var controlExpansedArray = $('.leaflet-panel-layers .expanded');
     var  groupExpansedArray = $('.leaflet-panel-layers-group .expansed');
 
