@@ -459,7 +459,7 @@ var overLayers = {
     children: [
         {
             label: '< 2020',
-            selectAllCheckbox: true,
+            selectAllCheckbox: 'tous',
             children: [
                 {
                     label: 'Paris - revel',
@@ -489,7 +489,7 @@ var overLayers = {
         },
         {
             label: '> 2020',
-            selectAllCheckbox: true,
+            selectAllCheckbox: 'tous',
             children: [
                 {
                     label: 'Nantes - Hambourg',
@@ -666,7 +666,7 @@ var baseLayers = {
 //		Panel Layers
 var lay = L.control.layers.tree(baseLayers, overLayers,
     {
-        namedToggle: true,
+        namedToggle: false,
         selectorBack: false,
         closedSymbol: '&#8862; &#x1f5c0;',
         openedSymbol: '&#8863; &#x1f5c1;',
