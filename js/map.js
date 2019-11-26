@@ -670,8 +670,6 @@ var lay = L.control.layers.tree(baseLayers, overLayers,
         selectorBack: false,
         closedSymbol: '&#8862; &#x1f5c0;',
         openedSymbol: '&#8863; &#x1f5c1;',
-        collapseAll: 'Collapse all',
-        expandAll: 'Expand all',
         collapsed: false,
     });
 
