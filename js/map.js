@@ -455,11 +455,11 @@ var capeNord = L.geoJson(capNord, {
 
 var overLayers = {
     label: 'overlays',
-    noshow: true,
     children: [
         {
-            label: '< 2020',
-            selectAllCheckbox: 'tous',
+            label: '2020',
+            noshow: false,
+            selectAllCheckbox: true,
             children: [
                 {
                     label: 'Paris - revel',
@@ -489,7 +489,8 @@ var overLayers = {
         },
         {
             label: '> 2020',
-            selectAllCheckbox: 'tous',
+            noshow: false,
+            selectAllCheckbox: true,
             children: [
                 {
                     label: 'Nantes - Hambourg',
