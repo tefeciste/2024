@@ -665,7 +665,8 @@ var baseLayers = {
                 }
             ]
         }
-    ]};
+    ]
+};
 //};
 
 //		Panel Layers
@@ -701,17 +702,12 @@ setBounds();
 }*/
 
 
-function toggleBm() {
-    if (map.hasLayer(wayCyc)) {
+function toggleMapboxLayer() {
+    if ((map.hasLayer(wayCyc) || map.hasLayer(wayMtb)) && !map.hasLayer(mpO)) {
         mpO.addTo(map);
-    } else if (map.hasLayer(wayMtb)) {
-        mpO.addTo(map);
-    } else {
-        if (map.hasLayer(mpO)) {
-            map.removeLayer(mpO);
-        }
+    } else if (map.hasLayer(mpO)) {
+        map.removeLayer(mpO);
     }
-
 }
 
 $(document).ready(function () {
@@ -727,13 +723,18 @@ $(document).ready(function () {
         $("#elClose").blur();
     });
 
-/*
-    $('.leaflet-panel-layers-base').click(function () {
-        toggleBm();
+    /*
+        $('.leaflet-panel-layers-base').click(function () {
+            toggleMapboxLayer();
+        });
+    */
+    var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
+    var carteDiv = titleDivs[0];
+    var y = document.getElementsByName('')
+    $(titleDivs).css("font-weight", "Bold");
+    $(carteDiv).click(function () {
+        toggleMapboxLayer();
     });
-*/
-    $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight","Bold");
-
     //	On click
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
