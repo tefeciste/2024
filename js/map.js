@@ -729,8 +729,7 @@ $(document).ready(function () {
         });
     */
     var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
-    var carteDiv = $(titleDivs).first();
-    var y = document.getElementsByName('')
+    var carteDiv = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').first();
     $(titleDivs).css("font-weight", "Bold");
     $(carteDiv).click(function () {
         toggleMapboxLayer();
