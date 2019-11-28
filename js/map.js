@@ -666,7 +666,7 @@ var baseLayers = {
 //		Panel Layers
 var lay = L.control.layers.tree(baseLayers, overLayers,
     {
-        namedToggle: true,
+        namedToggle: false,
         collapseAll: 'Collapse all',
         expandAll: 'Expand all',
         collapsed: true,
