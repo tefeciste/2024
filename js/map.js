@@ -458,7 +458,7 @@ var overLayers = {
     noShow: true,
     children: [
         {
-            label: '2020',
+            label: '  2020',
             collapsed: false,
             selectAllCheckbox: true,
             children: [
@@ -732,6 +732,7 @@ $(document).ready(function () {
         toggleBm();
     });
 */
+    $('.leaflet-layerstree-header-name').css("font-weight","Bold");
 
     //	On click
     map.on('click', function (e) {
