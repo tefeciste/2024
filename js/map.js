@@ -669,7 +669,7 @@ var lay = L.control.layers.tree(baseLayers, overLayers,
         namedToggle: true,
         collapseAll: 'Collapse all',
         expandAll: 'Expand all',
-        collapsed: false,
+        collapsed: true,
     });
 
 lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
