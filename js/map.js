@@ -455,6 +455,7 @@ var capeNord = L.geoJson(capNord, {
 
 var overLayers = {
     label: 'overlays',
+    noShow: true,
     children: [
         {
             label: '2020',
