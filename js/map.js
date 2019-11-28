@@ -732,7 +732,7 @@ $(document).ready(function () {
         toggleBm();
     });
 */
-    $('.leaflet-layerstree-header-pointer > .leaflet-layerstree-header-name').css("font-weight","Bold");
+    $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight","Bold");
 
     //	On click
     map.on('click', function (e) {
