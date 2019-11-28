@@ -729,7 +729,7 @@ $(document).ready(function () {
         });
     */
     var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
-    var carteDiv = titleDivs[0];
+    var carteDiv = $(titleDivs).first();
     var y = document.getElementsByName('')
     $(titleDivs).css("font-weight", "Bold");
     $(carteDiv).click(function () {
