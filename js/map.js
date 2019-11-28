@@ -458,7 +458,7 @@ var overLayers = {
     children: [
         {
             label: '2020',
-            noshow: false,
+            collapsed: false,
             selectAllCheckbox: true,
             children: [
                 {
@@ -489,7 +489,7 @@ var overLayers = {
         },
         {
             label: '> 2020',
-            noshow: false,
+            collapsed: true,
             selectAllCheckbox: true,
             children: [
                 {
@@ -508,6 +508,7 @@ var overLayers = {
         },
         {
             label: '< 2020',
+            collapsed: true,
             selectAllCheckbox: true,
             children: [
                 {
@@ -589,6 +590,7 @@ var baseLayers = {
     children: [
         {
             label: 'Cartes',
+            collapsed: true,
             children: [
                 {
                     label: 'Mapbox Outdoors',
@@ -622,6 +624,7 @@ var baseLayers = {
         },
         {
             label: 'Pays',
+            collapsed: true,
             children: [
                 {
                     label: 'France',
