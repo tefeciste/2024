@@ -740,8 +740,12 @@ $(document).ready(function () {
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
-    $('.leaflet-control-layers-base').prepend('<div class="inline-block"></div>')
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').appendTo('.inline-block');
+    $('.leaflet-control-layers-base').prepend('<div id="baseCollExp"></div>');
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').addClass('inline-block')
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[0].appendTo('#baseCollExp');
+    $('#baseCollExp').append(' / ');
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[1].appendTo('#baseCollExp');
+    $
 });
 			
 		
