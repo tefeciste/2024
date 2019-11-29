@@ -733,22 +733,23 @@ $(document).ready(function () {
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
-    var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
-    $(titleDivs).css("font-weight", "Bold");
-    $('.leaflet-control-layers-base').prepend('<div id="baseCollExp"></div>');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').first().appendTo('#baseCollExp');
-    $('#baseCollExp').append(' / ');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#baseCollExp');
 
-    $('.leaflet-control-layers-overlays').prepend('<div id="overCollExp"></div>');
+    $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight", "Bold");
+
+    var process = ["base", "overlays"];
+    for (var i = 0; i<process.length; i++){
+        $('.leaflet-control-layers-'+process[i]).prepend('<div id="'+process[i]+'CollExp"></div>');
+        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
+        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').first().appendTo('#'+process[i]+'CollExp');
+        $('#'+process[i]+'CollExp').append(' / ');
+        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#'+process[i]+'CollExp');
+    }
+/*    $('.leaflet-control-layers-overlays').prepend('<div id="overCollExp"></div>');
     $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
     $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').first().appendTo('#overCollExp');
     $('#overCollExp').append(' / ');
-    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');
+    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');*/
 
-    var mtb = $('.leaflet-layerstree-node:nth-child(6)').find('label').first();
-    var cyc = $('.leaflet-layerstree-node:nth-child(7)').find('label').first();
     $('.leaflet-layerstree-node:nth-child(1)').click(function () {
         toggleMapboxLayer();
     });
