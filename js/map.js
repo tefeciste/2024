@@ -730,11 +730,6 @@ $(document).ready(function () {
     */
     var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
     $(titleDivs).css("font-weight", "Bold");
-    //$('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').hide();
-    //$('.leaflet-control-layers-base').prepend('<span class=".leaflet-layerstree-expand-collapse" tabindex="0"></span>Collapse All<span class=".leaflet-layerstree-expand-collapse" tabindex="0">Expand All</span>');
-    $(carteDiv).click(function () {
-        toggleMapboxLayer();
-    });
     //	On click
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
