@@ -729,8 +729,10 @@ $(document).ready(function () {
         });
     */
     var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
-    var carteDiv = $('.leaflet-control-expanded > .leaflet-layerstree-node').first().find('.leaflet-layerstree-children');
+    var carteDiv = $('.leaflet-control-expanded ').find('.leaflet-layerstree-children').not('.leaflet-layerstree-children-nopad').first();
     $(titleDivs).css("font-weight", "Bold");
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').hide();
+    $('.leaflet-control-layers-base').prepend('<span class=\".leaflet-layerstree-expand-collapse\" tabindex=\"0\"></span><span class=\".leaflet-layerstree-expand-collapse\" tabindex=\"0\"></span>');
     $(carteDiv).click(function () {
         toggleMapboxLayer();
     });
