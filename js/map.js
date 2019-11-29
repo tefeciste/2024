@@ -745,7 +745,7 @@ $(document).ready(function () {
     $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
     $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').first().appendTo('#overCollExp');
     $('#overCollExp').append(' / ');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');
+    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');
 
     var mtb = $('.leaflet-layerstree-node:nth-child(6)').find('label').first();
     var cyc = $('.leaflet-layerstree-node:nth-child(7)').find('label').first();
