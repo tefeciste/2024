@@ -745,7 +745,6 @@ $(document).ready(function () {
     $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[0].appendTo('#baseCollExp');
     $('#baseCollExp').append(' / ');
     $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[1].appendTo('#baseCollExp');
-    $
 });
 			
 		
