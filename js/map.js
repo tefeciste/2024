@@ -703,9 +703,9 @@ setBounds();
 
 
 function toggleMapboxLayer() {
-    if ((map.hasLayer(wayCyc) || map.hasLayer(wayMtb)) && !map.hasLayer(mpO)) {
+    if (!map.hasLayer(mpO) && (map.hasLayer(wayCyc) || map.hasLayer(wayMtb))) {
         mpO.addTo(map);
-    } else if (map.hasLayer(mpO)) {
+    } else if (map.hasLayer(mpO) && !map.hasLayer(wayCyc) && !map.hasLayer(wayMtb)) {
         map.removeLayer(mpO);
     }
 }
@@ -749,10 +749,7 @@ $(document).ready(function () {
 
     var mtb = $('.leaflet-layerstree-node:nth-child(6)').find('label').first();
     var cyc = $('.leaflet-layerstree-node:nth-child(7)').find('label').first();
-    $(mtb).click(function () {
-        toggleMapboxLayer();
-    });
-    $(cyc).click(function () {
+    $('.leaflet-layerstree-node:nth-child(1)').click(function () {
         toggleMapboxLayer();
     });
 });
