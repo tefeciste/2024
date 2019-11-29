@@ -740,7 +740,8 @@ $(document).ready(function () {
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
-
+    $('.leaflet-control-layers-base').prepend('<div class="inline-block"></div>')
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').appendTo('.inline-block');
 });
 			
 		
