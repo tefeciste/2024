@@ -728,14 +728,13 @@ $(document).ready(function () {
             toggleMapboxLayer();
         });
     */
-    var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
-    $(titleDivs).css("font-weight", "Bold");
+
     //	On click
     map.on('click', function (e) {
         $('.leaflet-control.elevation').fadeOut('fast');
     });
-    $('.leaflet-control-layers-base').
-
+    var titleDivs = $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name');
+    $(titleDivs).css("font-weight", "Bold");
     $('.leaflet-control-layers-base').prepend('<div id="baseCollExp"></div>');
     $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
     $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').first().appendTo('#baseCollExp');
