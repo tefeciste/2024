@@ -1,3 +1,5 @@
-.inline-block{
+.layers-actions{
     display: inline-block;
+    font-size: 10px;
+    color: #5e6360;
 }
