@@ -742,9 +742,9 @@ $(document).ready(function () {
     });
     $('.leaflet-control-layers-base').prepend('<div id="baseCollExp"></div>');
     $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').addClass('inline-block');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[0].appendTo('#baseCollExp');
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse').first().appendTo('#baseCollExp');
     $('#baseCollExp').append(' / ');
-    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse')[1].appendTo('#baseCollExp');
+    $('.leaflet-control-layers-base').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#baseCollExp');
 });
 			
 		
