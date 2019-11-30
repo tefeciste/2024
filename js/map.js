@@ -220,8 +220,9 @@ function onEachFeature(feature, layer) {
         el.clear();
         el.addData(feature);
         $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
-        $('<span class="dl-link">' + feature.properties.desc + '</span>').appendTo('.leaflet-control.elevation');
-
+        if (feature.properties.desc) {
+            $('<span class="dl-link">' + feature.properties.desc + '</span>').appendTo('.leaflet-control.elevation');
+        }
     });
 }
 
