@@ -738,7 +738,7 @@ $(document).ready(function () {
 
     var process = ["base", "overlays"];
     for (var i = 0; i<process.length; i++){
-        $('.leaflet-control-layers-'+process[i]).prepend('<div id="'+process[i]+'CollExp"></div>');
+        $('.leaflet-control-layers-'+process[i]).prepend('<div id="'+process[i]+'CollExp class="text-center"></div>');
         $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
         $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').first().appendTo('#'+process[i]+'CollExp');
         $('#'+process[i]+'CollExp').append(' / ');
