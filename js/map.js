@@ -711,6 +711,16 @@ function toggleMapboxLayer() {
     }
 }
 
+var anteLayersArray=[aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,dkRoller,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,strasbSankt,toulMir,lisSantiago];
+var preLayersArray=[parisRev,luxembourg,nantesStras,geroAya,madLis,tlseBez];
+var postLayersArray=[nantHamb,mulhouse,capeNord];
+
+var allGroupLayers=[anteLayersArray,preLayersArray,postLayersArray];
+
+for (var i=0; i<preLayersArray.length; i++){
+    preLayersArray[i].addTo(map);
+}
+
 $(document).ready(function () {
 
     $('.leaflet-control.elevation').hide();
