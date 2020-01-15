@@ -397,8 +397,8 @@ var luxembourg = L.geoJson(luxLyon, {
 });
 //luxembourg.addTo(map);
 
-//	03 Madrid - Lisbonne
-var madLis = L.geoJson(madridLisb, {
+//	03 Gorges de l'Aveyron marathon départ de Penne
+var gorgesAveyron = L.geoJson(gorAveyron, {
     onEachFeature: onEachFeature,
     style: style
 });
@@ -411,19 +411,26 @@ var nantesStras = L.geoJson(nanStras, {
 });
 //nantesStras.addTo(map);
 
-// 05 Paris - revel
-var parisRev = new L.geoJson(parisRevel, {
+// 05 Dunkerque - revel
+var dunkerqueRev = new L.geoJson(dunRevel, {
     onEachFeature: onEachFeature,
     style: style
 });
-//parisRev.addTo(map);
+//dunkerqueRev.addTo(map);
 
-//	06 Toulouse - Béziers
-var tlseBez = L.geoJson(tlseBeziers, {
+//	07 Toulouse - Moissac - Albi
+var tlseAlbi = L.geoJson(tlseMoiss, {
     onEachFeature: onEachFeature,
     style: style
 });
 //tlseBez.addTo(map);
+
+//	08 Albi - Béziers
+var albiBeziers = L.geoJson(albiBez, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 
 /*
 		COUCHES GEOJSON
@@ -450,6 +457,18 @@ var capeNord = L.geoJson(capNord, {
 });
 //capeNord.addTo(map);
 
+//04 Trans Alpes
+var transAlpes = L.geoJson(transAlp, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
+//05 Dunkerque - strasbourg
+var dunStrasbourg = L.geoJson(dunStras, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 /*
     LAYER GROUPS
 */
@@ -464,8 +483,8 @@ var overLayers = {
             selectAllCheckbox: true,
             children: [
                 {
-                    label: 'Paris - revel',
-                    layer: parisRev
+                    label: 'Dunkerque - revel',
+                    layer: dunkerqueRev
                 },
                 {
                     label: 'Luxembourg - Lyon',
@@ -480,12 +499,16 @@ var overLayers = {
                     layer: geroAya
                 },
                 {
-                    label: 'Madrid - Lisbonne',
-                    layer: madLis
+                    label: 'Gorges de l\'Aveyron',
+                    layer: gorgesAveyron
                 },
                 {
-                    label: 'Toulouse - Béziers',
-                    layer: tlseBez
+                    label: 'Toulouse - Albi',
+                    layer: tlseAlbi
+                },
+                {
+                    label: 'Albi - Béziers',
+                    layer: albiBeziers
                 }
             ]
         },
@@ -505,6 +528,14 @@ var overLayers = {
                 {
                     label: 'Cap Nord',
                     layer: capeNord
+                },
+                {
+                    label: 'Trans Alpes',
+                    layer: transAlpes
+                },
+                {
+                    label: 'Dunkerque - Strasbourg',
+                    layer: dunStrasbourg
                 }
             ]
         },
@@ -712,8 +743,8 @@ function toggleMapboxLayer() {
 }
 
 var anteLayersArray=[aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,dkRoller,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,strasbSankt,toulMir,lisSantiago];
-var preLayersArray=[parisRev,luxembourg,nantesStras,geroAya,madLis,tlseBez];
-var postLayersArray=[nantHamb,mulhouse,capeNord];
+var preLayersArray=[dunkerqueRev,luxembourg,nantesStras,geroAya,gorgesAveyron,tlseAlbi,albiBeziers];
+var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg];
 
 var allGroupLayers=[anteLayersArray,preLayersArray,postLayersArray];
 
