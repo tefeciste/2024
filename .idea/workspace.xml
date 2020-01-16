@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/data/albiBeziers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/data/gorgesAveyron.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/data/tlseMoissacAlbi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/data/transAlp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/data/madLisb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/data/ssSeville.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/data/valMadrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/parisRevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/dunRevel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +30,30 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="776" column="108" selection-start-line="776" selection-start-column="108" selection-end-line="776" selection-end-column="108" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,8 +112,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,17 +129,25 @@
               <item name="2024" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="2024" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2024" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Logiciels/android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577107838600" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579125016005" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -130,17 +157,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\luccl\Workspaces\2024\images\ico" />
-      <recent name="C:\Users\luccl\Workspaces\2024\js" />
-      <recent name="C:\Users\luccl\Workspaces\2024\js\data\fait" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\luccl\Workspaces\2024\js\data" />
       <recent name="C:\Users\luccl\Workspaces\2024\js\data\" />
       <recent name="C:\Users\luccl\Workspaces\2024\css\images" />
       <recent name="C:\Users\luccl\Workspaces\2024\css" />
       <recent name="C:\Users\luccl\Workspaces\2024\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luccl\Workspaces\2024\images\ico" />
+      <recent name="C:\Users\luccl\Workspaces\2024\js" />
+      <recent name="C:\Users\luccl\Workspaces\2024\js\data\fait" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -179,12 +206,13 @@
       <workItem from="1574978625869" duration="7228000" />
       <workItem from="1575056629794" duration="7449000" />
       <workItem from="1577193123786" duration="11000" />
-      <workItem from="1579122100457" duration="2245000" />
+      <workItem from="1579122100457" duration="3476000" />
+      <workItem from="1579210760671" duration="361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76856000" />
+    <option name="totallyTimeSpent" value="78448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,8 +225,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -213,7 +242,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.21030043" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" visible="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5010661" side_tool="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -349,6 +378,19 @@
     <entry file="file://$PROJECT_DIR$/js/data/nanStras.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/albiBeziers.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/dunRevel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/dunStrasb.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/tlseMoissacAlbi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -363,32 +405,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/albiBeziers.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/dunRevel.js">
+    <entry file="file://$PROJECT_DIR$/js/data/gorgesAveyron.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="576">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="523">
+          <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state relative-caret-position="610">
+          <caret line="776" column="108" selection-start-line="776" selection-start-column="108" selection-end-line="776" selection-end-column="108" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#13618#15682#0" />
-            <element signature="e#15742#17842#0" />
           </folding>
         </state>
       </provider>

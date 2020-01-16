@@ -469,6 +469,24 @@ var dunStrasbourg = L.geoJson(dunStras, {
     style: style
 });
 
+// 06  Valence - Madrid
+var valenceMad = L.geoJson(valMad, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+//capeNord.addTo(map);
+
+//07 Madrid - Lisbonne
+var madridLisb = L.geoJson(madlis, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
+//08 San Sebastian - Seville
+var sanSebSeville = L.geoJson(sansSev, {
+    onEachFeature: onEachFeature,
+    style: style
+});
 /*
     LAYER GROUPS
 */
@@ -536,6 +554,18 @@ var overLayers = {
                 {
                     label: 'Dunkerque - Strasbourg',
                     layer: dunStrasbourg
+                },
+                {
+                    label: 'Valence - Madrid',
+                    layer: valenceMad
+                },
+                {
+                    label: 'Madrid - Lisbonne',
+                    layer: madridLisb
+                },
+                {
+                    label: 'San Sebastian - Séville',
+                    layer: sanSebSeville
                 }
             ]
         },
@@ -744,7 +774,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray=[aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,dkRoller,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,strasbSankt,toulMir,lisSantiago];
 var preLayersArray=[dunkerqueRev,luxembourg,nantesStras,geroAya,gorgesAveyron,tlseAlbi,albiBeziers];
-var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg];
+var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg,valenceMad,madridLisb,sanSebSeville];
 
 var allGroupLayers=[anteLayersArray,preLayersArray,postLayersArray];
 
