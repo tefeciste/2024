@@ -477,7 +477,7 @@ var valenceMad = L.geoJson(valMad, {
 //capeNord.addTo(map);
 
 //07 Madrid - Lisbonne
-var madridLisb = L.geoJson(madlis, {
+var madLisbonne = L.geoJson(madlis, {
     onEachFeature: onEachFeature,
     style: style
 });
@@ -561,7 +561,7 @@ var overLayers = {
                 },
                 {
                     label: 'Madrid - Lisbonne',
-                    layer: madridLisb
+                    layer: madLisbonne
                 },
                 {
                     label: 'San Sebastian - Séville',
@@ -774,7 +774,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray=[aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,dkRoller,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,strasbSankt,toulMir,lisSantiago];
 var preLayersArray=[dunkerqueRev,luxembourg,nantesStras,geroAya,gorgesAveyron,tlseAlbi,albiBeziers];
-var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg,valenceMad,madridLisb,sanSebSeville];
+var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg,valenceMad,madLisbonne,sanSebSeville];
 
 var allGroupLayers=[anteLayersArray,preLayersArray,postLayersArray];
 
