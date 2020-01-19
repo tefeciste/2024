@@ -156,31 +156,61 @@ var topoCyc = L.layerGroup([wayCyc]);
 //	ELEVATION CONTROL CUSTOMIZATION
 //	same options in js/elevation/Leaflet.Elevation-0.0.2.min.js
 //	all used options are the default values
-var el = L.control.elevation({
-    position: "bottomright",
-    theme: "steelblue-theme", //default: lime-theme
-    width: 600,
-    height: 130,
-    margins: {
-        top: 40,
-        right: 30,
-        bottom: 5,
-        left: 50
-    },
-    useHeightIndicator: true, //if false a marker is drawn at map position
-    interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
-    hoverNumber: {
-        decimalsX: 2, //decimals on distance (always in km)
-        decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
-        formatter: undefined //custom formatter function may be injected
-    },
-    xTicks: undefined, //number of ticks in x axis, calculated by default according to width
-    yTicks: undefined, //number of ticks on y axis, calculated by default according to height
-    collapsed: false,  //collapsed mode, show chart on click or mouseover
-    imperial: false    //display imperial units instead of metric
+var mobileWidth = document.getElementById("map").offsetWidth;
 
-});
+var deviceEl;
+if (L.Browser.mobile) {
+    deviceEl = L.control.elevation({
+        position: "bottomright",
+        theme: "steelblue-theme", //default: lime-theme
+        width: mobileWidth,
+        height: 130,
+        margins: {
+            top: 40,
+            right: 5,
+            bottom: 5,
+            left: 40
+        },
+        useHeightIndicator: true, //if false a marker is drawn at map position
+        interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
+        hoverNumber: {
+            decimalsX: 2, //decimals on distance (always in km)
+            decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
+            formatter: undefined //custom formatter function may be injected
+        },
+        xTicks: undefined, //number of ticks in x axis, calculated by default according to width
+        yTicks: undefined, //number of ticks on y axis, calculated by default according to height
+        collapsed: false,  //collapsed mode, show chart on click or mouseover
+        imperial: false    //display imperial units instead of metric
 
+    });
+}else{
+    deviceEl = L.control.elevation({
+        position: "bottomright",
+        theme: "steelblue-theme", //default: lime-theme
+        width: 600,
+        height: 130,
+        margins: {
+            top: 40,
+            right: 30,
+            bottom: 5,
+            left: 50
+        },
+        useHeightIndicator: true, //if false a marker is drawn at map position
+        interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
+        hoverNumber: {
+            decimalsX: 2, //decimals on distance (always in km)
+            decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
+            formatter: undefined //custom formatter function may be injected
+        },
+        xTicks: undefined, //number of ticks in x axis, calculated by default according to width
+        yTicks: undefined, //number of ticks on y axis, calculated by default according to height
+        collapsed: false,  //collapsed mode, show chart on click or mouseover
+        imperial: false    //display imperial units instead of metric
+
+    });
+}
+el=deviceEl;
 //	Add elevation-profile to map
 el.addTo(map);
 
@@ -188,10 +218,15 @@ el.addTo(map);
 function toggleEl() {
     if ($('.leaflet-control.elevation').not('visible')) {
         $('.leaflet-control.elevation').fadeIn('fast');
-        isDisplayed = true;
+        if (L.Browser.mobile) {
+            setMargin();
+        }
     }
-    isDisplayed = false;
+}
 
+function setMargin(){
+    $('.elevation').css({'margin-right':'1px'});
+    $('.elevation').css({'margin-bottom':'0px'});
 }
 
 //	Add data to elevation profile control
@@ -772,13 +807,13 @@ function toggleMapboxLayer() {
     }
 }
 
-var anteLayersArray=[aixCannes,bdxMoissac,revelSarlat,brianconAix,cheminNav,dkRoller,gtMassifC,gtMtnNoir,hendonosti,lyonAixPce,lyonBordeaux,nantesHend,revAix,soustons,strasbSankt,toulMir,lisSantiago];
-var preLayersArray=[dunkerqueRev,luxembourg,nantesStras,geroAya,gorgesAveyron,tlseAlbi,albiBeziers];
-var postLayersArray=[nantHamb,mulhouse,capeNord,transAlpes,dunStrasbourg,valenceMad,madLisbonne,sanSebSeville];
+var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
+var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville];
 
-var allGroupLayers=[anteLayersArray,preLayersArray,postLayersArray];
+var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
-for (var i=0; i<preLayersArray.length; i++){
+for (var i = 0; i < preLayersArray.length; i++) {
     preLayersArray[i].addTo(map);
 }
 
@@ -795,36 +830,31 @@ $(document).ready(function () {
         $("#elClose").blur();
     });
 
-    /*
-        $('.leaflet-panel-layers-base').click(function () {
-            toggleMapboxLayer();
-        });
-    */
-
     //	On click
-    map.on('click', function (e) {
-        $('.leaflet-control.elevation').fadeOut('fast');
-    });
+    /*    map.on('click', function (e) {
+            $('.leaflet-control.elevation').fadeOut('fast');
+        });*/
 
     $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight", "Bold");
 
     var process = ["base", "overlays"];
-    for (var i = 0; i<process.length; i++){
-        $('.leaflet-control-layers-'+process[i]).prepend('<div id="'+process[i]+'CollExp" class="text-center"></div>');
-        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
-        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse').first().appendTo('#'+process[i]+'CollExp');
-        $('#'+process[i]+'CollExp').append(' / ');
-        $('.leaflet-control-layers-'+process[i]).find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#'+process[i]+'CollExp');
+    for (var i = 0; i < process.length; i++) {
+        $('.leaflet-control-layers-' + process[i]).prepend('<div id="' + process[i] + 'CollExp" class="text-center"></div>');
+        $('.leaflet-control-layers-' + process[i]).find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
+        $('.leaflet-control-layers-' + process[i]).find('.leaflet-layerstree-expand-collapse').first().appendTo('#' + process[i] + 'CollExp');
+        $('#' + process[i] + 'CollExp').append(' / ');
+        $('.leaflet-control-layers-' + process[i]).find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#' + process[i] + 'CollExp');
     }
-/*    $('.leaflet-control-layers-overlays').prepend('<div id="overCollExp"></div>');
-    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
-    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').first().appendTo('#overCollExp');
-    $('#overCollExp').append(' / ');
-    $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');*/
+    /*    $('.leaflet-control-layers-overlays').prepend('<div id="overCollExp"></div>');
+        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
+        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').first().appendTo('#overCollExp');
+        $('#overCollExp').append(' / ');
+        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');*/
 
     $('.leaflet-layerstree-node:nth-child(1)').click(function () {
         toggleMapboxLayer();
     });
+
 });
 			
 		

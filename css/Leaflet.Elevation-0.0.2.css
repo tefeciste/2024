@@ -226,3 +226,18 @@
     pointer-events: none;
     stroke-width: 2
 }
+
+@media screen and (max-width: 600px)
+{
+    #titre{
+        font-size: 10px;
+    }
+    .deniv{
+        font-size: 10px;
+        left: 60%;
+    }
+    .elevation > g {
+        font-size: 8px;
+    }
+    /* Rédigez vos propriétés CSS ici */
+}
