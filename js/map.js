@@ -184,7 +184,7 @@ if (L.Browser.mobile) {
         imperial: false    //display imperial units instead of metric
 
     });
-}else{
+} else {
     deviceEl = L.control.elevation({
         position: "bottomright",
         theme: "steelblue-theme", //default: lime-theme
@@ -210,7 +210,7 @@ if (L.Browser.mobile) {
 
     });
 }
-el=deviceEl;
+el = deviceEl;
 //	Add elevation-profile to map
 el.addTo(map);
 
@@ -224,9 +224,9 @@ function toggleEl() {
     }
 }
 
-function setMargin(){
-    $('.elevation').css({'margin-right':'1px'});
-    $('.elevation').css({'margin-bottom':'0px'});
+function setMargin() {
+    $('.elevation').css({'margin-right': '1px'});
+    $('.elevation').css({'margin-bottom': '0px'});
 }
 
 //	Add data to elevation profile control
@@ -522,6 +522,13 @@ var sanSebSeville = L.geoJson(sansSev, {
     onEachFeature: onEachFeature,
     style: style
 });
+
+//09 Irun - Porto par la côte
+var irunPortoCote = L.geoJson(irunPorto, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 /*
     LAYER GROUPS
 */
@@ -809,7 +816,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
