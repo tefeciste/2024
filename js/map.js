@@ -608,6 +608,10 @@ var overLayers = {
                 {
                     label: 'San Sebastian - Séville',
                     layer: sanSebSeville
+                },
+                {
+                    label: 'Irun - Porto',
+                    layer: irunPortoCote
                 }
             ]
         },
