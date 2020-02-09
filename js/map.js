@@ -529,6 +529,18 @@ var irunPortoCote = L.geoJson(irunPorto, {
     style: style
 });
 
+//10 Charleville Mézières - Avallon
+var charlevilleAval = L.geoJson(charlAval, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
+//11 GTMC Avallon - Clermont Ferrand
+var avallonClermont = L.geoJson(avalClermont, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 /*
     LAYER GROUPS
 */
@@ -612,6 +624,14 @@ var overLayers = {
                 {
                     label: 'Irun - Porto',
                     layer: irunPortoCote
+                },
+                {
+                    label: 'Cordon lorrain',
+                    layer: charlevilleAval
+                },
+                {
+                    label: 'GTMC Morvan',
+                    layer: avallonClermont
                 }
             ]
         },
@@ -795,8 +815,9 @@ L.control.scale({imperial: false}).addTo(map);
 //  On load
 map.doubleClickZoom.disable();
 
-bounds_group.addLayer(lisSantiago);
-bounds_group.addLayer(capeNord);
+bounds_group.addLayer(luxembourg);
+bounds_group.addLayer(nantesStras);
+bounds_group.addLayer(geroAya);
 setBounds();
 
 
@@ -820,7 +841,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
