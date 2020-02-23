@@ -547,6 +547,12 @@ var portSelva = L.geoJson(revelSelva, {
     style: style
 });
 
+//13 Caen - Bordeaux
+var caenBordeaux = L.geoJson(caenBdx, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 /*
     LAYER GROUPS
 */
@@ -642,6 +648,10 @@ var overLayers = {
                 {
                     label: 'Revel - Port Selva',
                     layer: portSelva
+                },
+                {
+                    label: 'Caen - Bordeaux',
+                    layer: caenBordeaux
                 }
             ]
         },
@@ -851,7 +861,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
@@ -899,5 +909,4 @@ $(document).ready(function () {
 
 });
 			
-		
 		
