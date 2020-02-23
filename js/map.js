@@ -541,6 +541,12 @@ var avallonClermont = L.geoJson(avalClermont, {
     style: style
 });
 
+//12 Revel - Port de la Selva
+var portSelva = L.geoJson(revelSelva, {
+    onEachFeature: onEachFeature,
+    style: style
+});
+
 /*
     LAYER GROUPS
 */
@@ -632,6 +638,10 @@ var overLayers = {
                 {
                     label: 'GTMC Morvan',
                     layer: avallonClermont
+                },
+                {
+                    label: 'Revel - Port Selva',
+                    layer: portSelva
                 }
             ]
         },
@@ -841,7 +851,7 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
