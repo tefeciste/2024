@@ -570,6 +570,7 @@ var overLayers = {
             children: [
                 {
                     label: 'Route',
+                    selectAllCheckbox: true,
                     children: [
                         { label: 'Dunkerque - revel', layer: dunkerqueRev },
                         { label: 'Luxembourg - Lyon', layer: luxembourg },
@@ -580,6 +581,7 @@ var overLayers = {
                 },
                 {
                     label: 'VTT',
+                    selectAllCheckbox: true,
                     children: [
                         { label: 'Girona - Ayamonte', layer: geroAya },
                         { label: 'Gorges de l\'Aveyron', layer: gorgesAveyron }
@@ -595,6 +597,7 @@ var overLayers = {
             children: [
                 {
                     label: 'VTT',
+                    selectAllCheckbox: true,
                     children: [
                         {label: 'Valence - Madrid', layer: valenceMad},
                         {label: 'Madrid - Lisbonne', layer: madLisbonne},
@@ -608,6 +611,7 @@ var overLayers = {
                 },
                 {
                     label: 'Route',
+                    selectAllCheckbox: true,
                     children: [
                         {label: 'Dunkerque - Strasbourg', layer: dunStrasbourg},
                         {label: 'Caen - Bordeaux', layer: caenBordeaux}
@@ -615,6 +619,7 @@ var overLayers = {
                 },
                 {
                     label: 'Raids',
+                    selectAllCheckbox: true,
                     children: [
                         {label: 'Nantes - Hambourg', layer: nantHamb},
                         {label: 'Bale - Istanbul', layer: mulhouse},
@@ -630,6 +635,7 @@ var overLayers = {
             children: [
                 {
                     label: 'VTT',
+                    selectAllCheckbox: true,
                     children: [
                         {label: 'Aix-Cannes', layer: aixCannes},
                         {label: 'Chemin Navarrais', layer: cheminNav},
@@ -642,6 +648,7 @@ var overLayers = {
                 },
                 {
                     label: 'Route',
+                    selectAllCheckbox: true,
                     children: [
                         {label: 'Bordeaux - Moissac', layer: bdxMoissac},
                         {label: 'Revel - Sarlat', layer: revelSarlat},
