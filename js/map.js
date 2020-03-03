@@ -256,20 +256,7 @@ function onEachFeature(feature, layer) {
         toggleEl();
         el.clear();
         el.addData(feature);
-        $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
-        if (feature.properties.link) {
-            var item = $('#lien-carte');
-            if (item) {
-                item.html('');
-                item.append('<a target="_blank" href="\'+feature.properties.link+\'">Voir plus</a>')
-            } else {
-                    $('<span id="lien-carte" class="dl-link"><a target="_blank" href="' + feature.properties.link + '">Voir plus</a></span>').appendTo('.leaflet-control.elevation');
-            }
-        }else{
-            if ($('#lien-carte')) {
-                $('#lien-carte').html('');
-            }
-        }
+
     });
 }
 
