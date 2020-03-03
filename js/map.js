@@ -573,15 +573,15 @@ var overLayers = {
                         { label: 'Luxembourg - Lyon', layer: luxembourg },
                         { label: 'Nantes - Strasbourg', layer: nantesStras },
                         { label: 'Toulouse - Albi', layer: tlseAlbi },
-                        { label: 'Albi - Béziers', layer: albiBeziers },
+                        { label: 'Albi - Béziers', layer: albiBeziers }
                     ]
                 },
                 {
                     label: 'VTT',
                     children: [
                         { label: 'Girona - Ayamonte', layer: geroAya },
-                        { label: 'Gorges de l\'Aveyron', layer: gorgesAveyron },
-                        { label: 'Topographical', layer: usa_topo },
+                        { label: 'Gorges de l\'Aveyron', layer: gorgesAveyron }
+
                     ]
                 }
             ]
