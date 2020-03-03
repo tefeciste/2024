@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/dunRevel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/dunRevel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/aixCan.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/aixCan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/bdxMois.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/bdxMois.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/blanSarlat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/blanSarlat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/briAix.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/briAix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/chemNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/chemNav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/danemark.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/danemark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/gtmc.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/gtmc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/gtmn.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/gtmn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/lisSant.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/lisSant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/lyonAix.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/lyonAix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/lyonBdx.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/lyonBdx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/nantHend.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/nantHend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/revelAix.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/revelAix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/sousPiePor.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/sousPiePor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/strasStPet.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/strasStPet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/fait/tlseMirEbro.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/fait/tlseMirEbro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/revelSelva.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/revelSelva.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
-    </list>
+    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,83 +23,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/aixCan.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/blanSarlat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/hendSanSeb.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/albiBeziers.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/avalClermont.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/caenBdx.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/data/charlAval.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/chemNav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/danemark.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/fait/gtmn.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -185,7 +88,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-44" />
     <option name="y" value="40" />
     <option name="width" value="1407" />
@@ -197,6 +100,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,37 +109,17 @@
               <item name="2024" type="b2602c69:ProjectViewProjectNode" />
               <item name="2024" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="2024" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2024" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2024" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2024" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2024" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2024" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="fait" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Logiciels/android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583270819691" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583271549534" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -308,11 +193,12 @@
       <workItem from="1582487701949" duration="412000" />
       <workItem from="1582488477670" duration="2079000" />
       <workItem from="1583262607568" duration="5990000" />
+      <workItem from="1583270853931" duration="713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100108000" />
+    <option name="totallyTimeSpent" value="100821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +212,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15618336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15778251" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -418,13 +304,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/data/dunStrasb.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/tlseMoissacAlbi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/data/transAlp.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,7 +494,7 @@
     <entry file="file://$PROJECT_DIR$/js/data/fait/aixCan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -627,36 +506,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/fait/gtmn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/fait/chemNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/fait/danemark.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/fait/hendSanSeb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/albiBeziers.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/data/avalClermont.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -664,7 +519,42 @@
     <entry file="file://$PROJECT_DIR$/js/data/caenBdx.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/fait/chemNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/fait/danemark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/fait/gtmn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/charlAval.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/tlseMoissacAlbi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/albiBeziers.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
