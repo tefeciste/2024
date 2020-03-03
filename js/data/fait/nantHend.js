@@ -6,7 +6,7 @@ var nantHend={
             "properties": {
                 "name": "Nantes - Hendaye EV1",
 				"id": "3",
-                "desc": "<table>\n<tr><td><b>Distance</b> 834 km </td></tr>\n<tr><td><b>Lien </b><a href=\"https://www.wikiloc.com/bicycle-touring-trails/nantes-hendaye-ev1-18852291\" target=\"_blank\">Wikiloc</a></td></tr>\n</table>\n"
+                "desc": ""
             },
             "geometry": {
                 "type": "LineString",

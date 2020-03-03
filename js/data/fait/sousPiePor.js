@@ -6,8 +6,8 @@ var sousPiePor={
             "properties": {
                 "name": "Soustons - St Jean P",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 106 km  \n",
-                "desc": "\n<b>Distance</b> 106 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:44:08Z",
                 "coordTimes": [
                     "2019-02-23T21:44:08Z",

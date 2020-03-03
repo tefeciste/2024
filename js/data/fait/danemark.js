@@ -6,8 +6,8 @@ var danemark={
             "properties": {
                 "name": "Tour du Danemark",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 703 km  \n",
-                "desc": "\n<b>Distance</b> 703 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:52:53Z",
                 "coordTimes": [
                     "2019-02-23T21:52:53Z",

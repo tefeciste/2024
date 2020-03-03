@@ -6,8 +6,9 @@ var gtmc={
             "properties": {
                 "name": "GTMC",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 742 km  \n<b>Lien </b><a href=\"https://www.la-gtmc.com/itineraire\" rel=\"nofollow\" target=\"_blank\">Wikiloc</a> \n",
-                "desc": "\n<b>Distance</b> 742 km  \n<b>Lien </b><a href=\"https://www.la-gtmc.com/itineraire\" rel=\"nofollow\" target=\"_blank\">Wikiloc</a> \n",
+                "link": "http://velo300.free.fr/2018/gtmc",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:38:22Z",
                 "coordTimes": [
                     "2019-02-23T21:38:22Z",

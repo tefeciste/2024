@@ -6,6 +6,7 @@ var revelSelva={
             "properties": {
                 "name": "Revel - Port de la Selva",
 				"id": "4",
+                "link":"http://velo300.free.fr/projets/selva",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-02-23T19:12:22Z",

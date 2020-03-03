@@ -6,8 +6,8 @@ var revelAix={
             "properties": {
                 "name": "Revel - Aix",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 358 km  \n",
-                "desc": "\n<b>Distance</b> 358 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:46:37Z",
                 "coordTimes": [
                     "2019-02-23T21:46:37Z",

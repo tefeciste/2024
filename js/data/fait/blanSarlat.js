@@ -6,8 +6,8 @@ var blanSarlat={
             "properties": {
                 "name": "Revel - Sarlat",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 224 km  \n",
-                "desc": "\n<b>Distance</b> 224 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:56:52Z",
                 "coordTimes": [
                     "2019-02-23T21:56:52Z",

@@ -6,8 +6,8 @@ var strasStPet={
             "properties": {
                 "name": "Strasbourg - St-Petersbourg",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 2936 km  \n",
-                "desc": "\n<b>Distance</b> 2936 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:49:42Z",
                 "coordTimes": [
                     "2019-02-23T21:49:42Z",

@@ -6,6 +6,7 @@ var lyonbdx={
             "properties": {
                 "name": "Lyon - Bordeaux",
 				"id": "3",
+                "link":"http://velo300.free.fr/2019/parallele",
                 "cmt": "",
                 "desc": "",
                 "time": "2019-02-23T22:06:55Z",

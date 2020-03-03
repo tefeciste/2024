@@ -6,8 +6,8 @@ var gtmn={
             "properties": {
                 "name": "GT Montagne Noire",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 246 km  \n",
-                "desc": "\n<b>Distance</b> 246 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:55:22Z",
                 "coordTimes": [
                     "2019-02-23T21:55:22Z",

@@ -257,9 +257,9 @@ function onEachFeature(feature, layer) {
         el.clear();
         el.addData(feature);
         $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
-        /*        if (feature.properties.desc) {
-                    $('<span class="dl-link">' + feature.properties.desc + '</span>').appendTo('.leaflet-control.elevation');
-                }*/
+        if (feature.properties.link) {
+            $('<span class="dl-link"><a target="_blank" href="'+feature.properties.link+'">Voir plus</a></span>').appendTo('.leaflet-control.elevation');
+        }
     });
 }
 
@@ -572,19 +572,19 @@ var overLayers = {
                     label: 'Route',
                     selectAllCheckbox: true,
                     children: [
-                        { label: 'Dunkerque - revel', layer: dunkerqueRev },
-                        { label: 'Luxembourg - Lyon', layer: luxembourg },
-                        { label: 'Nantes - Strasbourg', layer: nantesStras },
-                        { label: 'Toulouse - Albi', layer: tlseAlbi },
-                        { label: 'Albi - Béziers', layer: albiBeziers }
+                        {label: 'Dunkerque - revel', layer: dunkerqueRev},
+                        {label: 'Luxembourg - Lyon', layer: luxembourg},
+                        {label: 'Nantes - Strasbourg', layer: nantesStras},
+                        {label: 'Toulouse - Albi', layer: tlseAlbi},
+                        {label: 'Albi - Béziers', layer: albiBeziers}
                     ]
                 },
                 {
                     label: 'VTT',
                     selectAllCheckbox: true,
                     children: [
-                        { label: 'Girona - Ayamonte', layer: geroAya },
-                        { label: 'Gorges de l\'Aveyron', layer: gorgesAveyron }
+                        {label: 'Girona - Ayamonte', layer: geroAya},
+                        {label: 'Gorges de l\'Aveyron', layer: gorgesAveyron}
 
                     ]
                 }

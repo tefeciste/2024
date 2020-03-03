@@ -6,6 +6,7 @@ var dunRevel={
             "properties": {
                 "name": "Dunkerque - Toulouse",
                 "id": "2",
+                "link": "http://velo300.free.fr/2019/paris/",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-01-15T22:03:33Z",

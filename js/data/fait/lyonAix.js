@@ -6,8 +6,9 @@ var lyonAix={
             "properties": {
                 "name": "Lyon - Avignon - Aix",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 361 km  \n<b>Lien</b> <a href=\"http://velo300.free.fr/2019/lyon\" rel=\"nofollow\" target=\"_blank\"> Lyon-Aix</a> \n",
-                "desc": "\n<b>Distance</b> 361 km  \n<b>Lien</b> <a href=\"http://velo300.free.fr/2019/lyon\" rel=\"nofollow\" target=\"_blank\"> Lyon-Aix</a> \n",
+                "link": "http://velo300.free.fr/2019/lyon",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:59:15Z",
                 "coordTimes": [
                     "2019-02-23T21:59:15Z",

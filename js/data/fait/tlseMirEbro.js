@@ -6,8 +6,8 @@ var tlseMirEbro={
             "properties": {
                 "name": "Toulouse - MirandadeEbro",
 				"id": "3",
-                "cmt": "\n<b>Distance</b> 649 km  \n",
-                "desc": "\n<b>Distance</b> 649 km  \n",
+                "cmt": "",
+                "desc": "",
                 "time": "2019-02-23T21:51:22Z",
                 "coordTimes": [
                     "2019-02-23T21:51:22Z",
