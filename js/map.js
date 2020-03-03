@@ -267,7 +267,7 @@ function onEachFeature(feature, layer) {
             }
         }else{
             if ($('#lien-carte')) {
-                $('#lien-carte').clear();
+                $('#lien-carte').html('');
             }
         }
     });
