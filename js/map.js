@@ -39,7 +39,7 @@ var mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tile
 
 //	2. IGN France Topo Scan express classique WMTS
 var ignApiKey = "uysc5plwe5d5vezt4dvze1l5";
-var scanWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
+var scanWmtsUrl = "https://wxs.ign.fr/" + ignApiKey + "/geoportail/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
 var basemap1 = L.tileLayer(scanWmtsUrl, {
     attribution: ''
 });

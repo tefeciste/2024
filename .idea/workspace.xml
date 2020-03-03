@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
-    </list>
+    <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-176">
-              <caret line="569" column="33" selection-start-line="569" selection-start-column="33" selection-end-line="569" selection-end-column="33" />
+            <state relative-caret-position="1024">
+              <caret line="620" column="17" lean-forward="true" selection-start-line="620" selection-start-column="17" selection-end-line="620" selection-end-column="17" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
@@ -125,7 +122,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="952" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
@@ -240,12 +237,12 @@
       <workItem from="1582483498251" duration="1052000" />
       <workItem from="1582487701949" duration="412000" />
       <workItem from="1582488477670" duration="2079000" />
-      <workItem from="1583262607568" duration="1392000" />
+      <workItem from="1583262607568" duration="1653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95510000" />
+    <option name="totallyTimeSpent" value="95771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -257,10 +254,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="-8" width="976" height="1066" extended-state="0" />
-    <editor active="true" />
+    <frame x="952" y="-8" width="976" height="1066" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31986898" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31986898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -275,7 +271,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.21030043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4968017" visible="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50319827" side_tool="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -485,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="569" column="33" selection-start-line="569" selection-start-column="33" selection-end-line="569" selection-end-column="33" />
+        <state relative-caret-position="1024">
+          <caret line="620" column="17" lean-forward="true" selection-start-line="620" selection-start-column="17" selection-end-line="620" selection-end-column="17" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />
