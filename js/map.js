@@ -5,7 +5,7 @@
 var dplus;
 var dmoins;
 
-var isDisplayed = true;
+var hasLienDiv = false;
 
 
 //	LatLng to center the map
@@ -244,6 +244,16 @@ function addData(e) {
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
 
+function addLien(lien) {
+    if (hasLienDiv === true) {
+        var item = $('#lien-carte');
+        item.html('');
+        item.append('<a target="_blank" href="' + lien + '">Voir plus</a>')
+    } else {
+        $('<span id="lien-carte" class="dl-link"><a target="_blank" href="' + lien + '">Voir plus</a></span>').appendTo('.leaflet-control.elevation');
+    }
+}
+
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
 //			-display elevation profile
@@ -256,7 +266,10 @@ function onEachFeature(feature, layer) {
         toggleEl();
         el.clear();
         el.addData(feature);
-
+        $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
+        if (feature.properties.link !== undefined){
+            addLien(feature.properties.link);
+        }
     });
 }
 
