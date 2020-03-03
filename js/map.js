@@ -255,9 +255,9 @@ function onEachFeature(feature, layer) {
         el.clear();
         el.addData(feature);
         $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
-/*        if (feature.properties.desc) {
-            $('<span class="dl-link">' + feature.properties.desc + '</span>').appendTo('.leaflet-control.elevation');
-        }*/
+        /*        if (feature.properties.desc) {
+                    $('<span class="dl-link">' + feature.properties.desc + '</span>').appendTo('.leaflet-control.elevation');
+                }*/
     });
 }
 
@@ -567,32 +567,22 @@ var overLayers = {
             selectAllCheckbox: true,
             children: [
                 {
-                    label: 'Dunkerque - revel',
-                    layer: dunkerqueRev
+                    label: 'Route',
+                    children: [
+                        { label: 'Dunkerque - revel', layer: dunkerqueRev },
+                        { label: 'Luxembourg - Lyon', layer: luxembourg },
+                        { label: 'Nantes - Strasbourg', layer: nantesStras },
+                        { label: 'Toulouse - Albi', layer: tlseAlbi },
+                        { label: 'Albi - Béziers', layer: albiBeziers },
+                    ]
                 },
                 {
-                    label: 'Luxembourg - Lyon',
-                    layer: luxembourg
-                },
-                {
-                    label: 'Nantes - Strasbourg',
-                    layer: nantesStras
-                },
-                {
-                    label: 'Girona - Ayamonte',
-                    layer: geroAya
-                },
-                {
-                    label: 'Gorges de l\'Aveyron',
-                    layer: gorgesAveyron
-                },
-                {
-                    label: 'Toulouse - Albi',
-                    layer: tlseAlbi
-                },
-                {
-                    label: 'Albi - Béziers',
-                    layer: albiBeziers
+                    label: 'VTT',
+                    children: [
+                        { label: 'Girona - Ayamonte', layer: geroAya },
+                        { label: 'Gorges de l\'Aveyron', layer: gorgesAveyron },
+                        { label: 'Topographical', layer: usa_topo },
+                    ]
                 }
             ]
         },
@@ -602,56 +592,32 @@ var overLayers = {
             selectAllCheckbox: true,
             children: [
                 {
-                    label: 'Nantes - Hambourg',
-                    layer: nantHamb
+                    label: 'VTT',
+                    children: [
+                        {label: 'Valence - Madrid', layer: valenceMad},
+                        {label: 'Madrid - Lisbonne', layer: madLisbonne},
+                        {label: 'San Sebastian - Séville', layer: sanSebSeville},
+                        {label: 'Irun - Porto', layer: irunPortoCote},
+                        {label: 'Trans Alpes', layer: transAlpes},
+                        {label: 'Cordon lorrain', layer: charlevilleAval},
+                        {label: 'GTMC Morvan', layer: avallonClermont},
+                        {label: 'Revel - Port Selva', layer: portSelva}
+                    ]
                 },
                 {
-                    label: 'Bale - Istanbul',
-                    layer: mulhouse
+                    label: 'Route',
+                    children: [
+                        {label: 'Dunkerque - Strasbourg', layer: dunStrasbourg},
+                        {label: 'Caen - Bordeaux', layer: caenBordeaux}
+                    ]
                 },
                 {
-                    label: 'Cap Nord',
-                    layer: capeNord
-                },
-                {
-                    label: 'Trans Alpes',
-                    layer: transAlpes
-                },
-                {
-                    label: 'Dunkerque - Strasbourg',
-                    layer: dunStrasbourg
-                },
-                {
-                    label: 'Valence - Madrid',
-                    layer: valenceMad
-                },
-                {
-                    label: 'Madrid - Lisbonne',
-                    layer: madLisbonne
-                },
-                {
-                    label: 'San Sebastian - Séville',
-                    layer: sanSebSeville
-                },
-                {
-                    label: 'Irun - Porto',
-                    layer: irunPortoCote
-                },
-                {
-                    label: 'Cordon lorrain',
-                    layer: charlevilleAval
-                },
-                {
-                    label: 'GTMC Morvan',
-                    layer: avallonClermont
-                },
-                {
-                    label: 'Revel - Port Selva',
-                    layer: portSelva
-                },
-                {
-                    label: 'Caen - Bordeaux',
-                    layer: caenBordeaux
+                    label: 'Raids',
+                    children: [
+                        {label: 'Nantes - Hambourg', layer: nantHamb},
+                        {label: 'Bale - Istanbul', layer: mulhouse},
+                        {label: 'Cap Nord', layer: capeNord}
+                    ]
                 }
             ]
         },
@@ -661,73 +627,38 @@ var overLayers = {
             selectAllCheckbox: true,
             children: [
                 {
-                    label: 'Aix-Cannes',
-                    layer: aixCannes
+                    label: 'VTT',
+                    children: [
+                        {label: 'Aix-Cannes', layer: aixCannes},
+                        {label: 'Chemin Navarrais', layer: cheminNav},
+                        {label: 'GTMC', layer: gtMassifC},
+                        //{ label: 'GTMN', layer: gtMtnNoir },
+                        {label: 'Soustons - St Jean', layer: soustons},
+                        {label: 'GTMC', layer: gtMassifC},
+                        {label: 'Lisbonne - Santiago', layer: lisSantiago},
+                    ]
                 },
                 {
-                    label: 'Bordeaux - Moissac',
-                    layer: bdxMoissac
-                },
+                    label: 'Route',
+                    children: [
+                        {label: 'Bordeaux - Moissac', layer: bdxMoissac},
+                        {label: 'Revel - Sarlat', layer: revelSarlat},
+                        {label: 'Briancon - Aix', layer: brianconAix},
+                        {label: 'Lyon - Aix', layer: lyonAixPce},
+                        {label: 'Hendaye - Donosti', layer: hendonosti},
+                        {label: 'Lyon - Bordeaux', layer: lyonBordeaux},
+                        {label: 'Nantes - Hendaye', layer: nantesHend},
+                        {label: 'Revel - Aix', layer: revAix},
+                        {label: 'Strasbourg - St Pétersbourg', layer: strasbSankt},
+                        {label: 'Toulouse - Miranda de Ebro', layer: toulMir},
+                    ]
+                }/*,
                 {
-                    label: 'Revel - Sarlat',
-                    layer: revelSarlat
-                },
-                {
-                    label: 'Briancon - Aix',
-                    layer: brianconAix
-                },
-                {
-                    label: 'Chemin Navarrais',
-                    layer: cheminNav
-                },
-                {
-                    label: 'Danemark en roller',
-                    layer: dkRoller
-                },
-                {
-                    label: 'GTMC',
-                    layer: gtMassifC
-                },
-                {
-                    label: 'GTMN',
-                    layer: gtMtnNoir
-                },
-                {
-                    label: 'Hendaye - Donosti',
-                    layer: hendonosti
-                },
-                {
-                    label: 'Lyon - Aix',
-                    layer: lyonAixPce
-                },
-                {
-                    label: 'Lyon - Bordeaux',
-                    layer: lyonBordeaux
-                },
-                {
-                    label: 'Nantes - Hendaye',
-                    layer: nantesHend
-                },
-                {
-                    label: 'Revel - Aix',
-                    layer: revAix
-                },
-                {
-                    label: 'Soustons - St Jean',
-                    layer: soustons
-                },
-                {
-                    label: 'Strasbourg - St Pétersbourg',
-                    layer: strasbSankt
-                },
-                {
-                    label: 'Toulouse - Miranda de Ebro',
-                    layer: toulMir
-                },
-                {
-                    label: 'Lisbonne - Santiago',
-                    layer: lisSantiago
-                }
+                    label: 'Autres',
+                    children: [
+                        {label: 'Danemark en roller', layer: dkRoller}
+                    ]
+                }*/
             ]
         }
     ]
@@ -738,7 +669,7 @@ var baseLayers = {
     noShow: true,
     children: [
         {
-            label: 'Cartes',
+            label: 'Monde',
             collapsed: true,
             children: [
                 {
