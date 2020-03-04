@@ -6,6 +6,7 @@ var dplus;
 var dmoins;
 
 var hasLienDiv = false;
+var isMobileDevice = false;
 
 
 //	LatLng to center the map
@@ -16,6 +17,7 @@ var map = L.map('map', {
     maxZoom: 20
 }); // .setView(saintCouat, 6);
 if (L.Browser.mobile) {
+    isMobileDevice = true;
     map.removeControl(map.zoomControl);
 }
 var bounds_group = new L.featureGroup([]);
@@ -244,14 +246,19 @@ function addData(e) {
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
 
-function addLien(lien) {
-    if (hasLienDiv === true) {
-        var item = $('#lien-carte');
-        item.html('');
-        item.append('<a target="_blank" href="' + lien + '">Voir plus</a>')
-    } else {
-        $('<span id="lien-carte" class="dl-link"><a target="_blank" href="' + lien + '">Voir plus</a></span>').appendTo('.leaflet-control.elevation');
+function addLien(lien, div) {
+    hasLienDiv=true;
+    if (div !== null) {
+        div.removeChild(div.lastChild);
+        div.append('<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>');
     }
+}
+
+
+//<a target="_blank" id="lien-pc" href="' + lien + '">Voir plus</a></span>
+function addParent() {
+        $('<span id="lien-pc-container" class="dl-link">').appendTo('.leaflet-control.elevation');
+        return $('#lien-pc-container');
 }
 
 // 		LAYER CLICK ACTIONS:
@@ -266,9 +273,11 @@ function onEachFeature(feature, layer) {
         toggleEl();
         el.clear();
         el.addData(feature);
-        $('<span id="titre">' + feature.properties.name + '</span>').appendTo('.leaflet-control.elevation');
-        if (feature.properties.link !== undefined){
-            addLien(feature.properties.link);
+        var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
+        $(titreHtml).appendTo('.leaflet-control.elevation');
+        if (feature.properties.link != null && feature.properties.link !== undefined) {
+            var item = hasLienDiv === true ? (isMobileDevice === true ? $('#titre'): $('#lien-pc-container')) : addParent();
+            addLien(feature.properties.link, item);
         }
     });
 }
