@@ -257,6 +257,7 @@ function addLien(lien) {
             $('#lien-pc-container').append(html)
         }
     } else {
+        hasLienDiv=true;
         if (isMobileDevice) {
             $('#titre').append(html);
         } else {
