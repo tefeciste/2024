@@ -280,7 +280,7 @@ function onEachFeature(feature, layer) {
         el.addData(feature);
         var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
         $(titreHtml).appendTo('.leaflet-control.elevation');
-        if (feature.properties.link !== undefined && feature.properties.link.length > 0) {
+        if (feature.properties.link !== undefined) {
             var lien = feature.properties.link;
             addLien(lien);
         } else if (hasLienDiv) {
