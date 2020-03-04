@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="287" column="38" lean-forward="true" selection-start-line="287" selection-start-column="38" selection-end-line="287" selection-end-column="38" />
+            <state relative-caret-position="400">
+              <caret line="284" column="26" lean-forward="true" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="26" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
                 <element signature="e#0#6#0" expanded="true" />
@@ -173,7 +173,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Logiciels/android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583360884136" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583361061506" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -249,12 +249,12 @@
       <workItem from="1583262607568" duration="5990000" />
       <workItem from="1583270853931" duration="713000" />
       <workItem from="1583271694037" duration="3309000" />
-      <workItem from="1583351170751" duration="9289000" />
+      <workItem from="1583351170751" duration="9825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113419000" />
+    <option name="totallyTimeSpent" value="113955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,8 +284,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49573562" visible="true" weight="0.21030043" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5042644" side_tool="true" visible="true" weight="0.21030043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49573562" visible="true" weight="0.21030043" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5042644" side_tool="true" visible="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -607,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="287" column="38" lean-forward="true" selection-start-line="287" selection-start-column="38" selection-end-line="287" selection-end-column="38" />
+        <state relative-caret-position="400">
+          <caret line="284" column="26" lean-forward="true" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="26" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
             <element signature="e#0#6#0" expanded="true" />

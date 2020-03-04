@@ -248,13 +248,14 @@ var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c30
 
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>';
-    var item = null;
-    var parent = null;
     if (hasLienDiv) {
-        parent = isMobileDevice === true ? $('#titre') : $('#lien-pc-container');
-        item = parent.lastChild;
-        $(item).remove();
-        parent.append(html);
+        if (isMobileDevice) {
+            $('#lien-mobile').remove();
+            $('#titre').append(html)
+        } else {
+            $('#lien-pc').remove();
+            $('#lien-pc-container').append(html)
+        }
     } else {
         if (isMobileDevice) {
             $('#titre').append(html);
@@ -264,12 +265,6 @@ function addLien(lien) {
     }
 }
 
-
-//<a target="_blank" id="lien-pc" href="' + lien + '">Voir plus</a></span>
-function addParent() {
-    $('<span id="lien-pc-container" class="dl-link">').appendTo('.leaflet-control.elevation');
-    return $('#lien-pc-container');
-}
 
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
@@ -285,9 +280,15 @@ function onEachFeature(feature, layer) {
         el.addData(feature);
         var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
         $(titreHtml).appendTo('.leaflet-control.elevation');
-        if (feature.properties.link!==undefined && feature.properties.link.length>0) {
+        if (feature.properties.link !== undefined && feature.properties.link.length > 0) {
             var lien = feature.properties.link;
             addLien(lien);
+        } else if (hasLienDiv) {
+            if (isMobileDevice) {
+                $('#lien-mobile').remove();
+            } else {
+                $('#lien-pc').remove();
+            }
         }
     });
 }
