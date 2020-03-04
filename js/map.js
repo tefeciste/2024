@@ -246,19 +246,29 @@ function addData(e) {
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
 
-function addLien(lien, div) {
-    hasLienDiv=true;
-    if (div !== null) {
-        $(div).last().remove();
-        div.append('<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>');
+function addLien(lien) {
+    var html = '<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>';
+    var item = null;
+    var parent = null;
+    if (hasLienDiv) {
+        parent = isMobileDevice === true ? $('#titre') : $('#lien-pc-container');
+        item = parent.lastChild;
+        $(item).remove();
+        parent.append(html);
+    } else {
+        if (isMobileDevice) {
+            $('#titre').append(html);
+        } else {
+            $('<span id="lien-pc-container" class="dl-link">' + html + '</span>').appendTo('.leaflet-control.elevation');
+        }
     }
 }
 
 
 //<a target="_blank" id="lien-pc" href="' + lien + '">Voir plus</a></span>
 function addParent() {
-        $('<span id="lien-pc-container" class="dl-link">').appendTo('.leaflet-control.elevation');
-        return $('#lien-pc-container');
+    $('<span id="lien-pc-container" class="dl-link">').appendTo('.leaflet-control.elevation');
+    return $('#lien-pc-container');
 }
 
 // 		LAYER CLICK ACTIONS:
@@ -273,16 +283,11 @@ function onEachFeature(feature, layer) {
         toggleEl();
         el.clear();
         el.addData(feature);
-        if (isMobileDevice===true){
-
-        }else{
-
-        }
         var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
         $(titreHtml).appendTo('.leaflet-control.elevation');
-        if (feature.properties.link != null && feature.properties.link !== undefined) {
-            var item = hasLienDiv === true ? (isMobileDevice === true ? $('#titre'): $('#lien-pc-container')) : addParent();
-            addLien(feature.properties.link, item);
+        if (feature.hasOwnProperty("link")) {
+            var lien = feature.properties.link;
+            addLien(lien);
         }
     });
 }
