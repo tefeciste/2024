@@ -285,6 +285,7 @@ function onEachFeature(feature, layer) {
             var lien = feature.properties.link;
             addLien(lien);
         } else if (hasLienDiv) {
+            hasLienDiv=false;
             if (isMobileDevice) {
                 $('#lien-mobile').remove();
             } else {
