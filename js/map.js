@@ -249,11 +249,10 @@ var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c30
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>';
     if (hasLienDiv) {
+        $('#lien').remove();
         if (isMobileDevice) {
-            $('#lien-mobile').remove();
             $('#titre').append(html)
         } else {
-            $('#lien-pc').remove();
             $('#lien-pc-container').append(html)
         }
     } else {
@@ -287,9 +286,9 @@ function onEachFeature(feature, layer) {
         } else if (hasLienDiv) {
             hasLienDiv=false;
             if (isMobileDevice) {
-                $('#lien-mobile').remove();
+                $('#lien').remove();
             } else {
-                $('#lien-pc').remove();
+                $('#lien-pc-container').remove();
             }
         }
     });
