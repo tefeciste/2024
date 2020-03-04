@@ -249,7 +249,7 @@ var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c30
 function addLien(lien, div) {
     hasLienDiv=true;
     if (div !== null) {
-        div.removeChild(div.lastChild);
+        $(div).last().remove();
         div.append('<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>');
     }
 }
@@ -273,6 +273,11 @@ function onEachFeature(feature, layer) {
         toggleEl();
         el.clear();
         el.addData(feature);
+        if (isMobileDevice===true){
+
+        }else{
+
+        }
         var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
         $(titreHtml).appendTo('.leaflet-control.elevation');
         if (feature.properties.link != null && feature.properties.link !== undefined) {
