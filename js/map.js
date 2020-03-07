@@ -586,6 +586,12 @@ var caenBordeaux = L.geoJson(caenBdx, {
     style: style
 });
 
+
+//13 Caen - Bordeaux
+var havre = L.geoJson(havreBdx, {
+    onEachFeature: onEachFeature,
+    style: style
+});
 /*
     LAYER GROUPS
 */
@@ -645,7 +651,8 @@ var overLayers = {
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Dunkerque - Strasbourg', layer: dunStrasbourg},
-                        {label: 'Caen - Bordeaux', layer: caenBordeaux}
+                        //{label: 'Caen - Bordeaux', layer: caenBordeaux},
+                        {label: 'Le Havre - Bordeaux', layer: havre}
                     ]
                 },
                 {
