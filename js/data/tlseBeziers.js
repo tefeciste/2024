@@ -6,6 +6,7 @@ var tlseBeziers={
             "properties": {
                 "name": "Toulouse-Béziers",
 				"id": "2",
+                "link": "http://velo300.free.fr/2020/tlseBeziers",
                 "cmt": "",
                 "desc": "",
                 "time": "2019-11-23T14:02:45Z",

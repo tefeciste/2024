@@ -6,6 +6,7 @@ var nanStras={
             "properties": {
                 "name": "Nantes - Strasbourg",
 				"id": "2",
+                "link": "http://velo300.free.fr/2020/nantesStrasbourg",
                 "cmt": "",
                 "desc": "",
                 "time": "2019-11-23T13:58:35Z",

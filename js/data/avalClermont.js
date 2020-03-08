@@ -5,7 +5,8 @@ var avalClermont={
             "type": "Feature",
             "properties": {
                 "name": "GTMC Avallon - Clermont",
-				"id": "4"
+				"id": "4",
+				"link": "http://velo300.free.fr/projets/morvan"
             },
             "geometry": {
                 "type": "LineString",

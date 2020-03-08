@@ -6,6 +6,7 @@ var luxLyon={
             "properties": {
                 "name": "Luxembourg - Lyon",
                 "id": "2",
+                "link": "http://velo300.free.fr/projets/luxLyon",
 				"cmt": "",
                 "desc": "",
                 "time": "2019-11-23T13:54:07Z",

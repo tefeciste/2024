@@ -6,6 +6,7 @@ var gorAveyron={
             "properties": {
                 "name": "Gorges Aveyron-Le Marathon-départ Penne",
 				"id": "2",
+                "link": "http://velo300.free.fr/2020/aveyron",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-01-15T22:20:14Z",

@@ -6,6 +6,7 @@ var albiBez={
             "properties": {
                 "name": "Albi - Castres - Beziers",
 				"id": "2",
+                "link":"http://velo300.free.fr/2020/albiBeziers",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-01-15T22:26:37Z",

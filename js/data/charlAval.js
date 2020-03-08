@@ -6,6 +6,7 @@ var charlAval={
             "properties": {
                 "name": "Charleville - Avallon",
 				"id": "4",
+                "link": "http://velo300.free.fr/projets/lorrain",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-02-09T00:43:45Z",

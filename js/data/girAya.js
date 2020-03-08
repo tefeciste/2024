@@ -5,8 +5,9 @@ var giroAya={
             "type": "Feature",
             "properties": {
                 "name": "Girona-Ayamonte",
+                "id": "2",
+                "link": "http://velo300.free.fr/2020/girAyamonte",
                 "cmt": "",
-				"id": "2",
                 "desc": "",
                 "time": "2019-11-23T13:52:31Z",
                 "coordTimes": [

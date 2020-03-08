@@ -6,6 +6,7 @@ var transAlp={
             "properties": {
                 "name": "TRANS ALPES (Garmisch - Lago di Garda)",
 				"id": "4",
+                "link": "http://velo300.free.fr/projets/transAlp",
                 "cmt": "",
                 "desc": "",
                 "time": "2012-05-09T08:53:08Z",

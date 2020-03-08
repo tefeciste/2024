@@ -1,27 +1,21 @@
 //Leaflet configuration javascript file
 //Luc Clément	
 
-//	Elevation statistics global variables
-var dplus;
-var dmoins;
-
 var hasLienDiv = false;
 var isMobileDevice = false;
 
-
-//	LatLng to center the map
-var saintCouat = [42.996200, 2.107704];
 //	LEAFLET Map Object
 var map = L.map('map', {
     zoomControl: true,
     maxZoom: 20
-}); // .setView(saintCouat, 6);
+});
+
 if (L.Browser.mobile) {
     isMobileDevice = true;
     map.removeControl(map.zoomControl);
 }
-var bounds_group = new L.featureGroup([]);
 
+var bounds_group = new L.featureGroup([]);
 function setBounds() {
     if (bounds_group.getLayers().length) {
         map.fitBounds(bounds_group.getBounds());
@@ -100,18 +94,6 @@ var norvege = L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gm
     maxZoom: 17
 });
 
-//	12.	Suede
-// var suede = L.tileLayer.wmts('https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/64a0ae63-35dd-3eed-aa75-97e6d2093f1e/?request=getcapabilities&service=wmts', {
-// layer: 'topowebb',
-// tilematrixSet: '3857',
-// format: 'image/png',
-// style: 'default',
-// uppercase: true,
-// transparent: true,
-// continuousWorld : true,
-// opacity: 1.0
-// });
-
 //	13.	Croatie topo
 var croatie = L.tileLayer.wms("http://geoportal.dgu.hr/services/tk/wms", {
     layers: 'TK25',
@@ -132,13 +114,11 @@ var suede = new L.TileLayer(`https://api.lantmateriet.se/open/topowebb-ccby/v1/w
     attribution: '&copy; <a href="https://www.lantmateriet.se/en/">Lantmäteriet</a> Topografisk Webbkarta Visning, CCB',
 });
 
-
 //	16. Thunderforest Outdoors
 var bm0 = L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=2ef599d239a34da9ba2e91cd3e33a269', {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 28
 });
-
 
 //	16.	Waymarked Trails VTT
 var wayMtb = L.tileLayer('http://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
@@ -146,7 +126,6 @@ var wayMtb = L.tileLayer('http://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', 
     transparent: true,
     maxZoom: 17
 });
-var topoMtb = L.layerGroup([wayMtb]);
 
 //	17.	Waymarked Trails Route
 var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
@@ -154,8 +133,6 @@ var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.pn
     transparent: true,
     maxZoom: 17
 });
-var topoCyc = L.layerGroup([wayCyc]);
-
 
 //	ELEVATION CONTROL CUSTOMIZATION
 //	same options in js/elevation/Leaflet.Elevation-0.0.2.min.js
@@ -240,11 +217,9 @@ function addData(e) {
     map.addControl(el);
 }
 
-
 //	1.	Manosque - Cavaillon
 //	2.	Cavaillon - Aix
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
-
 
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>';
@@ -264,7 +239,6 @@ function addLien(lien) {
         }
     }
 }
-
 
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
@@ -299,7 +273,6 @@ function onEachFeature(feature, layer) {
 function style(feature) {
     for (var i = 0; i < tabCouleurs.length; i++) {
 
-
         return {
             color: tabCouleurs[feature.properties.id - 1],
             weight: 3,
@@ -313,7 +286,6 @@ function style(feature) {
 function large(feature) {
     for (var i = 0; i < tabCouleurs.length; i++) {
 
-
         return {
             color: "rgba(255,255,255, 0.01)",
             weight: 10,
@@ -326,125 +298,91 @@ function large(feature) {
 /*      COUCHES GEOJSON
         Traces déjà faites
 */
-
 //	01 Aix - Cannes
 var aixCannes = L.geoJson(aixCan, {
     onEachFeature: onEachFeature,
     style: style
 });
-//aixCannes.addTo(map);
-
 //	02 Bordeaux - Moissac
 var bdxMoissac = L.geoJson(bdxMois, {
     onEachFeature: onEachFeature,
     style: style
 });
-//bdxMoissac.addTo(map);
-
 //	03 Blan - Sarlat
 var revelSarlat = L.geoJson(blanSarlat, {
     onEachFeature: onEachFeature,
     style: style
 });
-//revelSarlat.addTo(map);
-
 //	04 Briancon - Aix
 var brianconAix = L.geoJson(briAix, {
     onEachFeature: onEachFeature,
     style: style
 });
-//brianconAix.addTo(map);
-
 // 05 Chemin navarrais
 var cheminNav = L.geoJson(chemNav, {
     onEachFeature: onEachFeature,
     style: style
 });
-//cheminNav.addTo(map);
-
 //  06 Danemark
 var dkRoller = L.geoJson(danemark, {
     onEachFeature: onEachFeature,
     style: style
 });
-//dkRoller.addTo(map);
-
 // 07 gtmc
 var gtMassifC = L.geoJson(gtmc, {
     onEachFeature: onEachFeature,
     style: style
 });
-//gtMassifC.addTo(map);
-
 // 08 gtmn
 var gtMtnNoir = L.geoJson(gtmn, {
     onEachFeature: onEachFeature,
     style: style
 });
-//gtMtnNoir.addTo(map);
-
 // 09 Hendaye - San Sebastian
 var hendonosti = L.geoJson(hendSanSeb, {
     onEachFeature: onEachFeature,
     style: style
 });
-//hendonosti.addTo(map);
-
 // 10 Lyon - Aix
 var lyonAixPce = L.geoJson(lyonAix, {
     onEachFeature: onEachFeature,
     style: style
 });
-//lyonAixPce.addTo(map);
-
 // 11 Lyon - Bordeaux
 var lyonBordeaux = L.geoJson(lyonbdx, {
     onEachFeature: onEachFeature,
     style: style
 });
-//lyonBordeaux.addTo(map);
-
 // 12 Nantes - Hendaye
 var nantesHend = L.geoJson(nantHend, {
     onEachFeature: onEachFeature,
     style: style
 });
-//nantesHend.addTo(map);
-
 // 13 Revel - Aix
 var revAix = L.geoJson(revelAix, {
     onEachFeature: onEachFeature,
     style: style
 });
-//revAix.addTo(map);
-
 // 14 Souston - St Jean-Pied-de-Port
 var soustons = L.geoJson(sousPiePor, {
     onEachFeature: onEachFeature,
     style: style
 });
-//soustons.addTo(map);
-
 // 15 Strasbourg - Saint-Petersbourg
 var strasbSankt = L.geoJson(strasStPet, {
     onEachFeature: onEachFeature,
     style: style
 });
-//strasbSankt.addTo(map);
-
 // 16 Toulouse - Miranda de Ebro
 var toulMir = L.geoJson(tlseMirEbro, {
     onEachFeature: onEachFeature,
     style: style
 });
-//toulMir.addTo(map);
-
 // 17 Lisbonne - Santiago
 var lisSantiago = L.geoJson(lisSant, {
     onEachFeature: onEachFeature,
     style: style
 });
-//lisSantiago.addTo(map);
 
 /*
         COUCHES GEOJSON
@@ -456,43 +394,31 @@ var geroAya = L.geoJson(giroAya, {
     onEachFeature: onEachFeature,
     style: style
 });
-//geroAya.addTo(map);
-
 // 02 Luxembourg - Lyon
 var luxembourg = L.geoJson(luxLyon, {
     onEachFeature: onEachFeature,
     style: style
 });
-//luxembourg.addTo(map);
-
 //	03 Gorges de l'Aveyron marathon départ de Penne
 var gorgesAveyron = L.geoJson(gorAveyron, {
     onEachFeature: onEachFeature,
     style: style
 });
-//madLis.addTo(map);
-
 // 04 Nantes - Strasbourg
 var nantesStras = L.geoJson(nanStras, {
     onEachFeature: onEachFeature,
     style: style
 });
-//nantesStras.addTo(map);
-
 // 05 Dunkerque - revel
 var dunkerqueRev = new L.geoJson(dunRevel, {
     onEachFeature: onEachFeature,
     style: style
 });
-//dunkerqueRev.addTo(map);
-
 //	07 Toulouse - Moissac - Albi
 var tlseAlbi = L.geoJson(tlseMoiss, {
     onEachFeature: onEachFeature,
     style: style
 });
-//tlseBez.addTo(map);
-
 //	08 Albi - Béziers
 var albiBeziers = L.geoJson(albiBez, {
     onEachFeature: onEachFeature,
@@ -509,84 +435,66 @@ var nantHamb = L.geoJson(nanthambourg, {
     onEachFeature: onEachFeature,
     style: style
 });
-//nantHamb.addTo(map);
-
 // 02 Mulhouse - Istanbul
 var mulhouse = new L.geoJson(mulhIstanbul, {
     onEachFeature: onEachFeature,
     style: style
 });
-//mulhouse.addTo(map);
-
 // 03  Cap Nord
 var capeNord = L.geoJson(capNord, {
     onEachFeature: onEachFeature,
     style: style
 });
-//capeNord.addTo(map);
-
 //04 Trans Alpes
 var transAlpes = L.geoJson(transAlp, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //05 Dunkerque - strasbourg
 var dunStrasbourg = L.geoJson(dunStras, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 // 06  Valence - Madrid
 var valenceMad = L.geoJson(valMad, {
     onEachFeature: onEachFeature,
     style: style
 });
-//capeNord.addTo(map);
-
 //07 Madrid - Lisbonne
 var madLisbonne = L.geoJson(madlis, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //08 San Sebastian - Seville
 var sanSebSeville = L.geoJson(sansSev, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //09 Irun - Porto par la côte
 var irunPortoCote = L.geoJson(irunPorto, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //10 Charleville Mézières - Avallon
 var charlevilleAval = L.geoJson(charlAval, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //11 GTMC Avallon - Clermont Ferrand
 var avallonClermont = L.geoJson(avalClermont, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //12 Revel - Port de la Selva
 var portSelva = L.geoJson(revelSelva, {
     onEachFeature: onEachFeature,
     style: style
 });
-
 //13 Caen - Bordeaux
 var caenBordeaux = L.geoJson(caenBdx, {
     onEachFeature: onEachFeature,
     style: style
 });
-
-
 //13 Caen - Bordeaux
 var havre = L.geoJson(havreBdx, {
     onEachFeature: onEachFeature,
@@ -819,16 +727,6 @@ bounds_group.addLayer(geroAya);
 setBounds();
 
 
-//	Adjust map to fit layer clicked
-/*function onselect(feature, layer) {
-    layer.on('overlayadd', onOverlayAdd);
-
-    function onOverlayAdd(e) {
-        map.fitBounds(layer.getBounds());
-    }
-}*/
-
-
 function toggleMapboxLayer() {
     if (!map.hasLayer(mpO) && (map.hasLayer(wayCyc) || map.hasLayer(wayMtb))) {
         mpO.addTo(map);
@@ -860,11 +758,6 @@ $(document).ready(function () {
         $("#elClose").blur();
     });
 
-    //	On click
-    /*    map.on('click', function (e) {
-            $('.leaflet-control.elevation').fadeOut('fast');
-        });*/
-
     $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight", "Bold");
 
     var process = ["base", "overlays"];
@@ -875,12 +768,6 @@ $(document).ready(function () {
         $('#' + process[i] + 'CollExp').append(' / ');
         $('.leaflet-control-layers-' + process[i]).find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#' + process[i] + 'CollExp');
     }
-    /*    $('.leaflet-control-layers-overlays').prepend('<div id="overCollExp"></div>');
-        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').addClass('layers-actions');
-        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse').first().appendTo('#overCollExp');
-        $('#overCollExp').append(' / ');
-        $('.leaflet-control-layers-overlays').find('.leaflet-layerstree-expand-collapse:nth-child(2)').appendTo('#overCollExp');*/
-
     $('.leaflet-layerstree-node:nth-child(1)').click(function () {
         toggleMapboxLayer();
     });

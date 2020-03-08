@@ -6,6 +6,7 @@ var nanthambourg={
             "properties": {
                 "name": "Brest - Hambourg",
 				"id": "4",
+                "link": "http://velo300.free.fr/projets/hambourg",
                 "cmt": "",
                 "desc": "",
                 "time": "2019-11-23T14:07:44Z",

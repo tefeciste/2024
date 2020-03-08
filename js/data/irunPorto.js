@@ -6,6 +6,7 @@ var irunPorto={
             "properties": {
                 "name": "Irun - Porto par la côte",
 				"id": "4",
+                "link": "http://velo300.free.fr/projets/irunPorto",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-01-19T21:48:19Z",

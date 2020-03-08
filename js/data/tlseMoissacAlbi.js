@@ -5,6 +5,7 @@ var tlseMoiss={
             "type": "Feature",
             "properties": {
                 "name": "Toulouse - Moissac - Albi",
+                "link": "http://velo300.free.fr/2020/tlseAlbi",
 				"id": "2",
                 "cmt": "",
                 "desc": "",

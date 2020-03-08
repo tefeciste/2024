@@ -4,8 +4,9 @@ var valMad={
         {
             "type": "Feature",
             "properties": {
-                "name": "Valence - Madrid 001",
+                "name": "Valence - Madrid",
 				"id":"4",
+                "link": "http://velo300.free.fr/projets/valMadrid",
                 "cmt": "",
                 "desc": "",
                 "time": "2020-01-16T22:36:44Z",
