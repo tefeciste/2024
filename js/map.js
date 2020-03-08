@@ -222,7 +222,7 @@ function addData(e) {
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
 function addLien(lien) {
-    var html = '<a target="_blank" id="lien" href="' + lien + '">Voir plus</a>';
+    var html = '<a target="_blank" id="lien" href="' + lien + '">Voir seul</a>';
     if (hasLienDiv) {
         $('#lien').remove();
         if (isMobileDevice) {
