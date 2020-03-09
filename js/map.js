@@ -16,6 +16,7 @@ if (L.Browser.mobile) {
 }
 
 var bounds_group = new L.featureGroup([]);
+
 function setBounds() {
     if (bounds_group.getLayers().length) {
         map.fitBounds(bounds_group.getBounds());
@@ -220,22 +221,26 @@ function addData(e) {
 //	1.	Manosque - Cavaillon
 //	2.	Cavaillon - Aix
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
+var lienIt = 0;
 
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir seul</a>';
+    var containerHtml = '<span id="lien-pc-container" class="dl-link">' + html + '</span>';
     if (hasLienDiv) {
         $('#lien').remove();
-        if (isMobileDevice) {
+        $(html).appendTo(isMobileDevice === true ? '#titre' : '#lien-pc-container');
+/*        if (isMobileDevice) {
             $('#titre').append(html)
         } else {
             $('#lien-pc-container').append(html)
-        }
+        }*/
     } else {
-        hasLienDiv=true;
+        hasLienDiv = true;
         if (isMobileDevice) {
-            $('#titre').append(html);
+            $('#titre').append(lienIt === 0 ? '<br>' + html : html);
+            lienIt++;
         } else {
-            $('<span id="lien-pc-container" class="dl-link">' + html + '</span>').appendTo('.leaflet-control.elevation');
+            $(containerHtml).appendTo('.leaflet-control.elevation');
         }
     }
 }
@@ -258,7 +263,7 @@ function onEachFeature(feature, layer) {
             var lien = feature.properties.link;
             addLien(lien);
         } else if (hasLienDiv) {
-            hasLienDiv=false;
+            hasLienDiv = false;
             if (isMobileDevice) {
                 $('#lien').remove();
             } else {
@@ -718,12 +723,10 @@ lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
 L.control.scale({imperial: false}).addTo(map);
 
 //	MAP EVENTS
-//  On load
 map.doubleClickZoom.disable();
 
-bounds_group.addLayer(luxembourg);
-bounds_group.addLayer(nantesStras);
-bounds_group.addLayer(geroAya);
+bounds_group.addLayer(luxembourg,nantesStras,geroAya);
+
 setBounds();
 
 
@@ -758,8 +761,10 @@ $(document).ready(function () {
         $("#elClose").blur();
     });
 
+    // Style div group titles
     $('.leaflet-layerstree-header-pointer').find('.leaflet-layerstree-header-name').css("font-weight", "Bold");
 
+    // Style Collapse/Expand functions
     var process = ["base", "overlays"];
     for (var i = 0; i < process.length; i++) {
         $('.leaflet-control-layers-' + process[i]).prepend('<div id="' + process[i] + 'CollExp" class="text-center"></div>');

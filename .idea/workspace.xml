@@ -3,25 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/albiBeziers.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/albiBeziers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/avalClermont.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/avalClermont.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/charlAval.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/charlAval.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/dunStrasb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/dunStrasb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/girAya.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/girAya.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/gorgesAveyron.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/gorgesAveyron.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/havreBdx.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/havreBdx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/irunPorto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/irunPorto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/luxLyon.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/luxLyon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/madLisb.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/madLisb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/nanStras.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/nanStras.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/raid/capNord.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/raid/capNord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/raid/mulhIstanbul.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/raid/mulhIstanbul.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/raid/nanthambourg.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/raid/nanthambourg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/ssSeville.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/ssSeville.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/tlseBeziers.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/tlseBeziers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/tlseMoissacAlbi.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/tlseMoissacAlbi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/transAlp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/transAlp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/data/valMadrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/data/valMadrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,20 +27,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/data/raid/mulhIstanbul.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="61" />
+            <state relative-caret-position="448">
+              <caret line="241" column="40" lean-forward="true" selection-start-line="241" selection-start-column="40" selection-end-line="241" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#0#6#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/data/raid/nanthambourg.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/data/gorgesAveyron.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+            <state relative-caret-position="576">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -119,7 +113,6 @@
         <option value="$PROJECT_DIR$/js/data/fait/danemark.js" />
         <option value="$PROJECT_DIR$/js/elevation/Leaflet.Elevation-0.0.2.min.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/map.js" />
         <option value="$PROJECT_DIR$/js/data/albiBeziers.js" />
         <option value="$PROJECT_DIR$/js/data/avalClermont.js" />
         <option value="$PROJECT_DIR$/js/data/charlAval.js" />
@@ -138,6 +131,7 @@
         <option value="$PROJECT_DIR$/js/data/valMadrid.js" />
         <option value="$PROJECT_DIR$/js/data/raid/mulhIstanbul.js" />
         <option value="$PROJECT_DIR$/js/data/raid/nanthambourg.js" />
+        <option value="$PROJECT_DIR$/js/map.js" />
       </list>
     </option>
   </component>
@@ -159,8 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,24 +178,19 @@
               <item name="data" type="462c0819:PsiDirectoryNode" />
               <item name="fait" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="2024" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2024" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="raid" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Logiciels/android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583675323772" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583675452927" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -284,12 +271,14 @@
       <workItem from="1583539537669" duration="1363000" />
       <workItem from="1583605093793" duration="4617000" />
       <workItem from="1583617106250" duration="128000" />
-      <workItem from="1583671182837" duration="2893000" />
+      <workItem from="1583671182837" duration="3126000" />
+      <workItem from="1583676172992" duration="264000" />
+      <workItem from="1583778866123" duration="827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126631000" />
+    <option name="totallyTimeSpent" value="127955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,7 +293,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17217484" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -367,17 +356,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/map.js</url>
-          <line>207</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -554,20 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12224">
-          <caret line="765" column="41" selection-start-line="765" selection-start-column="41" selection-end-line="765" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/avalClermont.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -600,13 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/gorgesAveyron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -708,6 +665,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/data/raid/nanthambourg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/data/raid/mulhIstanbul.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -715,10 +679,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/data/raid/nanthambourg.js">
+    <entry file="file://$PROJECT_DIR$/js/data/gorgesAveyron.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="64" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+        <state relative-caret-position="576">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="241" column="40" lean-forward="true" selection-start-line="241" selection-start-column="40" selection-end-line="241" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
