@@ -221,7 +221,7 @@ function addData(e) {
 //	1.	Manosque - Cavaillon
 //	2.	Cavaillon - Aix
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
-var lienIt = 0;
+var mobileLienCounter = 0;
 
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir seul</a>';
@@ -238,7 +238,7 @@ function addLien(lien) {
         hasLienDiv = true;
         if (isMobileDevice) {
             $('#titre').append(lienIt === 0 ? '<br>' + html : html);
-            lienIt++;
+            mobileLienCounter++;
         } else {
             $(containerHtml).appendTo('.leaflet-control.elevation');
         }
@@ -725,7 +725,9 @@ L.control.scale({imperial: false}).addTo(map);
 //	MAP EVENTS
 map.doubleClickZoom.disable();
 
-bounds_group.addLayer(luxembourg,nantesStras,geroAya);
+bounds_group.addLayer(luxembourg);
+bounds_group.addLayer(nantesStras);
+bounds_group.addLayer(geroAya);
 
 setBounds();
 
