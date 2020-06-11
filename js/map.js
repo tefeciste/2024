@@ -509,7 +509,7 @@ var overLayers = {
     label: 'overlays',
     noShow: true,
     children: [
-        {
+/*        {
             label: '  2020',
             collapsed: false,
             selectAllCheckbox: true,
@@ -535,7 +535,7 @@ var overLayers = {
                     ]
                 }
             ]
-        },
+        },*/
         {
             label: '> 2020',
             collapsed: true,
@@ -552,7 +552,9 @@ var overLayers = {
                         {label: 'Trans Alpes', layer: transAlpes},
                         {label: 'Cordon lorrain', layer: charlevilleAval},
                         {label: 'GTMC Morvan', layer: avallonClermont},
-                        {label: 'Revel - Port Selva', layer: portSelva}
+                        {label: 'Revel - Port Selva', layer: portSelva},
+                        {label: 'Girona - Ayamonte', layer: geroAya},
+                        {label: 'Gorges de l\'Aveyron', layer: gorgesAveyron}
                     ]
                 },
                 {
@@ -561,7 +563,12 @@ var overLayers = {
                     children: [
                         {label: 'Dunkerque - Strasbourg', layer: dunStrasbourg},
                         //{label: 'Caen - Bordeaux', layer: caenBordeaux},
-                        {label: 'Le Havre - Bordeaux', layer: havre}
+                        {label: 'Le Havre - Bordeaux', layer: havre},
+                        {label: 'Dunkerque - revel', layer: dunkerqueRev},
+                        {label: 'Luxembourg - Lyon', layer: luxembourg},
+                        {label: 'Nantes - Strasbourg', layer: nantesStras},
+                        {label: 'Toulouse - Albi', layer: tlseAlbi},
+                        {label: 'Albi - Béziers', layer: albiBeziers}
                     ]
                 },
                 {
