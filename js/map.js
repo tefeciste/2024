@@ -9,7 +9,7 @@ var map = L.map('map', {
     zoomControl: true,
     maxZoom: 20
 });
-var myRenderer = L.canvas({ padding: 0.5, tolerance: 30 });
+var myRenderer = L.canvas({ padding: 0.8, tolerance: 30 });
 if (L.Browser.mobile) {
     isMobileDevice = true;
     map.removeControl(map.zoomControl);
