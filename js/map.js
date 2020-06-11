@@ -10,18 +10,13 @@ var map = L.map('map', {
     maxZoom: 20
 });
 var myRenderer = L.canvas({ padding: 0.8, tolerance: 30 });
-if (L.Browser.mobile) {
-    isMobileDevice = true;
-    map.removeControl(map.zoomControl);
-}
-var bounds_group = new L.featureGroup([]);
 
+var bounds_group = new L.featureGroup([]);
 function setBounds() {
     if (bounds_group.getLayers().length) {
         map.fitBounds(bounds_group.getBounds());
     }
 }
-
 //	BASEMAPS LAYERS
 
 //	1.	MapBox Outdoors (Topo)
@@ -191,10 +186,21 @@ function addData(e) {
     map.addControl(el);
 }
 
+function style(feature) {
+    for (var i=0; i<tabCouleurs.length; i++){
+
+
+        return {
+            color: tabCouleurs[feature.properties.id],
+            weight: 3,
+            opacity: 1
+        };
+
+    }
+}
 //	1.	Manosque - Cavaillon
 //	2.	Cavaillon - Aix
 var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
-var mobileLienCounter = 0;
 
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir seul</a>';
@@ -211,7 +217,6 @@ function addLien(lien) {
         hasLienDiv = true;
         if (isMobileDevice) {
             $('#titre').append(lienIt === 0 ? '<br>' + html : html);
-            mobileLienCounter++;
         } else {
             $(containerHtml).appendTo('.leaflet-control.elevation');
         }
@@ -220,7 +225,7 @@ function addLien(lien) {
 
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
-//			-display elevation profile
+//			-display eleofile
 //			-add elevation profile title div
 
 function onEachFeature(feature, layer) {
@@ -749,6 +754,10 @@ for (var i = 0; i < preLayersArray.length; i++) {
 }
 
 $(document).ready(function () {
+    if (L.Browser.mobile) {
+        isMobileDevice = true;
+        map.removeControl(map.zoomControl);
+    }
 
     $('.leaflet-control.elevation').hide();
 
