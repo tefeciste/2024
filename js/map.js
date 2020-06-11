@@ -186,33 +186,17 @@ function addData(e) {
     map.addControl(el);
 }
 
-function style(feature) {
-    for (var i=0; i<tabCouleurs.length; i++){
-
-
-        return {
-            color: tabCouleurs[feature.properties.id],
-            weight: 3,
-            opacity: 1
-        };
-
-    }
-}
-//	1.	Manosque - Cavaillon
-//	2.	Cavaillon - Aix
-var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
-
 function addLien(lien) {
     var html = '<a target="_blank" id="lien" href="' + lien + '">Voir seul</a>';
     var containerHtml = '<span id="lien-pc-container" class="dl-link">' + html + '</span>';
     if (hasLienDiv) {
         $('#lien').remove();
         $(html).appendTo(isMobileDevice === true ? '#titre' : '#lien-pc-container');
-/*        if (isMobileDevice) {
-            $('#titre').append(html)
-        } else {
-            $('#lien-pc-container').append(html)
-        }*/
+        /*        if (isMobileDevice) {
+                    $('#titre').append(html)
+                } else {
+                    $('#lien-pc-container').append(html)
+                }*/
     } else {
         hasLienDiv = true;
         if (isMobileDevice) {
@@ -222,6 +206,7 @@ function addLien(lien) {
         }
     }
 }
+var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
@@ -254,62 +239,77 @@ function onEachFeature(feature, layer) {
         }
     });
 }
+function style(feature) {
+    for (var i=0; i<tabCouleurs.length; i++){
+
+
+        return {
+            color: tabCouleurs[feature.properties.id],
+            weight: 3,
+            opacity: 1
+        };
+
+    }
+}
+
+
 
 /*      COUCHES GEOJSON
         Traces déjà faites
 */
 //	01 Aix - Cannes
 var aixCannes = L.geoJson(aixCan, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	02 Bordeaux - Moissac
 var bdxMoissac = L.geoJson(bdxMois, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	03 Blan - Sarlat
 var revelSarlat = L.geoJson(blanSarlat, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	04 Briancon - Aix
 var brianconAix = L.geoJson(briAix, {
+
+
     onEachFeature: onEachFeature,
-    renderer: myRenderer,
     style: style
 });
 // 05 Chemin navarrais
 var cheminNav = L.geoJson(chemNav, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //  06 Danemark
 var dkRoller = L.geoJson(danemark, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 07 gtmc
 var gtMassifC = L.geoJson(gtmc, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 08 gtmn
 var gtMtnNoir = L.geoJson(gtmn, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 09 Hendaye - San Sebastian
 var hendonosti = L.geoJson(hendSanSeb, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 10 Lyon - Aix
@@ -320,44 +320,44 @@ var lyonAixPce = L.geoJson(lyonAix, {
 });
 // 11 Lyon - Bordeaux
 var lyonBordeaux = L.geoJson(lyonbdx, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 12 Nantes - Hendaye
 var nantesHend = L.geoJson(nantHend, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 13 Revel - Aix
 var revAix = L.geoJson(revelAix, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 14 Souston - St Jean-Pied-de-Port
 var soustons = L.geoJson(sousPiePor, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 15 Strasbourg - Saint-Petersbourg
 var strasbSankt = L.geoJson(strasStPet, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 16 Toulouse - Miranda de Ebro
 var toulMir = L.geoJson(tlseMirEbro, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 17 Lisbonne - Santiago
 var lisSantiago = L.geoJson(lisSant, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 
@@ -368,44 +368,44 @@ var lisSantiago = L.geoJson(lisSant, {
 
 //	01 Gerone - Ayamonte
 var geroAya = L.geoJson(giroAya, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 02 Luxembourg - Lyon
 var luxembourg = L.geoJson(luxLyon, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	03 Gorges de l'Aveyron marathon départ de Penne
 var gorgesAveyron = L.geoJson(gorAveyron, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 04 Nantes - Strasbourg
 var nantesStras = L.geoJson(nanStras, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 05 Dunkerque - revel
 var dunkerqueRev = new L.geoJson(dunRevel, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	07 Toulouse - Moissac - Albi
 var tlseAlbi = L.geoJson(tlseMoiss, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //	08 Albi - Béziers
 var albiBeziers = L.geoJson(albiBez, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 
@@ -416,86 +416,89 @@ var albiBeziers = L.geoJson(albiBez, {
 */
 // 01 Nantes - Hambourg
 var nantHamb = L.geoJson(nanthambourg, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 02 Mulhouse - Istanbul
 var mulhouse = new L.geoJson(mulhIstanbul, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 03  Cap Nord
 var capeNord = L.geoJson(capNord, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //04 Trans Alpes
 var transAlpes = L.geoJson(transAlp, {
+    renderer: myRenderer,
     onEachFeature: onEachFeature,
     renderer: myRenderer,
     style: style
 });
 //05 Dunkerque - strasbourg
 var dunStrasbourg = L.geoJson(dunStras, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 // 06  Valence - Madrid
 var valenceMad = L.geoJson(valMad, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //07 Madrid - Lisbonne
 var madLisbonne = L.geoJson(madlis, {
+    renderer: myRenderer,
     onEachFeature: onEachFeature,
     renderer: myRenderer,
     style: style
 });
 //08 San Sebastian - Seville
 var sanSebSeville = L.geoJson(sansSev, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //09 Irun - Porto par la côte
 var irunPortoCote = L.geoJson(irunPorto, {
+    renderer: myRenderer,
     onEachFeature: onEachFeature,
     renderer: myRenderer,
     style: style
 });
 //10 Charleville Mézières - Avallon
 var charlevilleAval = L.geoJson(charlAval, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //11 GTMC Avallon - Clermont Ferrand
 var avallonClermont = L.geoJson(avalClermont, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //12 Revel - Port de la Selva
 var portSelva = L.geoJson(revelSelva, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //13 Caen - Bordeaux
 var caenBordeaux = L.geoJson(caenBdx, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 //13 Caen - Bordeaux
 var havre = L.geoJson(havreBdx, {
-    onEachFeature: onEachFeature,
     renderer: myRenderer,
+    onEachFeature: onEachFeature,
     style: style
 });
 /*
