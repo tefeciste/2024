@@ -9,12 +9,11 @@ var map = L.map('map', {
     zoomControl: true,
     maxZoom: 20
 });
-
+var myRenderer = L.canvas({ padding: 0.5, tolerance: 30 });
 if (L.Browser.mobile) {
     isMobileDevice = true;
     map.removeControl(map.zoomControl);
 }
-
 var bounds_group = new L.featureGroup([]);
 
 function setBounds() {
@@ -139,13 +138,12 @@ var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.pn
 //	same options in js/elevation/Leaflet.Elevation-0.0.2.min.js
 //	all used options are the default values
 var mobileWidth = document.getElementById("map").offsetWidth;
+var deviceWidth = L.Browser.mobile? mobileWidth : 600;
 
-var deviceEl;
-if (L.Browser.mobile) {
-    deviceEl = L.control.elevation({
+        el = L.control.elevation({
         position: "bottomright",
         theme: "steelblue-theme", //default: lime-theme
-        width: mobileWidth,
+        width: deviceWidth,
         height: 130,
         margins: {
             top: 40,
@@ -166,33 +164,7 @@ if (L.Browser.mobile) {
         imperial: false    //display imperial units instead of metric
 
     });
-} else {
-    deviceEl = L.control.elevation({
-        position: "bottomright",
-        theme: "steelblue-theme", //default: lime-theme
-        width: 600,
-        height: 130,
-        margins: {
-            top: 40,
-            right: 30,
-            bottom: 5,
-            left: 50
-        },
-        useHeightIndicator: true, //if false a marker is drawn at map position
-        interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
-        hoverNumber: {
-            decimalsX: 2, //decimals on distance (always in km)
-            decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
-            formatter: undefined //custom formatter function may be injected
-        },
-        xTicks: undefined, //number of ticks in x axis, calculated by default according to width
-        yTicks: undefined, //number of ticks on y axis, calculated by default according to height
-        collapsed: false,  //collapsed mode, show chart on click or mouseover
-        imperial: false    //display imperial units instead of metric
 
-    });
-}
-el = deviceEl;
 //	Add elevation-profile to map
 el.addTo(map);
 
@@ -202,6 +174,7 @@ function toggleEl() {
         $('.leaflet-control.elevation').fadeIn('fast');
         if (L.Browser.mobile) {
             setMargin();
+            $('.leaflet-control-scale').hide();
         }
     }
 }
@@ -252,6 +225,7 @@ function addLien(lien) {
 
 function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
+        L.DomEvent.stopPropagation(e);
         $('.area').css('fill', tabCouleurs[feature.properties.id - 1]);
         map.fitBounds(layer.getBounds());
         toggleEl();
@@ -259,6 +233,9 @@ function onEachFeature(feature, layer) {
         el.addData(feature);
         var titreHtml = '<span id="titre">' + feature.properties.name + '</span>';
         $(titreHtml).appendTo('.leaflet-control.elevation');
+        if (isMobileDevice) {
+            $('.leaflet-control-scale').hide();
+        }
         if (feature.properties.link !== undefined) {
             var lien = feature.properties.link;
             addLien(lien);
@@ -273,119 +250,109 @@ function onEachFeature(feature, layer) {
     });
 }
 
-//	LAYER STYLE
-//	1. Visible track style
-function style(feature) {
-    for (var i = 0; i < tabCouleurs.length; i++) {
-
-        return {
-            color: tabCouleurs[feature.properties.id - 1],
-            weight: 3,
-            opacity: 1
-        };
-
-    }
-}
-
-//	2. Large transparent track style (mobile use)
-function large(feature) {
-    for (var i = 0; i < tabCouleurs.length; i++) {
-
-        return {
-            color: "rgba(255,255,255, 0.01)",
-            weight: 10,
-            opacity: 1
-        };
-
-    }
-}
-
 /*      COUCHES GEOJSON
         Traces déjà faites
 */
 //	01 Aix - Cannes
 var aixCannes = L.geoJson(aixCan, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	02 Bordeaux - Moissac
 var bdxMoissac = L.geoJson(bdxMois, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	03 Blan - Sarlat
 var revelSarlat = L.geoJson(blanSarlat, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	04 Briancon - Aix
 var brianconAix = L.geoJson(briAix, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 05 Chemin navarrais
 var cheminNav = L.geoJson(chemNav, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //  06 Danemark
 var dkRoller = L.geoJson(danemark, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 07 gtmc
 var gtMassifC = L.geoJson(gtmc, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 08 gtmn
 var gtMtnNoir = L.geoJson(gtmn, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 09 Hendaye - San Sebastian
 var hendonosti = L.geoJson(hendSanSeb, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 10 Lyon - Aix
 var lyonAixPce = L.geoJson(lyonAix, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 11 Lyon - Bordeaux
 var lyonBordeaux = L.geoJson(lyonbdx, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 12 Nantes - Hendaye
 var nantesHend = L.geoJson(nantHend, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 13 Revel - Aix
 var revAix = L.geoJson(revelAix, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 14 Souston - St Jean-Pied-de-Port
 var soustons = L.geoJson(sousPiePor, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 15 Strasbourg - Saint-Petersbourg
 var strasbSankt = L.geoJson(strasStPet, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 16 Toulouse - Miranda de Ebro
 var toulMir = L.geoJson(tlseMirEbro, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 17 Lisbonne - Santiago
 var lisSantiago = L.geoJson(lisSant, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 
@@ -397,36 +364,43 @@ var lisSantiago = L.geoJson(lisSant, {
 //	01 Gerone - Ayamonte
 var geroAya = L.geoJson(giroAya, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 02 Luxembourg - Lyon
 var luxembourg = L.geoJson(luxLyon, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	03 Gorges de l'Aveyron marathon départ de Penne
 var gorgesAveyron = L.geoJson(gorAveyron, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 04 Nantes - Strasbourg
 var nantesStras = L.geoJson(nanStras, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 05 Dunkerque - revel
 var dunkerqueRev = new L.geoJson(dunRevel, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	07 Toulouse - Moissac - Albi
 var tlseAlbi = L.geoJson(tlseMoiss, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //	08 Albi - Béziers
 var albiBeziers = L.geoJson(albiBez, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 
@@ -438,71 +412,85 @@ var albiBeziers = L.geoJson(albiBez, {
 // 01 Nantes - Hambourg
 var nantHamb = L.geoJson(nanthambourg, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 02 Mulhouse - Istanbul
 var mulhouse = new L.geoJson(mulhIstanbul, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 03  Cap Nord
 var capeNord = L.geoJson(capNord, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //04 Trans Alpes
 var transAlpes = L.geoJson(transAlp, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //05 Dunkerque - strasbourg
 var dunStrasbourg = L.geoJson(dunStras, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 // 06  Valence - Madrid
 var valenceMad = L.geoJson(valMad, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //07 Madrid - Lisbonne
 var madLisbonne = L.geoJson(madlis, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //08 San Sebastian - Seville
 var sanSebSeville = L.geoJson(sansSev, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //09 Irun - Porto par la côte
 var irunPortoCote = L.geoJson(irunPorto, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //10 Charleville Mézières - Avallon
 var charlevilleAval = L.geoJson(charlAval, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //11 GTMC Avallon - Clermont Ferrand
 var avallonClermont = L.geoJson(avalClermont, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //12 Revel - Port de la Selva
 var portSelva = L.geoJson(revelSelva, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //13 Caen - Bordeaux
 var caenBordeaux = L.geoJson(caenBdx, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 //13 Caen - Bordeaux
 var havre = L.geoJson(havreBdx, {
     onEachFeature: onEachFeature,
+    renderer: myRenderer,
     style: style
 });
 /*
@@ -731,6 +719,16 @@ bounds_group.addLayer(geroAya);
 
 setBounds();
 
+// 		On click
+map.on('click', function(e) {
+    if ($('.leaflet-control.elevation').not('visible')) {
+        $('.leaflet-control.elevation').fadeOut('fast');
+        isDisplayed=false;
+        if (L.Browser.mobile){
+            $('.leaflet-control-attribution').show();
+        }
+    }
+});
 
 function toggleMapboxLayer() {
     if (!map.hasLayer(mpO) && (map.hasLayer(wayCyc) || map.hasLayer(wayMtb))) {
@@ -761,6 +759,9 @@ $(document).ready(function () {
     $('#elClose').click(function () {
         $('.leaflet-control.elevation').fadeOut('fast');
         $("#elClose").blur();
+        if (isMobileDevice) {
+            $('.leaflet-control-scale').show();
+        }
     });
 
     // Style div group titles
