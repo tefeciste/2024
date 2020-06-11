@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6b977b-f366-4bb5-88ef-d9cc753dee7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/leaflet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/leaflet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/map.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="242" column="45" lean-forward="true" selection-start-line="242" selection-start-column="45" selection-end-line="242" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="757" column="284" selection-start-line="757" selection-start-column="284" selection-end-line="757" selection-end-column="284" />
               <folding>
                 <element signature="e#154#196#0" />
                 <element signature="e#0#6#0" expanded="true" />
@@ -41,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/leaflet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+            <state relative-caret-position="448">
+              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
@@ -146,8 +145,8 @@
         <option value="$PROJECT_DIR$/js/data/valMadrid.js" />
         <option value="$PROJECT_DIR$/js/data/raid/mulhIstanbul.js" />
         <option value="$PROJECT_DIR$/js/data/raid/nanthambourg.js" />
-        <option value="$PROJECT_DIR$/js/map.js" />
         <option value="$PROJECT_DIR$/css/leaflet.css" />
+        <option value="$PROJECT_DIR$/js/map.js" />
       </list>
     </option>
   </component>
@@ -291,12 +290,12 @@
       <workItem from="1589180951275" duration="34000" />
       <workItem from="1589181394041" duration="1096000" />
       <workItem from="1591915675212" duration="1396000" />
-      <workItem from="1591917110813" duration="552000" />
+      <workItem from="1591917110813" duration="913000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132391000" />
+    <option name="totallyTimeSpent" value="132752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,7 +310,7 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -326,7 +325,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4946695" visible="true" weight="0.21030043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4946695" visible="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5053305" side_tool="true" weight="0.21030043" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -698,18 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="242" column="45" lean-forward="true" selection-start-line="242" selection-start-column="45" selection-end-line="242" selection-end-column="45" />
-          <folding>
-            <element signature="e#154#196#0" />
-            <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#0#6#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/leaflet-src.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -726,8 +713,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/leaflet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+        <state relative-caret-position="448">
+          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="757" column="284" selection-start-line="757" selection-start-column="284" selection-end-line="757" selection-end-column="284" />
+          <folding>
+            <element signature="e#154#196#0" />
+            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

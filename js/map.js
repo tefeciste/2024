@@ -755,12 +755,12 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux, havre];
+var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux, havre, dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
 for (var i = 0; i < preLayersArray.length; i++) {
-    preLayersArray[i].addTo(map);
+    postLayersArray[i].addTo(map);
 }
 
 $(document).ready(function () {
