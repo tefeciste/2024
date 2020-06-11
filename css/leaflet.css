@@ -154,7 +154,7 @@
 	margin-top: 10px;
 	}
 .leaflet-bottom .leaflet-control {
-	margin-bottom: 10px;
+	margin-bottom: 0;
 	}
 .leaflet-left .leaflet-control {
 	margin-left: 10px;

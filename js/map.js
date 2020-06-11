@@ -216,7 +216,7 @@ var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c30
 function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
         L.DomEvent.stopPropagation(e);
-        $('.area').css('fill', tabCouleurs[feature.properties.id - 1]);
+        $('.area').css('fill', tabCouleurs[feature.properties.id-1]);
         map.fitBounds(layer.getBounds());
         toggleEl();
         el.clear();
@@ -244,7 +244,7 @@ function style(feature) {
 
 
         return {
-            color: tabCouleurs[feature.properties.id],
+            color: tabCouleurs[feature.properties.id-1],
             weight: 3,
             opacity: 1
         };
