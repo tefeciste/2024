@@ -11,7 +11,7 @@ Carte d'itinéraires vélo en Europe de 2003 à 2024
 <br>
 <br>
 
-Consommation de cartes par service WMS/WMTS:<br>
+Consommation de cartes par service WMS/WMTS<br>
 Google Streets, Satelite, Relief<br>
 Thunderforest OSM, Outdoors<br>
 Waymarked trails mtb<br>
