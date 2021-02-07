@@ -5,7 +5,7 @@ Carte d'itinéraires vélo en Europe de 2003 à 2024
 <br>
 
 * Leaflet JS
-* Adaptation du [profil d'élévation] avec calcul des dénivelés
+* Adaptation du [profil d'élévation](https://github.com/MrMufflon/Leaflet.Elevation) avec calcul des dénivelés
 * Amélioration de l'ergonomie sur mobile
 
 <br>
