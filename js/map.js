@@ -360,6 +360,12 @@ var lisSantiago = L.geoJson(lisSant, {
     onEachFeature: onEachFeature,
     style: style
 });
+// 18 Tour Pyrénées
+var vueltapyr = L.geoJson(vueltajson, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
 
 /*
         COUCHES GEOJSON
@@ -604,6 +610,7 @@ var overLayers = {
                     label: 'Route',
                     selectAllCheckbox: true,
                     children: [
+                        {label: 'Tour Pyrénées', layer: vueltapyr},
                         {label: 'Bordeaux - Moissac', layer: bdxMoissac},
                         {label: 'Revel - Sarlat', layer: revelSarlat},
                         {label: 'Briancon - Aix', layer: brianconAix},
