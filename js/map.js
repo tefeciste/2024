@@ -366,6 +366,12 @@ var vueltapyr = L.geoJson(vueltajson, {
     onEachFeature: onEachFeature,
     style: style
 });
+// 18 Cols Pyrénéens
+var colpyr = L.geoJson(colpyrjson, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
 
 /*
         COUCHES GEOJSON
@@ -611,6 +617,7 @@ var overLayers = {
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Tour Pyrénées', layer: vueltapyr},
+                        {label: 'Cols Pyrénéens', layer: colpyr},
                         {label: 'Bordeaux - Moissac', layer: bdxMoissac},
                         {label: 'Revel - Sarlat', layer: revelSarlat},
                         {label: 'Briancon - Aix', layer: brianconAix},
