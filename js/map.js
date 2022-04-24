@@ -9,14 +9,16 @@ var map = L.map('map', {
     zoomControl: true,
     maxZoom: 20
 });
-var myRenderer = L.canvas({ padding: 0.8, tolerance: 30 });
+var myRenderer = L.canvas({padding: 0.8, tolerance: 30});
 
 var bounds_group = new L.featureGroup([]);
+
 function setBounds() {
     if (bounds_group.getLayers().length) {
         map.fitBounds(bounds_group.getBounds());
     }
 }
+
 //	BASEMAPS LAYERS
 
 //	1.	MapBox Outdoors (Topo)
@@ -27,7 +29,7 @@ var mapBox = L.tileLayer('https://api.mapbox.com/v4/matt.f714d988/{z}/{x}/{y}.pn
 
 var mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
     maxZoom: 21
-}).addTo(map);
+});
 
 //	2. IGN France Topo Scan express classique WMTS
 var ignApiKey = "uysc5plwe5d5vezt4dvze1l5";
@@ -50,7 +52,7 @@ var MTN = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster?", {
 var googleLayer = L.tileLayer('http://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-});
+}).addTo(map);
 
 //	5.	Google Satellite
 var satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
@@ -133,32 +135,32 @@ var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.pn
 //	same options in js/elevation/Leaflet.Elevation-0.0.2.min.js
 //	all used options are the default values
 var mobileWidth = document.getElementById("map").offsetWidth;
-var deviceWidth = L.Browser.mobile? mobileWidth : 600;
+var deviceWidth = L.Browser.mobile ? mobileWidth : 600;
 
-        el = L.control.elevation({
-        position: "bottomright",
-        theme: "steelblue-theme", //default: lime-theme
-        width: deviceWidth,
-        height: 130,
-        margins: {
-            top: 40,
-            right: 5,
-            bottom: 5,
-            left: 40
-        },
-        useHeightIndicator: true, //if false a marker is drawn at map position
-        interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
-        hoverNumber: {
-            decimalsX: 2, //decimals on distance (always in km)
-            decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
-            formatter: undefined //custom formatter function may be injected
-        },
-        xTicks: undefined, //number of ticks in x axis, calculated by default according to width
-        yTicks: undefined, //number of ticks on y axis, calculated by default according to height
-        collapsed: false,  //collapsed mode, show chart on click or mouseover
-        imperial: false    //display imperial units instead of metric
+el = L.control.elevation({
+    position: "bottomright",
+    theme: "steelblue-theme", //default: lime-theme
+    width: deviceWidth,
+    height: 130,
+    margins: {
+        top: 40,
+        right: 5,
+        bottom: 5,
+        left: 40
+    },
+    useHeightIndicator: true, //if false a marker is drawn at map position
+    interpolation: "linear", //see https://github.com/mbostock/d3/wiki/SVG-Shapes#wiki-area_interpolate
+    hoverNumber: {
+        decimalsX: 2, //decimals on distance (always in km)
+        decimalsY: 0, //deciamls on hehttps://www.npmjs.com/package/leaflet.coordinatesight (always in m)
+        formatter: undefined //custom formatter function may be injected
+    },
+    xTicks: undefined, //number of ticks in x axis, calculated by default according to width
+    yTicks: undefined, //number of ticks on y axis, calculated by default according to height
+    collapsed: false,  //collapsed mode, show chart on click or mouseover
+    imperial: false    //display imperial units instead of metric
 
-    });
+});
 
 //	Add elevation-profile to map
 el.addTo(map);
@@ -206,8 +208,10 @@ function addLien(lien) {
         }
     }
 }
-var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
 
+var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
+const tabColorBin = ["#78ff48", "#12BED4"];
+const tabColorBinAlt = ["#ff3135", "#ce06cb"];
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
 //			-display eleofile
@@ -216,7 +220,7 @@ var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c30
 function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
         L.DomEvent.stopPropagation(e);
-        $('.area').css('fill', tabCouleurs[feature.properties.id-1]);
+        $('.area').css('fill', tabCouleurs[feature.properties.id - 1]);
         map.fitBounds(layer.getBounds());
         toggleEl();
         el.clear();
@@ -239,19 +243,29 @@ function onEachFeature(feature, layer) {
         }
     });
 }
+
 function style(feature) {
-    for (var i=0; i<tabCouleurs.length; i++){
-
-
-        return {
-            color: tabCouleurs[feature.properties.id-1],
-            weight: 3,
-            opacity: 1
-        };
-
-    }
+    return {
+        color: tabCouleurs[feature.properties.id - 1],
+        weight: 3,
+        opacity: 1
+    };
 }
 
+const styleBinary = (feature) => {
+    return {
+        color: tabColorBin[feature.properties.id],
+        weight: 3,
+        opacity: 1
+    };
+};
+const styleBinaryAlt = (feature) => {
+    return {
+        color: tabColorBinAlt[feature.properties.id],
+        weight: 3,
+        opacity: 1
+    };
+};
 
 
 /*      COUCHES GEOJSON
@@ -433,10 +447,20 @@ var nantHamb = L.geoJson(nanthambourg, {
     style: style
 });
 // 02 Mulhouse - Istanbul
-var mulhouse = new L.geoJson(mulhIstanbul, {
+const strasist = new L.geoJson(strasistanbul, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
     style: style
+});
+const strasistL = new L.geoJson(strasistanbuletape, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: styleBinary
+});
+const strasistXL = new L.geoJson(strasistanbuletapelong, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: styleBinaryAlt
 });
 // 03  Cap Nord
 var capeNord = L.geoJson(capNord, {
@@ -521,33 +545,33 @@ var overLayers = {
     label: 'overlays',
     noShow: true,
     children: [
-/*        {
-            label: '  2020',
-            collapsed: false,
-            selectAllCheckbox: true,
-            children: [
-                {
-                    label: 'Route',
+        /*        {
+                    label: '  2020',
+                    collapsed: false,
                     selectAllCheckbox: true,
                     children: [
-                        {label: 'Dunkerque - revel', layer: dunkerqueRev},
-                        {label: 'Luxembourg - Lyon', layer: luxembourg},
-                        {label: 'Nantes - Strasbourg', layer: nantesStras},
-                        {label: 'Toulouse - Albi', layer: tlseAlbi},
-                        {label: 'Albi - Béziers', layer: albiBeziers}
-                    ]
-                },
-                {
-                    label: 'VTT',
-                    selectAllCheckbox: true,
-                    children: [
-                        {label: 'Girona - Ayamonte', layer: geroAya},
-                        {label: 'Gorges de l\'Aveyron', layer: gorgesAveyron}
+                        {
+                            label: 'Route',
+                            selectAllCheckbox: true,
+                            children: [
+                                {label: 'Dunkerque - revel', layer: dunkerqueRev},
+                                {label: 'Luxembourg - Lyon', layer: luxembourg},
+                                {label: 'Nantes - Strasbourg', layer: nantesStras},
+                                {label: 'Toulouse - Albi', layer: tlseAlbi},
+                                {label: 'Albi - Béziers', layer: albiBeziers}
+                            ]
+                        },
+                        {
+                            label: 'VTT',
+                            selectAllCheckbox: true,
+                            children: [
+                                {label: 'Girona - Ayamonte', layer: geroAya},
+                                {label: 'Gorges de l\'Aveyron', layer: gorgesAveyron}
 
+                            ]
+                        }
                     ]
-                }
-            ]
-        },*/
+                },*/
         {
             label: '> 2020',
             collapsed: true,
@@ -588,7 +612,9 @@ var overLayers = {
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Nantes - Hambourg', layer: nantHamb},
-                        {label: 'Bale - Istanbul', layer: mulhouse},
+                        {label: 'Strasbourg - Istanbul', layer: strasist},
+                        {label: 'Strasbourg - Istanbul étaoes 120', layer: strasistL},
+                        {label: 'Strasbourg - Istanbul étaoes 150', layer: strasistXL},
                         {label: 'Cap Nord', layer: capeNord}
                     ]
                 }
@@ -749,11 +775,11 @@ bounds_group.addLayer(geroAya);
 setBounds();
 
 // 		On click
-map.on('click', function(e) {
+map.on('click', function (e) {
     if ($('.leaflet-control.elevation').not('visible')) {
         $('.leaflet-control.elevation').fadeOut('fast');
-        isDisplayed=false;
-        if (L.Browser.mobile){
+        isDisplayed = false;
+        if (L.Browser.mobile) {
             $('.leaflet-control-attribution').show();
         }
     }
@@ -769,13 +795,16 @@ function toggleMapboxLayer() {
 
 var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
 var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [nantHamb, mulhouse, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux, havre, dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
+var postLayersArray = [strasist, strasistL, strasistXL, nantHamb, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux, havre, dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
 
 var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
 
-for (var i = 0; i < preLayersArray.length; i++) {
+for (let i = 0; i < 3; i++) {
     postLayersArray[i].addTo(map);
 }
+
+
+
 
 $(document).ready(function () {
     if (L.Browser.mobile) {
