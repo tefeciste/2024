@@ -545,40 +545,14 @@ var overLayers = {
     label: 'overlays',
     noShow: true,
     children: [
-        /*        {
-                    label: '  2020',
-                    collapsed: false,
-                    selectAllCheckbox: true,
-                    children: [
-                        {
-                            label: 'Route',
-                            selectAllCheckbox: true,
-                            children: [
-                                {label: 'Dunkerque - revel', layer: dunkerqueRev},
-                                {label: 'Luxembourg - Lyon', layer: luxembourg},
-                                {label: 'Nantes - Strasbourg', layer: nantesStras},
-                                {label: 'Toulouse - Albi', layer: tlseAlbi},
-                                {label: 'Albi - Béziers', layer: albiBeziers}
-                            ]
-                        },
-                        {
-                            label: 'VTT',
-                            selectAllCheckbox: true,
-                            children: [
-                                {label: 'Girona - Ayamonte', layer: geroAya},
-                                {label: 'Gorges de l\'Aveyron', layer: gorgesAveyron}
-
-                            ]
-                        }
-                    ]
-                },*/
         {
             label: '> 2020',
-            collapsed: true,
+            collapsed: false,
             selectAllCheckbox: true,
             children: [
                 {
                     label: 'VTT',
+                    collapsed: true,
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Valence - Madrid', layer: valenceMad},
@@ -595,6 +569,7 @@ var overLayers = {
                 },
                 {
                     label: 'Route',
+                    collapsed: true,
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Dunkerque - Strasbourg', layer: dunStrasbourg},
@@ -609,6 +584,7 @@ var overLayers = {
                 },
                 {
                     label: 'Raids',
+                    collapsed: false,
                     selectAllCheckbox: true,
                     children: [
                         {label: 'Nantes - Hambourg', layer: nantHamb},
@@ -655,13 +631,7 @@ var overLayers = {
                         {label: 'Strasbourg - St Pétersbourg', layer: strasbSankt},
                         {label: 'Toulouse - Miranda de Ebro', layer: toulMir},
                     ]
-                }/*,
-                {
-                    label: 'Autres',
-                    children: [
-                        {label: 'Danemark en roller', layer: dkRoller}
-                    ]
-                }*/
+                }
             ]
         }
     ]
