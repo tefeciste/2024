@@ -738,9 +738,7 @@ L.control.scale({imperial: false}).addTo(map);
 //	MAP EVENTS
 map.doubleClickZoom.disable();
 
-bounds_group.addLayer(luxembourg);
-bounds_group.addLayer(nantesStras);
-bounds_group.addLayer(geroAya);
+bounds_group.addLayer(strasist);
 
 setBounds();
 
