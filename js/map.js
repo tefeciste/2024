@@ -677,7 +677,7 @@ var baseLayers = {
             children: [
                 {
                     label: 'Mapbox Outdoors',
-                    layer: mapBox
+                    layer: mpO
                 },
                 {
                     label: 'Street',
