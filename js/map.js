@@ -220,7 +220,13 @@ const tabColorBinAlt = ["#ff3135", "#ce06cb"];
 function onEachFeature(feature, layer) {
     layer.on('click', function (e) {
         L.DomEvent.stopPropagation(e);
-        $('.area').css('fill', tabCouleurs[feature.properties.id - 1]);
+        if (feature.properties.name.includes('Istanbul 120 Etape')){
+            $('.area').css('fill', tabColorBin[feature.properties.id]);
+        } else if (feature.properties.name.includes('Istanbul 150 Etape')) {
+            $('.area').css('fill', tabColorBinAlt[feature.properties.id]);
+        } else {
+            $('.area').css('fill', tabCouleurs[feature.properties.id - 1]);
+        }
         map.fitBounds(layer.getBounds());
         toggleEl();
         el.clear();
@@ -761,14 +767,10 @@ function toggleMapboxLayer() {
     }
 }
 
-var anteLayersArray = [aixCannes, bdxMoissac, revelSarlat, brianconAix, cheminNav, dkRoller, gtMassifC, gtMtnNoir, hendonosti, lyonAixPce, lyonBordeaux, nantesHend, revAix, soustons, strasbSankt, toulMir, lisSantiago];
-var preLayersArray = [dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
-var postLayersArray = [strasist, strasistL, strasistXL, nantHamb, capeNord, transAlpes, dunStrasbourg, valenceMad, madLisbonne, sanSebSeville, irunPortoCote, charlevilleAval, avallonClermont, portSelva, caenBordeaux, havre, dunkerqueRev, luxembourg, nantesStras, geroAya, gorgesAveyron, tlseAlbi, albiBeziers];
+const startLayers = [strasist, strasistL, strasistXL];
 
-var allGroupLayers = [anteLayersArray, preLayersArray, postLayersArray];
-
-for (let i = 0; i < 3; i++) {
-    postLayersArray[i].addTo(map);
+for (let i = 0; i < startLayers.length; i++) {
+    startLayers[i].addTo(map);
 }
 
 
