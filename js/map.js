@@ -386,8 +386,20 @@ var vueltapyr = L.geoJson(vueltajson, {
     onEachFeature: onEachFeature,
     style: style
 });
-// 18 Cols Pyrénéens
+// 19 Cols Pyrénéens
 var colpyr = L.geoJson(colpyrjson, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
+// 20 Toulouse - Castellon
+var tlseCastellon = L.geoJson(tlseVin, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
+// 21 Vitoria - Zaragoza
+var vitzara = L.geoJson(vitzar, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
     style: style
@@ -552,7 +564,7 @@ var overLayers = {
     noShow: true,
     children: [
         {
-            label: '> 2020',
+            label: '> 2024',
             collapsed: false,
             selectAllCheckbox: true,
             children: [
@@ -603,7 +615,7 @@ var overLayers = {
             ]
         },
         {
-            label: '< 2020',
+            label: '< 2024',
             collapsed: true,
             selectAllCheckbox: true,
             children: [
@@ -618,6 +630,7 @@ var overLayers = {
                         {label: 'Soustons - St Jean', layer: soustons},
                         {label: 'GTMC', layer: gtMassifC},
                         {label: 'Lisbonne - Santiago', layer: lisSantiago},
+                        {label: 'Vitoria - Zaragoza', layer: vitzara},
                     ]
                 },
                 {
@@ -636,6 +649,7 @@ var overLayers = {
                         {label: 'Revel - Aix', layer: revAix},
                         {label: 'Strasbourg - St Pétersbourg', layer: strasbSankt},
                         {label: 'Toulouse - Miranda de Ebro', layer: toulMir},
+                        {label: 'Toulouse - Vinaros', layer: tlseCastellon},
                     ]
                 }
             ]
