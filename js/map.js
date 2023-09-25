@@ -406,6 +406,12 @@ var vitzara = L.geoJson(vitzar, {
     onEachFeature: onEachFeature,
     style: style
 });
+// 21 Vitoria - Zaragoza
+var floracAlbi = L.geoJson(florAlbi, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
 
 /*
         COUCHES GEOJSON
@@ -492,7 +498,6 @@ var capeNord = L.geoJson(capNord, {
 var transAlpes = L.geoJson(transAlp, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
-    renderer: myRenderer,
     style: style
 });
 //05 Dunkerque - strasbourg
@@ -511,7 +516,6 @@ var valenceMad = L.geoJson(valMad, {
 var madLisbonne = L.geoJson(madlis, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
-    renderer: myRenderer,
     style: style
 });
 //08 San Sebastian - Seville
@@ -524,7 +528,6 @@ var sanSebSeville = L.geoJson(sansSev, {
 var irunPortoCote = L.geoJson(irunPorto, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
-    renderer: myRenderer,
     style: style
 });
 //10 Charleville Mézières - Avallon
@@ -628,7 +631,7 @@ var overLayers = {
                         {label: 'Aix-Cannes', layer: aixCannes},
                         {label: 'Chemin Navarrais', layer: cheminNav},
                         {label: 'GTMC', layer: gtMassifC},
-                        //{ label: 'GTMN', layer: gtMtnNoir },
+                        { label: 'GTMN', layer: gtMtnNoir },
                         {label: 'Soustons - St Jean', layer: soustons},
                         {label: 'GTMC', layer: gtMassifC},
                         {label: 'Lisbonne - Santiago', layer: lisSantiago},
@@ -652,6 +655,7 @@ var overLayers = {
                         {label: 'Strasbourg - St Pétersbourg', layer: strasbSankt},
                         {label: 'Blan - Miranda de Ebro', layer: toulMir},
                         {label: 'Toulouse - Vinaros', layer: tlseCastellon},
+                        {label: 'Florac - Albi', layer: floracAlbi},
                     ]
                 }
             ]
