@@ -1,20 +1,21 @@
 //Leaflet configuration javascript file
 //Luc Clément	
 
-var hasLienDiv = false;
-var isMobileDevice = false;
+let hasLienDiv = false;
+let isMobileDevice = false;
 
 //	LEAFLET Map Object
-var map = L.map('map', {
+const map = L.map('map', {
     zoomControl: true,
-    maxZoom: 20
+    maxZoom: 20,
+    attributionControl: false
 });
-var myRenderer = L.canvas({padding: 0.8, tolerance: 30});
+const myRenderer = L.canvas({padding: 0.8, tolerance: 30});
 
-var bounds_group = new L.featureGroup([]);
+const bounds_group = new L.featureGroup([]);
 
 function setBounds() {
-    if (bounds_group.getLayers().length) {
+    if (bounds_group.getLayers().length > 0) {
         map.fitBounds(bounds_group.getBounds());
     }
 }
@@ -23,24 +24,25 @@ function setBounds() {
 
 //	1.	MapBox Outdoors (Topo)
 //var mapBox = L.tileLayer('http://{s}.tiles.mapbox.com/v4/matt.f714d988/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
-var mapBox = L.tileLayer('https://api.mapbox.com/v4/matt.f714d988/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
+const mapBox = L.tileLayer('https://api.mapbox.com/v4/matt.f714d988/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
     maxZoom: 21
 });
 
-var mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
+const mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
     maxZoom: 21
 });
 
 //	2. IGN France Topo Scan express classique WMTS
-var ignApiKey = "uysc5plwe5d5vezt4dvze1l5";
-//var scanWmtsUrl = "http://wxs.ign.fr/" + ignApiKey + "/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
-var scanWmtsUrl = "https://wxs.ign.fr/pratique/geoportail/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
-var basemap1 = L.tileLayer(scanWmtsUrl, {
-    attribution: ''
+const ignApiKey = 'lmjqehac12qtnljsv7mnuib5';
+const scanWmtsUrl = 'https://wxs.ign.fr/' + ignApiKey + '/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}';
+//const scanWmtsUrl = "https://wxs.ign.fr/pratique/geoportail/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
+const basemap1 = L.tileLayer(scanWmtsUrl, {
+    attribution: '',
+    maxZoom: 17
 });
 
 //	3. IGN EspaÃ±a Mapa Raster WMS
-var MTN = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster?", {
+const MTN = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster?", {
     layers: 'mtn_rasterizado', // Capa o capas separadas por coma. Consultar los metadatos del servicio
     format: 'image/png',
     transparent: true,
@@ -49,62 +51,62 @@ var MTN = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster?", {
 });
 
 //	4.	Google Street
-var googleLayer = L.tileLayer('http://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+const googleLayer = L.tileLayer('http://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 }).addTo(map);
 
 //	5.	Google Satellite
-var satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+const satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
 //	6.	Google Relief
-var reliefLayer = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+const reliefLayer = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
 //	7.	Cyclemap OSM
-var osmBike = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=2ef599d239a34da9ba2e91cd3e33a269', {
+const osmBike = L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=2ef599d239a34da9ba2e91cd3e33a269', {
     maxZoom: 18
 });
 
 //	8.	Hongrie IGN
-var hongrie = L.tileLayer('http://terkep.turistautak.hu/tiles/turistautak-domborzattal/{z}/{x}/{y}.png', {
+const hongrie = L.tileLayer('http://terkep.turistautak.hu/tiles/turistautak-domborzattal/{z}/{x}/{y}.png', {
     maxZoom: 17
 });
 
 //	9.	Slovaquie
-var slovaquie = L.tileLayer('http://t{s}.freemap.sk/T/{z}/{x}/{y}.png', {});
+const slovaquie = L.tileLayer('http://t{s}.freemap.sk/T/{z}/{x}/{y}.png', {});
 
 //	10.	Autriche
-var austria = L.tileLayer('http://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png', {
+const austria = L.tileLayer('http://{s}.wien.gv.at/basemap/geolandbasemap/normal/google3857/{z}/{y}/{x}.png', {
     format: 'image/png',
     maxZoom: 19,
     subdomains: ['maps', 'maps1', 'maps2', 'maps3', 'maps4']
 });
 
 //	11.	Norvège
-var norvege = L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=toporaster3&zoom={z}&x={x}&y={y}', {
+const norvege = L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=toporaster3&zoom={z}&x={x}&y={y}', {
     maxZoom: 17
 });
 
 //	13.	Croatie topo
-var croatie = L.tileLayer.wms("http://geoportal.dgu.hr/services/tk/wms", {
+const croatie = L.tileLayer.wms("http://geoportal.dgu.hr/services/tk/wms", {
     layers: 'TK25',
     format: 'image/jpeg'
 });
 
 //	14.	Belgique topo
-var belgique = L.tileLayer('http://www.ngi.be/cartoweb/1.0.0/topo/default/3857/{z}/{y}/{x}.png', {
+const belgique = L.tileLayer('http://www.ngi.be/cartoweb/1.0.0/topo/default/3857/{z}/{y}/{x}.png', {
     maxZoom: 18
 });
 
 //	15.	Suède topo
-var apiKey = "64a0ae63-35dd-3eed-aa75-97e6d2093f1e";
-var suede = new L.TileLayer(`https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/${apiKey}/1.0.0/topowebb/default/3857/{z}/{y}/{x}.png`, {
+const apiKey = "64a0ae63-35dd-3eed-aa75-97e6d2093f1e";
+const suede = new L.TileLayer(`https://api.lantmateriet.se/open/topowebb-ccby/v1/wmts/token/${apiKey}/1.0.0/topowebb/default/3857/{z}/{y}/{x}.png`, {
     maxZoom: 17,
     minZoom: 0,
     continuousWorld: true,
@@ -112,20 +114,20 @@ var suede = new L.TileLayer(`https://api.lantmateriet.se/open/topowebb-ccby/v1/w
 });
 
 //	16. Thunderforest Outdoors
-var bm0 = L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=2ef599d239a34da9ba2e91cd3e33a269', {
+const bm0 = L.tileLayer('https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=2ef599d239a34da9ba2e91cd3e33a269', {
     attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     maxZoom: 28
 });
 
 //	16.	Waymarked Trails VTT
-var wayMtb = L.tileLayer('http://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
+const wayMtb = L.tileLayer('http://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
     format: 'image/png',
     transparent: true,
     maxZoom: 17
 });
 
 //	17.	Waymarked Trails Route
-var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
+const wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.png', {
     format: 'image/png',
     transparent: true,
     maxZoom: 17
@@ -134,8 +136,8 @@ var wayCyc = L.tileLayer('http://tile.waymarkedtrails.org/cycling/{z}/{x}/{y}.pn
 //	ELEVATION CONTROL CUSTOMIZATION
 //	same options in js/elevation/Leaflet.Elevation-0.0.2.min.js
 //	all used options are the default values
-var mobileWidth = document.getElementById("map").offsetWidth;
-var deviceWidth = L.Browser.mobile ? mobileWidth : 600;
+const mobileWidth = document.getElementById("map").offsetWidth;
+const deviceWidth = L.Browser.mobile ? mobileWidth : 600;
 
 el = L.control.elevation({
     position: "bottomright",
@@ -209,9 +211,9 @@ function addLien(lien) {
     }
 }
 
-var tabCouleurs = ["#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8", "#ff3135", "#009b2e", "#ce06cb", "#3399ff", "#2d867c", "#9c3030", "#00c2d8"];
-const tabColorBin = ["#78ff48", "#12BED4"];
-const tabColorBinAlt = ["#ff3135", "#ce06cb"];
+const tabCouleurs = ['#ff3135', '#009b2e', '#ce06cb', '#3399ff', '#2d867c', '#9c3030', '#00c2d8', '#ff3135', '#009b2e', '#ce06cb', '#3399ff', '#2d867c', '#9c3030', '#00c2d8', '#ff3135', '#009b2e', '#ce06cb', '#3399ff', '#2d867c', '#9c3030', '#00c2d8', '#ff3135', '#009b2e', '#ce06cb', '#3399ff', '#2d867c', '#9c3030', '#00c2d8'];
+const tabColorBin = ['#78ff48', '#12BED4'];
+const tabColorBinAlt = ['#ff3135', '#ce06cb'];
 // 		LAYER CLICK ACTIONS:
 //			-change profile color,
 //			-display eleofile
@@ -758,9 +760,9 @@ L.control.scale({imperial: false}).addTo(map);
 //	MAP EVENTS
 map.doubleClickZoom.disable();
 
-bounds_group.addLayer(strasist);
 
-setBounds();
+
+
 
 // 		On click
 map.on('click', function (e) {
@@ -781,11 +783,16 @@ function toggleMapboxLayer() {
     }
 }
 
-const startLayers = [strasist, strasistL, strasistXL];
-
-for (let i = 0; i < startLayers.length; i++) {
-    startLayers[i].addTo(map);
+const before2024 = overLayers.children[1].children;
+for (const group of before2024) {
+    for (const layerObject of group.children) {
+        if (layerObject.label !== 'Strasbourg - St Pétersbourg') {
+            layerObject.layer.addTo(map);
+            bounds_group.addLayer(layerObject.layer);
+        }
+    }
 }
+setBounds();
 
 
 
