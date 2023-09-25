@@ -406,8 +406,15 @@ var vitzara = L.geoJson(vitzar, {
     onEachFeature: onEachFeature,
     style: style
 });
-// 21 Vitoria - Zaragoza
+// 21 Florac - Albi
 var floracAlbi = L.geoJson(florAlbi, {
+    renderer: myRenderer,
+    onEachFeature: onEachFeature,
+    style: style
+});
+
+// 21 Florac - Albi
+var carcaMin = L.geoJson(carcavil, {
     renderer: myRenderer,
     onEachFeature: onEachFeature,
     style: style
@@ -656,6 +663,7 @@ var overLayers = {
                         {label: 'Blan - Miranda de Ebro', layer: toulMir},
                         {label: 'Toulouse - Vinaros', layer: tlseCastellon},
                         {label: 'Florac - Albi', layer: floracAlbi},
+		    	{label: 'Carcassonne - Villeneuve', layer: carcaMin},
                     ]
                 }
             ]
