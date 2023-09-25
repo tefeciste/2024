@@ -648,7 +648,7 @@ var overLayers = {
                         {label: 'Nantes - Hendaye', layer: nantesHend},
                         {label: 'Revel - Aix', layer: revAix},
                         {label: 'Strasbourg - St Pétersbourg', layer: strasbSankt},
-                        {label: 'Toulouse - Miranda de Ebro', layer: toulMir},
+                        {label: 'Blan - Miranda de Ebro', layer: toulMir},
                         {label: 'Toulouse - Vinaros', layer: tlseCastellon},
                     ]
                 }
