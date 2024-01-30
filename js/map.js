@@ -33,8 +33,8 @@ const mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/ti
 });
 
 //	2. IGN France Topo Scan express classique WMTS
-const ignApiKey = 'lmjqehac12qtnljsv7mnuib5';
-const scanWmtsUrl = 'https://wxs.ign.fr/' + ignApiKey + '/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}';
+const ignApiKey = "lmjqehac12qtnljsv7mnuib5";
+const scanWmtsUrl = "https://wxs.ign.fr/"+ ignApiKey + "/geoportail/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
 //const scanWmtsUrl = "https://wxs.ign.fr/pratique/geoportail/wmts?LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&EXCEPTIONS=text/xml&FORMAT=image/jpeg&SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&STYLE=normal&TILEMATRIXSET=PM&&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}";
 const basemap1 = L.tileLayer(scanWmtsUrl, {
     attribution: '',
