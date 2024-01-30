@@ -30,7 +30,7 @@ const mapBox = L.tileLayer('https://api.mapbox.com/v4/matt.f714d988/{z}/{x}/{y}.
 
 const mpO = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZHVuY2FuZ3JhaGFtIiwiYSI6IlJJcWdFczQifQ.9HUpTV1es8IjaGAf_s64VQ', {
     maxZoom: 21
-});
+}).addTo(map);
 
 //	2. IGN France Topo Scan express classique WMTS
 const ignApiKey = "lmjqehac12qtnljsv7mnuib5";
@@ -54,7 +54,7 @@ const MTN = L.tileLayer.wms("http://www.ign.es/wms-inspire/mapa-raster?", {
 const googleLayer = L.tileLayer('http://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-}).addTo(map);
+});
 
 //	5.	Google Satellite
 const satelite = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
