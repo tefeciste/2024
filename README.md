@@ -1,4 +1,4 @@
-# Projets 2024 (Projet Github datant de 2016!!!)
+# Projets 2024 (Projet Github datant de 2016 avant la formation de développeur web!!!)
 
 Carte d'itinéraires vélo en Europe de 2003 à 2024
 
